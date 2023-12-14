@@ -645,6 +645,7 @@
         "HELP_SESSIONS" : "Denne siden vil bli fylt med nåværende aktive forbindelser. Tilkoblingene oppført og evnen til å drepe disse tilkoblingene er avhengig av tilgangsnivået ditt. Dersom du ønsker å avbryte en eller flere sesjoner haker du av boksen ved siden av sesjonen og klikker \"Avbryt sesjoner\". Avbrytes en sesjon vil brukeren umiddelbart kobles av den aktuelle sesjonen.",
         
         "INFO_NO_SESSIONS" : "Ingen aktive sesjoner",
+        "INFO_NO_SHARINGLINKS" : "Ingen delingslenker er gitt",
 
         "SECTION_HEADER_SESSIONS" : "Aktive Sesjoner",
         
@@ -652,6 +653,7 @@
         "TABLE_HEADER_SESSION_REMOTEHOST"      : "Server",
         "TABLE_HEADER_SESSION_STARTDATE"       : "Aktiv siden",
         "TABLE_HEADER_SESSION_USERNAME"        : "Brukernavn",
+        "TABLE_HEADER_SESSION_JOIN"            : "Bli med i sesjonen",
         
         "TEXT_CONFIRM_DELETE" : "Er du sikker på at du vil avslutte valgte sesjoner? Brukere av disse sesjonene vil bli frakoblet umiddelbart."
 

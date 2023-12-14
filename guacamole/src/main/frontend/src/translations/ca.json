@@ -959,6 +959,7 @@
         "HELP_SESSIONS" : "Aquesta pàgina s'omple amb les connexions actualment actives. Les connexions enumerades i la possibilitat de tancar-les depèn del nivell d'accés. Si voleu tancar una o més sessions, marqueu la casella que hi ha al costat de les sessions i feu clic a \"Tanca sessions\". Tancant una sessió es desconnectarà immediatament l'usuari de la connexió associada.",
         
         "INFO_NO_SESSIONS" : "No hi ha sessions actives",
+        "INFO_NO_SHARINGLINKS" : "No s'han proporcionat enllaços per compartir",
 
         "SECTION_HEADER_SESSIONS" : "Sessions actives",
         
@@ -966,6 +967,7 @@
         "TABLE_HEADER_SESSION_REMOTEHOST"      : "Amfitrió remot",
         "TABLE_HEADER_SESSION_STARTDATE"       : "Actiu des de",
         "TABLE_HEADER_SESSION_USERNAME"        : "Nom d'usuari",
+        "TABLE_HEADER_SESSION_JOIN"            : "Uneix-te sessió",
         
         "TEXT_CONFIRM_DELETE" : "Esteu segur que voleu matar totes les sessions seleccionades? Els usuaris que utilitzin aquestes sessions seran desconnectats immediatament."
 

@@ -664,6 +664,7 @@
         "HELP_SESSIONS" : "Deze pagina wordt gevuld met momenteel actieve verbindingen. De vermelde verbindingen en de mogelijkheid om die verbindingen te doden, zijn afhankelijk van uw toegangsniveau. Als u een of meerdere sessies wilt beeindigen, vink die sessie(s) dan aan en klik op \"Beeindig Sessies\". Door het verbreken van een sessie verliest de gebruiker ogenblikkelijk het contact met die sessie(s).",
 
         "INFO_NO_SESSIONS" : "Geen actieve sessies",
+        "INFO_NO_SHARINGLINKS" : "Er worden geen deellinks verstrekt",
 
         "SECTION_HEADER_SESSIONS" : "Actieve Sessies",
 
@@ -671,6 +672,7 @@
         "TABLE_HEADER_SESSION_REMOTEHOST"      : "Servernaam",
         "TABLE_HEADER_SESSION_STARTDATE"       : "Actief sinds",
         "TABLE_HEADER_SESSION_USERNAME"        : "Gebruikersnaam",
+        "TABLE_HEADER_SESSION_JOIN"            : "Deelnemen aan sessie",
 
         "TEXT_CONFIRM_DELETE" : "Weet u zeker dat u alle geselecteerde sessies wilt beeindigen? De gebruikers van deze sessies zullen ogenblikkelijk hun verbinding met deze sessies verliezen."
 

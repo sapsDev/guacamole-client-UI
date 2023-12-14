@@ -1112,6 +1112,7 @@
         "HELP_SESSIONS" : "This page will be populated with currently-active connections. The connections listed and the ability to kill those connections is dependent upon your access level. If you wish to kill one or more sessions, check the box next to those sessions and click \"Kill Sessions\". Killing a session will immediately disconnect the user from the associated connection.",
         
         "INFO_NO_SESSIONS" : "No active sessions",
+        "INFO_NO_SHARINGLINKS" : "No sharing links provided",
 
         "SECTION_HEADER_SESSIONS" : "Active Sessions",
         
@@ -1119,6 +1120,7 @@
         "TABLE_HEADER_SESSION_REMOTEHOST"      : "Remote host",
         "TABLE_HEADER_SESSION_STARTDATE"       : "Active since",
         "TABLE_HEADER_SESSION_USERNAME"        : "Username",
+        "TABLE_HEADER_SESSION_JOIN"            : "Join Session",
         
         "TEXT_CONFIRM_DELETE" : "Are you sure you want to kill all selected sessions? The users using these sessions will be immediately disconnected."
 

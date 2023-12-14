@@ -804,12 +804,14 @@
         "HELP_SESSIONS" : "Guacamoleのアクティブなセッションが全て表示されています。 もしセッションを強制切断したい場合、 チェックボックスにチェックを入れて、強制切断ボタンをクリックしてください。",
         
         "INFO_NO_SESSIONS" : "アクティブセッションはありません",
+        "INFO_NO_SHARINGLINKS" : "シェアリンクはありません",
 
         "SECTION_HEADER_SESSIONS" : "アクティブセッション",
         
         "TABLE_HEADER_SESSION_CONNECTION_NAME" : "接続名",
         "TABLE_HEADER_SESSION_REMOTEHOST"      : "接続元",
         "TABLE_HEADER_SESSION_USERNAME"        : "ユーザ名",
+        "TABLE_HEADER_SESSION_JOIN"            : "セッションに参加",
         
         "TEXT_CONFIRM_DELETE" : "選択したすべてのセッションを強制終了しますか？これらのセッションを使用しているユーザーは直ちに切断されます。"
 

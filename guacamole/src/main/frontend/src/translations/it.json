@@ -577,6 +577,7 @@
         "HELP_SESSIONS" : "Questa pagina verrà popolata con connessioni attualmente attive. Le connessioni elencate e la possibilità di terminare tali connessioni dipende dal tuo livello di accesso. Se desideri terminare una o più sessioni, seleziona la casella accanto a quelle sessioni e fai clic su \"Termina sessione \". Terminando una sessione si disconnetterà immediatamente l'utente dalla connessione associata.",
         
         "INFO_NO_SESSIONS" : "Nessuna sessione attiva",
+        "INFO_NO_SHARINGLINKS" : "Non vengono forniti collegamenti di condivisione",
 
         "SECTION_HEADER_SESSIONS" : "Sessioni Attive",
         
@@ -584,6 +585,7 @@
         "TABLE_HEADER_SESSION_STARTDATE"       : "Attivo da",
         "TABLE_HEADER_SESSION_REMOTEHOST"      : "Host remoto",
         "TABLE_HEADER_SESSION_CONNECTION_NAME" : "Nome della connessione",
+        "TABLE_HEADER_SESSION_JOIN"            : "Partecipa sessione",
         
         "TEXT_CONFIRM_DELETE" : "Sei sicuro di voler terminare la sessione selezionata? L'utente che sta utilizzando questa sessione sarà immediatamente disconnesso."
 

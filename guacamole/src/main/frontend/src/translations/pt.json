@@ -973,6 +973,7 @@
         "HELP_SESSIONS" : "Esta página será preenchida com conexões ativas no momento. As conexões listadas e a capacidade de encerrar estas conexões dependem do seu nível de acesso. Se você deseja encerrar uma ou mais sessões, marque a caixa ao lado destas sessões e clique em \"Encerrar Sessões\". Encerrar uma sessão desconectará imediatamente o usuário da conexão associada.",
         
         "INFO_NO_SESSIONS" : "Nenhuma sessão ativa",
+        "INFO_NO_SHARINGLINKS" : "Nenhum link fornecido para compartilhar",
 
         "SECTION_HEADER_SESSIONS" : "Sessões Ativas",
         
@@ -980,6 +981,7 @@
         "TABLE_HEADER_SESSION_REMOTEHOST"      : "Host remoto",
         "TABLE_HEADER_SESSION_STARTDATE"       : "Ativo desde",
         "TABLE_HEADER_SESSION_USERNAME"        : "Usuário",
+        "TABLE_HEADER_SESSION_JOIN"            : "Junte-se sessão",
         
         "TEXT_CONFIRM_DELETE" : "Você tem certeza que quer encerrar as sessões selecionadas? Usuários que estão utilizando estas sessões serão imediatamente desconectados."
 

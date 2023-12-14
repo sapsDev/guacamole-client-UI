@@ -1089,6 +1089,7 @@
         "HELP_SESSIONS" : "Diese Seite wird mit derzeit aktiven Verbindungen gefüllt. Die aufgelisteten Verbindungen und die Möglichkeit, diese Verbindungen zu beenden, hängen von Ihrer Zugriffsebene ab. Wenn Sie eine oder mehrere Sitzungen beenden wollen, wählen Sie diese Sitzung durch Aktivierung der nebenstehende Box und klicken auf \"Beende Sitzung\". Beendung einer Sitzung trennt den Benutzer von dessen Verbindung unverzüglich.",
         
         "INFO_NO_SESSIONS" : "Keine aktiven Sitzungen",
+        "INFO_NO_SHARINGLINKS" : "Keine Sharing-Links bereitgestellt",
 
         "SECTION_HEADER_SESSIONS" : "Aktive Sitzungen",
         
@@ -1096,6 +1097,7 @@
         "TABLE_HEADER_SESSION_REMOTEHOST"      : "Entfernter Host",
         "TABLE_HEADER_SESSION_STARTDATE"       : "Sitzung aktiv seit",
         "TABLE_HEADER_SESSION_USERNAME"        : "Benutzername",
+        "TABLE_HEADER_SESSION_JOIN"            : "Sitzung beitreten",
         
         "TEXT_CONFIRM_DELETE" : "Sind Sie sicher, dass alle ausgewählten Sitzungen beendet werden sollen? Die Benutzer dieser Sitzungen werden unverzüglich getrennt."
 
