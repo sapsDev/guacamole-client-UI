@@ -111,6 +111,12 @@
     width: 100%;
 }
 
+#guac-menu #access-settings .caption {
+    font-size: 0.9em;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
 #guac-menu #zoom-settings {
     text-align: center;
 }
