@@ -123,6 +123,13 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
         emulateAbsoluteMouse : preferenceService.preferences.emulateAbsoluteMouse,
 
         /**
+         * The currently selected automated admin-sharing method.
+         * 
+         * @type String
+         */
+        adminAccess : preferenceService.preferences.adminAccess,
+
+        /**
          * The current scroll state of the menu.
          *
          * @type ScrollState
