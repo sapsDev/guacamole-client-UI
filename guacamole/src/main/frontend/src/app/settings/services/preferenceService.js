@@ -83,7 +83,7 @@ angular.module('settings').provider('preferenceService', ['$injector',
      * 
      * @type Object.<String, String>
      */       
-    var adminAcessSettings = {
+    var adminAccessSettings = {
 
         /**
          * The current connection is not automatically shared with the administrator.
@@ -176,7 +176,7 @@ angular.module('settings').provider('preferenceService', ['$injector',
          *
          * @type String
          */
-        adminAccess : adminAcessSettings.REFUSE,
+        adminAccess : adminAccessSettings.REFUSE,
         
         /**
          * The key of the desired display language.
