@@ -79,6 +79,41 @@ angular.module('settings').provider('preferenceService', ['$injector',
     };
 
     /**
+     * All valid admin access settings.
+     * 
+     * @type Object.<String, String>
+     */       
+    var adminAcessSettings = {
+
+        /**
+         * The current connection is not automatically shared with the administrator.
+         *
+         * @constant
+         * @type String
+         */
+        REFUSE : 'refuse',
+
+        /**
+         * The current connection is automatically shared with the administrator, 
+         * using read-only rights.
+         *
+         * @constant
+         * @type String
+         */
+        READONLY : 'readonly',
+
+        /**
+         * The current connection is automatically shared with the administrator,
+         * using read/write rights.
+         *
+         * @constant
+         * @type String
+         */
+        READWRITE : 'readwrite',
+        
+    };
+
+    /**
      * Returns the key of the language currently in use within the browser.
      * This is not necessarily the user's desired language, but is rather the
      * language user by the browser's interface.
