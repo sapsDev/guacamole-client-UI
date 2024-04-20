@@ -218,6 +218,13 @@ angular.module('settings').provider('preferenceService', ['$injector',
         service.inputMethods = inputMethods;
 
         /**
+         * All valid admin access settings.
+         *
+         * @type Object.<String, String>
+         */
+        service.adminAccess = adminAccessSettings;
+
+        /**
          * All currently-set preferences, as name/value pairs. Each property name
          * corresponds to the name of a preference.
          *
