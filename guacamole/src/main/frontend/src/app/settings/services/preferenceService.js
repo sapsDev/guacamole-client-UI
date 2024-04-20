@@ -169,6 +169,14 @@ angular.module('settings').provider('preferenceService', ['$injector',
          * @type String
          */
         inputMethod : inputMethods.NONE,
+
+        /**
+         * The default admin access setting. This may be any of the values defined
+         * within preferenceService.adminAccessSettings.
+         *
+         * @type String
+         */
+        adminAccess : adminAcessSettings.REFUSE,
         
         /**
          * The key of the desired display language.
