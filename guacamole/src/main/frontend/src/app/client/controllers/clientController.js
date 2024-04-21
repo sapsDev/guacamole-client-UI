@@ -460,6 +460,19 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
         $scope.showTextInput = (inputMethod === 'text');
 
     });
+    
+    //Function to test change handling in adminAccess-settings
+    $scope.$watch('menu.adminAccess', function setAdminAccess(adminAccess) {
+        
+        //Test inputs
+        if (adminAccess === 'refuse')
+            console.log("[DEV-INFO]: REFUSE selected!")
+        if (adminAccess === 'readonly')
+            console.log("[DEV-INFO]: READONLY selected!")
+        if (adminAccess === 'readwrite')
+            console.log("[DEV-INFO]: READWRITE selected!")
+        
+    });        
 
     // Update client state/behavior as visibility of the Guacamole menu changes
     $scope.$watch('menu.shown', function menuVisibilityChanged(menuShown, menuShownPreviousState) {
