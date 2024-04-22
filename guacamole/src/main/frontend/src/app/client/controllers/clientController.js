@@ -123,6 +123,13 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
         emulateAbsoluteMouse : preferenceService.preferences.emulateAbsoluteMouse,
 
         /**
+         * The currently selected automated admin-sharing method.
+         * 
+         * @type String
+         */
+        adminAccess : preferenceService.preferences.adminAccess,
+
+        /**
          * The current scroll state of the menu.
          *
          * @type ScrollState
@@ -453,6 +460,19 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
         $scope.showTextInput = (inputMethod === 'text');
 
     });
+    
+    //Create/update/delete share links for administrator access
+    $scope.$watch('menu.adminAccess', function setAdminAccess(adminAccess) {
+        
+        //TODO: handle changes at adminAccessSettings
+        if (adminAccess === 'refuse')
+            console.log("[DEV-INFO]: REFUSE selected!")
+        if (adminAccess === 'readonly')
+            console.log("[DEV-INFO]: READONLY selected!")
+        if (adminAccess === 'readwrite')
+            console.log("[DEV-INFO]: READWRITE selected!")
+        
+    });        
 
     // Update client state/behavior as visibility of the Guacamole menu changes
     $scope.$watch('menu.shown', function menuVisibilityChanged(menuShown, menuShownPreviousState) {

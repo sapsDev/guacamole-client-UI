@@ -79,6 +79,41 @@ angular.module('settings').provider('preferenceService', ['$injector',
     };
 
     /**
+     * All valid admin access settings.
+     * 
+     * @type Object.<String, String>
+     */       
+    var adminAccessSettings = {
+
+        /**
+         * The current connection is not automatically shared with the administrator.
+         *
+         * @constant
+         * @type String
+         */
+        REFUSE : 'refuse',
+
+        /**
+         * The current connection is automatically shared with the administrator, 
+         * using read-only rights.
+         *
+         * @constant
+         * @type String
+         */
+        READONLY : 'readonly',
+
+        /**
+         * The current connection is automatically shared with the administrator,
+         * using read/write rights.
+         *
+         * @constant
+         * @type String
+         */
+        READWRITE : 'readwrite',
+        
+    };
+
+    /**
      * Returns the key of the language currently in use within the browser.
      * This is not necessarily the user's desired language, but is rather the
      * language user by the browser's interface.
@@ -134,6 +169,14 @@ angular.module('settings').provider('preferenceService', ['$injector',
          * @type String
          */
         inputMethod : inputMethods.NONE,
+
+        /**
+         * The default admin access setting. This may be any of the values defined
+         * within preferenceService.adminAccessSettings.
+         *
+         * @type String
+         */
+        adminAccess : adminAccessSettings.REFUSE,
         
         /**
          * The key of the desired display language.
@@ -173,6 +216,13 @@ angular.module('settings').provider('preferenceService', ['$injector',
          * @type Object.<String, String>
          */
         service.inputMethods = inputMethods;
+
+        /**
+         * All valid admin access settings.
+         *
+         * @type Object.<String, String>
+         */
+        service.adminAccess = adminAccessSettings;
 
         /**
          * All currently-set preferences, as name/value pairs. Each property name
