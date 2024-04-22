@@ -461,10 +461,10 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
 
     });
     
-    //Function to test change handling in adminAccess-settings
+    //Create/update/delete share links for administrator access
     $scope.$watch('menu.adminAccess', function setAdminAccess(adminAccess) {
         
-        //Test inputs
+        //TODO: handle changes at adminAccessSettings
         if (adminAccess === 'refuse')
             console.log("[DEV-INFO]: REFUSE selected!")
         if (adminAccess === 'readonly')
