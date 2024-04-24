@@ -466,7 +466,7 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
     $scope.$watch('menu.adminAccess', function setAdminAccess(adminAccess) {
         
         //TODO: handle changes at adminAccessSettings
-        if($scope.focusedClient) {
+        if($scope.focusedClient && $scope.canShareConnection()) {
             if (adminAccess === 'refuse') {
                 console.log("[DEV-INFO]: REFUSE selected!")
                 var id_test = $scope.focusedClient.id;
