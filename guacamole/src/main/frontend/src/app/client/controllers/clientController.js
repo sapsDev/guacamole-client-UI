@@ -128,7 +128,7 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
          * 
          * @type String
          */
-        adminAccess : preferenceService.preferences.adminAccess,
+        adminAccess : null,
 
         /**
          * The current scroll state of the menu.
@@ -467,12 +467,13 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
         
         //TODO: handle changes at adminAccessSettings
         if($scope.focusedClient) {
-            if (adminAccess === 'refuse')
+            if (adminAccess === 'refuse') {
                 console.log("[DEV-INFO]: REFUSE selected!")
-            var id_test = $scope.focusedClient.id;
-            var clientIdentifier = ClientIdentifier.fromString(id_test);
-            console.log("id: " + clientIdentifier.id);
-            console.log("datasource: " + clientIdentifier.dataSource)
+                var id_test = $scope.focusedClient.id;
+                var clientIdentifier = ClientIdentifier.fromString(id_test);
+                console.log("id: " + clientIdentifier.id);
+                console.log("datasource: " + clientIdentifier.dataSource)
+            }
             if (adminAccess === 'readonly')
                 console.log("[DEV-INFO]: READONLY selected!")
             if (adminAccess === 'readwrite')
@@ -502,6 +503,9 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
 
         const oldFocusedClient = $scope.focusedClient;
         $scope.focusedClient = newFocusedClient;
+        
+        //Set admin access setting
+        $scope.menu.adminAccess = preferenceService.preferences.adminAccess;
 
         // Apply any parameter changes when focus is changing
         if (oldFocusedClient)
