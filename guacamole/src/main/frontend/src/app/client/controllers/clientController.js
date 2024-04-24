@@ -24,6 +24,7 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
         function clientController($scope, $routeParams, $injector) {
 
     // Required types
+    const ClientIdentifier   = $injector.get('ClientIdentifier');
     const ConnectionGroup    = $injector.get('ConnectionGroup');
     const ManagedClient      = $injector.get('ManagedClient');
     const ManagedClientGroup = $injector.get('ManagedClientGroup');
