@@ -118,6 +118,30 @@ angular.module('rest').factory('activeConnectionService', ['$injector',
         });
         
     };
+    
+    service.testurl = function testurl(dataSource, id ) {
+        
+        //Log remote Host
+        console.log(authenticationService.request({
+            method  : 'GET',
+            url     : 'api/session/data/' + encodeURIComponent(dataSource)
+                        + '/activeConnections/' + encodeURIComponent(id)
+                        + '/remoteHost'
+        }));
+        
+    };
+
+    //service.updateAdminAccess = function updateAdminAccess(dataSource, id ) {
+    //    
+    //    // Update administrator access shareLink
+    //    return authenticationService.request({
+    //        method  : 'PATCH',
+    //        url     : 'api/session/data/' + encodeURIComponent(dataSource)
+    //            + '/activeConnections/' + encodeURIComponent(id)
+    //            + '//',
+    //        data    :
+    //    });  
+    //};
 
     /**
      * Makes a request to the REST API to generate credentials which have
