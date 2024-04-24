@@ -468,13 +468,12 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
         //TODO: handle changes at adminAccessSettings
         if (adminAccess === 'refuse')
             console.log("[DEV-INFO]: REFUSE selected!")
-        if (adminAccess === 'readonly')
-            console.log("[DEV-INFO]: READONLY selected!");
-            var id = $scope.focusedClient.id;
-            var clientIdentifier = ClientIdentifier.fromString(id);
+            var id_test = $scope.focusedClient.id;
+            var clientIdentifier = ClientIdentifier.fromString(id_test);
             console.log("id: " + clientIdentifier.id);
             console.log("datasource: " + clientIdentifier.dataSource)
-        
+        if (adminAccess === 'readonly')
+            console.log("[DEV-INFO]: READONLY selected!")
         if (adminAccess === 'readwrite')
             console.log("[DEV-INFO]: READWRITE selected!")
         
