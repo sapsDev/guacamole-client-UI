@@ -540,10 +540,10 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
     $scope.$watch('sharingProfiles', function initializeAdminAccess(sharingProfiles){
         console.log("[DEV-INFO]: scope.watch sharingProfiles")
         console.log($scope.sharingProfiles)
-        if (sharingProfiles === {})
-            return;
-        else
+        if ($scope.canShareConnection())
             $scope.menu.adminAccess = preferenceService.preferences.adminAccess;
+        else
+            return;
     });
 
     /**
