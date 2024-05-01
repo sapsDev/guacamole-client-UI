@@ -503,10 +503,6 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
 
         const oldFocusedClient = $scope.focusedClient;
         $scope.focusedClient = newFocusedClient;
-        
-        //Set admin access setting
-        if($scope.canShareConnection())
-            $scope.menu.adminAccess = preferenceService.preferences.adminAccess
 
         // Apply any parameter changes when focus is changing
         if (oldFocusedClient)
@@ -538,6 +534,10 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
         .then(function sharingProfilesRetrieved(sharingProfiles) {
             $scope.sharingProfiles = sharingProfiles;
         }, requestService.WARN);
+        
+        //Set admin access setting
+        if ($scope.canShareConnection())
+            $scope.menu.adminAccess = preferenceService.preferences.adminAccess;
 
     });
 
