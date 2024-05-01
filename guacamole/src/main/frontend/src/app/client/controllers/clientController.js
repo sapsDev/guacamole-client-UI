@@ -535,10 +535,14 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
             $scope.sharingProfiles = sharingProfiles;
         }, requestService.WARN);
         
-        //Set admin access setting
-        if ($scope.canShareConnection())
+    });
+    
+    $scope.$watch('sharingProfiles', function initializeAdminAccess(sharingProfiles){
+        console.log("[DEV-INFO]: scope.watch sharingProfiles")
+        if (sharingProfiles === {})
+            return;
+        else
             $scope.menu.adminAccess = preferenceService.preferences.adminAccess;
-
     });
 
     /**
