@@ -34,18 +34,19 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
     const ScrollState        = $injector.get('ScrollState');
 
     // Required services
-    const $location              = $injector.get('$location');
-    const authenticationService  = $injector.get('authenticationService');
-    const connectionGroupService = $injector.get('connectionGroupService');
-    const clipboardService       = $injector.get('clipboardService');
-    const dataSourceService      = $injector.get('dataSourceService');
-    const guacClientManager      = $injector.get('guacClientManager');
-    const guacFullscreen         = $injector.get('guacFullscreen');
-    const iconService            = $injector.get('iconService');
-    const preferenceService      = $injector.get('preferenceService');
-    const requestService         = $injector.get('requestService');
-    const tunnelService          = $injector.get('tunnelService');
-    const userPageService        = $injector.get('userPageService');
+    const $location               = $injector.get('$location');
+    const activeConnectionService = $injector.get('activeConnectionService');
+    const authenticationService   = $injector.get('authenticationService');
+    const connectionGroupService  = $injector.get('connectionGroupService');
+    const clipboardService        = $injector.get('clipboardService');
+    const dataSourceService       = $injector.get('dataSourceService');
+    const guacClientManager       = $injector.get('guacClientManager');
+    const guacFullscreen          = $injector.get('guacFullscreen');
+    const iconService             = $injector.get('iconService');
+    const preferenceService       = $injector.get('preferenceService');
+    const requestService          = $injector.get('requestService');
+    const tunnelService           = $injector.get('tunnelService');
+    const userPageService         = $injector.get('userPageService');
 
     /**
      * The minimum number of pixels a drag gesture must move to result in the
