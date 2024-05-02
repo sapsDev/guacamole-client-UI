@@ -473,6 +473,7 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
                 var id_test = $scope.focusedClient.id;
                 var clientIdentifier = ClientIdentifier.fromString(id_test);
                 console.log("clientIdentifier: " + clientIdentifier);
+                console.log("scope.focusedClient.client: " + $scope.focusedClient.client);
                 console.log("scope.focusedClient.id: " + id_test);
                 console.log("clientIdentifier.id: " + clientIdentifier.id);
                 console.log("clientIdentifier.datasource: " + clientIdentifier.dataSource);
