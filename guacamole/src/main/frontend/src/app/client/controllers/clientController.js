@@ -537,13 +537,15 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
         
     });
     
-    $scope.$watch('sharingProfiles', function initializeAdminAccess(sharingProfiles){
-        console.log("[DEV-INFO]: scope.watch sharingProfiles")
-        console.log($scope.sharingProfiles)
+    // Set default/preferred admin access setting once the sharing profiles are known
+    $scope.$watch('sharingProfiles', function initializeAdminAccess(){
+
+        // Only set admin access setting if connection can be shared
         if ($scope.canShareConnection())
             $scope.menu.adminAccess = preferenceService.preferences.adminAccess;
         else
             return;
+        
     });
 
     /**
