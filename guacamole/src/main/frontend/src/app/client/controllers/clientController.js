@@ -472,8 +472,10 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
                 console.log("[DEV-INFO]: REFUSE selected!")
                 var id_test = $scope.focusedClient.id;
                 var clientIdentifier = ClientIdentifier.fromString(id_test);
-                console.log("id: " + clientIdentifier.id);
-                console.log("datasource: " + clientIdentifier.dataSource);
+                console.log("clientIdentifier: " + clientIdentifier);
+                console.log("scope.focusedClient.id: " + id_test);
+                console.log("clientIdentifier.id: " + clientIdentifier.id);
+                console.log("clientIdentifier.datasource: " + clientIdentifier.dataSource);
                 console.log("api request: " + activeConnectionService.getActiveConnection(clientIdentifier.dataSource, clientIdentifier.id));
             }
             if (adminAccess === 'readonly')
