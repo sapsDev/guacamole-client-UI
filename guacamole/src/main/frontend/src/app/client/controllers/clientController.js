@@ -477,6 +477,8 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
                 console.log("scope.focusedClient.id: " + id_test);
                 console.log("clientIdentifier.id: " + clientIdentifier.id);
                 console.log("clientIdentifier.datasource: " + clientIdentifier.dataSource);
+                console.log("tunnel: " + $scope.focusedClient.tunnel)
+                console.log("tunnel.uuid: " + $scope.focusedClient.tunnel.uuid)
                 console.log("encodeURIComponent: ")
                 console.log("clientIdentifier: " + encodeURIComponent(clientIdentifier));
                 console.log("scope.focusedClient.id: " + encodeURIComponent(id_test));
