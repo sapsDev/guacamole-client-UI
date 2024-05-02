@@ -477,6 +477,11 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
                 console.log("scope.focusedClient.id: " + id_test);
                 console.log("clientIdentifier.id: " + clientIdentifier.id);
                 console.log("clientIdentifier.datasource: " + clientIdentifier.dataSource);
+                console.log("encodeURIComponent: ")
+                console.log("clientIdentifier: " + encodeURIComponent(clientIdentifier));
+                console.log("scope.focusedClient.id: " + encodeURIComponent(id_test));
+                console.log("clientIdentifier.id: " + encodeURIComponent(clientIdentifier.id));
+                console.log("clientIdentifier.datasource: " + encodeURIComponent(clientIdentifier.dataSource));
                 console.log("api request: " + activeConnectionService.getActiveConnection(clientIdentifier.dataSource, clientIdentifier.id));
             }
             if (adminAccess === 'readonly')
