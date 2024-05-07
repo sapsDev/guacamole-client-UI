@@ -470,21 +470,25 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
         if($scope.focusedClient) {
             if (adminAccess === 'refuse') {
                 console.log("[DEV-INFO]: REFUSE selected!")
-                var id_test = $scope.focusedClient.id;
-                var clientIdentifier = ClientIdentifier.fromString(id_test);
-                console.log("clientIdentifier: " + clientIdentifier);
-                console.log("scope.focusedClient.client: " + $scope.focusedClient.client);
-                console.log("scope.focusedClient.id: " + id_test);
-                console.log("clientIdentifier.id: " + clientIdentifier.id);
-                console.log("clientIdentifier.datasource: " + clientIdentifier.dataSource);
-                console.log("tunnel: " + $scope.focusedClient.tunnel)
-                console.log("tunnel.uuid: " + $scope.focusedClient.tunnel.uuid)
-                console.log("encodeURIComponent: ")
-                console.log("clientIdentifier: " + encodeURIComponent(clientIdentifier));
-                console.log("scope.focusedClient.id: " + encodeURIComponent(id_test));
-                console.log("clientIdentifier.id: " + encodeURIComponent(clientIdentifier.id));
-                console.log("clientIdentifier.datasource: " + encodeURIComponent(clientIdentifier.dataSource));
-                console.log("api request: " + activeConnectionService.getActiveConnection(clientIdentifier.dataSource, clientIdentifier.id));
+                var dataSource = ClientIdentifier.fromString($scope.focusedClient.id).dataSource;
+                var id         = $scope.focusedClient.tunnel.uuid;
+                console.log("dataSource: " + dataSource);
+                console.log("id: " + id);
+                // var id_test = $scope.focusedClient.id;
+                // var clientIdentifier = ClientIdentifier.fromString(id_test);
+                // console.log("clientIdentifier: " + clientIdentifier);
+                // console.log("scope.focusedClient.client: " + $scope.focusedClient.client);
+                // console.log("scope.focusedClient.id: " + id_test);
+                // console.log("clientIdentifier.id: " + clientIdentifier.id);
+                // console.log("clientIdentifier.datasource: " + clientIdentifier.dataSource);
+                // console.log("tunnel: " + $scope.focusedClient.tunnel)
+                // console.log("tunnel.uuid: " + $scope.focusedClient.tunnel.uuid)
+                // console.log("encodeURIComponent: ")
+                // console.log("clientIdentifier: " + encodeURIComponent(clientIdentifier));
+                // console.log("scope.focusedClient.id: " + encodeURIComponent(id_test));
+                // console.log("clientIdentifier.id: " + encodeURIComponent(clientIdentifier.id));
+                // console.log("clientIdentifier.datasource: " + encodeURIComponent(clientIdentifier.dataSource));
+                console.log("api request: " + activeConnectionService.getActiveConnection(dataSource, id));
             }
             if (adminAccess === 'readonly')
                 console.log("[DEV-INFO]: READONLY selected!")
