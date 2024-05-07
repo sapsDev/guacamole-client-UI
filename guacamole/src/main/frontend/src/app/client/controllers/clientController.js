@@ -489,6 +489,7 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
                 // console.log("clientIdentifier.id: " + encodeURIComponent(clientIdentifier.id));
                 // console.log("clientIdentifier.datasource: " + encodeURIComponent(clientIdentifier.dataSource));
                 console.log("api request: " + activeConnectionService.getActiveConnection(dataSource, id));
+                activeConnectionService.testurl(dataSource, id);
             }
             if (adminAccess === 'readonly')
                 console.log("[DEV-INFO]: READONLY selected!")

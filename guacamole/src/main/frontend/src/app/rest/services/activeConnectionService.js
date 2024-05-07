@@ -119,14 +119,14 @@ angular.module('rest').factory('activeConnectionService', ['$injector',
         
     };
     
-    service.testurl = function testurl(dataSource, id ) {
+    service.testurl = function testurl(dataSource, id) {
         
         //Log remote Host
         console.log(authenticationService.request({
             method  : 'GET',
             url     : 'api/session/data/' + encodeURIComponent(dataSource)
                         + '/activeConnections/' + encodeURIComponent(id)
-                        + '/remoteHost'
+                        + '/startDate'
         }));
         
     };
