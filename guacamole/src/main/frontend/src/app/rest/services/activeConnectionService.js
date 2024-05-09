@@ -119,15 +119,21 @@ angular.module('rest').factory('activeConnectionService', ['$injector',
         
     };
     
-    service.testurl = function testurl(dataSource, id) {
-        
-        //Log remote Host
-        console.log(authenticationService.request({
-            method  : 'GET',
-            url     : 'api/session/data/' + encodeURIComponent(dataSource)
-                        + '/activeConnections/' + encodeURIComponent(id)
-                        + '/startDate'
-        }));
+    service.test = function testRequest(dataSource, id) {
+        service.getActiveConnection(dataSource, id)
+            .then(function activeConnectionRetrieved(activeConnection) {
+                
+                //Edit startDate
+                activeConnection.startDate = activeConnection.startDate - 100;
+                console.log(activeConnection);
+                
+                //Update ActiveConnection
+                return authenticationService.request({
+                    method  : 'PUT',
+                    url     : 'api/session/data/' + encodeURIComponent(dataSource) + '/activeConnections/' + encodeURIComponent(id),
+                    data    :  activeConnection
+                }); 
+            })
         
     };
 
