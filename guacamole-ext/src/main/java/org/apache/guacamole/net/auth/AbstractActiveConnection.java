@@ -58,11 +58,6 @@ public abstract class AbstractActiveConnection extends AbstractIdentifiable
      * The underlying GuacamoleTunnel.
      */
     private GuacamoleTunnel tunnel;
-    
-    /**
-     * The admin access link of this connection.
-     */
-    private String shareLink;
 
     @Override
     public String getConnectionIdentifier() {
@@ -122,16 +117,6 @@ public abstract class AbstractActiveConnection extends AbstractIdentifiable
     @Override
     public void setTunnel(GuacamoleTunnel tunnel) {
         this.tunnel = tunnel;
-    }
-    
-    @Override 
-    public String getShareLink() {
-        return shareLink;
-    }
-    
-    @Override
-    public void setShareLink(String shareLink) {
-        this.shareLink = shareLink;
     }
 
 }

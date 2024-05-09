@@ -106,28 +106,7 @@ public interface ActiveConnection extends Identifiable, Connectable,
      *     information is not available.
      */
     void setRemoteHost(String remoteHost);
-
-    /**
-     * Returns the admin access link, which enables the administrator
-     * to join the connection, if known. If the admin access link is
-     * not known, null is returned.
-     *
-     * @return
-     *     The admin access link, or null if this
-     *     information is not available.
-     */
-    String getShareLink();
-    
-    /**
-     * Sets the admin access link which, enables the administrator
-     * to join the connection.
-     *
-     * @param shareLink
-     *     The admin access link, or null if this 
-     *     information is not available.
-     */
-     void setShareLink(String shareLink);
-         
+       
     /**
      * Returns the name of the user who is using this connection.
      *

@@ -58,11 +58,6 @@ public class APIActiveConnection {
      * Whether this active connection may be connected to.
      */
     private final boolean connectable;
-    
-    /**
-     * Admin access link of this connection
-     */
-     private final String shareLink;
 
     /**
      * Creates a new APIActiveConnection, copying the information from the given
@@ -78,7 +73,6 @@ public class APIActiveConnection {
         this.remoteHost           = connection.getRemoteHost();
         this.username             = connection.getUsername();
         this.connectable          = connection.isConnectable();
-        this.shareLink            = connection.getShareLink();
     }
 
     /**
@@ -144,16 +138,5 @@ public class APIActiveConnection {
     public boolean isConnectable() {
         return connectable;
     }
-    
-    /**
-     * Returns the admin access link, which enables the administrator 
-     * to join the connection.
-     *
-     * @return
-     *     The admin access link of this active connection.
-     */
-     public boolean getShareLink() {
-         return shareLink;
-     }
 
 }
