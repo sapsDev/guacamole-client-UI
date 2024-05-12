@@ -124,14 +124,18 @@ angular.module('rest').factory('activeConnectionService', ['$injector',
             .then(function activeConnectionRetrieved(activeConnection) {
                 
                 //Edit startDate
-                activeConnection.startDate = activeConnection.startDate - 100;
+                activeConnection.startDate = activeConnection.startDate + 1;
                 console.log(activeConnection);
                 
                 //Update ActiveConnection
                 return authenticationService.request({
-                    method  : 'PUT',
-                    url     : 'api/session/data/' + encodeURIComponent(dataSource) + '/activeConnections/' + encodeURIComponent(id),
-                    data    :  activeConnection
+                    method  : 'PATCH',
+                    url     : 'api/session/data/' + encodeURIComponent(dataSource) + '/activeConnections',
+                    data    :  {
+                        op    : 'replace',
+                        path  : '/' + id,
+                        value : activeConnection
+                    }
                 }); 
             })
         
