@@ -134,7 +134,7 @@ angular.module('rest').factory('activeConnectionService', ['$injector',
                     data    :  {
                         op    : 'replace',
                         path  : '/' + id,
-                        value : activeConnection
+                        value : activeConnection.startDate + 1
                     }
                 }); 
             })
