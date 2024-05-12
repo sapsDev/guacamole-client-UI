@@ -470,10 +470,6 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
         if($scope.focusedClient) {
             if (adminAccess === 'refuse') {
                 console.log("[DEV-INFO]: REFUSE selected!")
-                var dataSource = ClientIdentifier.fromString($scope.focusedClient.id).dataSource;
-                var id         = $scope.focusedClient.tunnel.uuid;
-                console.log("dataSource: " + dataSource);
-                console.log("id: " + id);
                 // var id_test = $scope.focusedClient.id;
                 // var clientIdentifier = ClientIdentifier.fromString(id_test);
                 // console.log("clientIdentifier: " + clientIdentifier);
@@ -491,6 +487,10 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
             }
             if (adminAccess === 'readonly'){
                 console.log("[DEV-INFO]: READONLY selected!")
+                var dataSource = ClientIdentifier.fromString($scope.focusedClient.id).dataSource;
+                var id         = $scope.focusedClient.tunnel.uuid;
+                console.log("dataSource: " + dataSource);
+                console.log("id: " + id);
                 activeConnectionService.test(dataSource, id);
             }
             if (adminAccess === 'readwrite')
