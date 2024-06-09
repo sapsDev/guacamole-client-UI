@@ -44,6 +44,7 @@ public class ActiveConnectionObjectTranslator
             throws GuacamoleException {
 
         // ActiveConnection objects are read-only
+        System.out.print("<<<<Test>>>>");
         throw new GuacamoleUnsupportedException("Active connection records are read-only.");
 
     }
@@ -53,6 +54,7 @@ public class ActiveConnectionObjectTranslator
             APIActiveConnection object) throws GuacamoleException {
 
         // Modification not supported for ActiveConnection
+        System.out.print("<<<<Test2>>>>");
         throw new GuacamoleUnsupportedException("Active connection records are read-only.");
 
     }
