@@ -19,6 +19,9 @@
 
 package org.apache.guacamole.rest.activeconnection;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import java.util.Date;
 import org.apache.guacamole.net.auth.ActiveConnection;
 
