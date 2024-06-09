@@ -26,6 +26,8 @@ import org.apache.guacamole.net.auth.ActiveConnection;
  * Information related to active connections which may be exposed through the
  * REST endpoints.
  */
+ @JsonIgnoreProperties(ignoreUnknown = true)
+ @JsonInclude(value=Include.NON_NULL)
 public class APIActiveConnection {
 
     /**
