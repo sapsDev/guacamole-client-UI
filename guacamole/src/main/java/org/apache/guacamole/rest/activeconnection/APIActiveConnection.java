@@ -60,6 +60,13 @@ public class APIActiveConnection {
     private final boolean connectable;
 
     /**
+     * Creates an empty, uninitialized APIActiveConnection. The properties of the
+     * created APIActiveConnection will need to be set individually as necessary
+     * via their corresponding setters.
+     */
+    public APIActiveConnection() {}
+        
+    /**
      * Creates a new APIActiveConnection, copying the information from the given
      * active connection.
      *
