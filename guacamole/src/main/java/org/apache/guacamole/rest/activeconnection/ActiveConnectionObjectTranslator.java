@@ -52,7 +52,8 @@ public class ActiveConnectionObjectTranslator
     public void applyExternalChanges(ActiveConnection existingObject,
             APIActiveConnection object) throws GuacamoleException {
 
-        existingObject.setStartDate(object.getStartDate());
+        // Modification not supported for ActiveConnection
+        throw new GuacamoleUnsupportedException("Active connection records are read-only.");
 
     }
 
