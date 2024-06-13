@@ -208,11 +208,11 @@ public class APIActiveConnection {
      * Sets whether this active connection may be connected to, just as a
      * normal connection.
      *
-     * @param isConnectable
+     * @param connectable
      *     true if this active connection may be connected to, false otherwise.
      */
-    public void setConnectable(boolean isConnectable) {
-        this.isConnectable = isConnectable;
+    public void setConnectable(boolean connectable) {
+        this.connectable = connectable;
     }
 
 }
