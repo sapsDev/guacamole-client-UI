@@ -36,33 +36,33 @@ public class APIActiveConnection {
     /**
      * The identifier of the active connection itself.
      */
-    private final String identifier;
+    private String identifier;
 
     /**
      * The identifier of the connection associated with this
      * active connection.
      */
-    private final String connectionIdentifier;
+    private String connectionIdentifier;
     
     /**
      * The date and time the connection began.
      */
-    private final Date startDate;
+    private Date startDate;
 
     /**
      * The host from which the connection originated, if known.
      */
-    private final String remoteHost;
+    private String remoteHost;
     
     /**
      * The name of the user who used or is using the connection.
      */
-    private final String username;
+    private String username;
 
     /**
      * Whether this active connection may be connected to.
      */
-    private final boolean connectable;
+    private boolean connectable;
 
     /**
      * Creates an empty, uninitialized APIActiveConnection. The properties of the
@@ -98,6 +98,16 @@ public class APIActiveConnection {
     }
     
     /**
+     * Sets the identifier of the connection associated with this tunnel.
+     *
+     * @param connectionIdentifier
+     *     The identifier of the connection associated with this tunnel.
+     */
+    public void setConnectionIdentifier(String connectionIdentifier) {
+        this.connectionIdentifier = connectionIdentifier;
+    }
+    
+    /**
      * Returns the date and time the connection began.
      *
      * @return
@@ -105,6 +115,16 @@ public class APIActiveConnection {
      */
     public Date getStartDate() {
         return startDate;
+    }
+    
+    /**
+     * Sets the date and time the connection began.
+     *
+     * @param startDate
+     *     The date and time the connection began.
+     */
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
     }
 
     /**
@@ -116,6 +136,16 @@ public class APIActiveConnection {
     public String getRemoteHost() {
         return remoteHost;
     }
+    
+    /**
+     * Sets the remote host from which this connection originated.
+     *
+     * @param remoteHost
+     *     The remote host from which this connection originated.
+     */
+    public void setRemoteHost(String remoteHost) {
+        this.remoteHost = remoteHost;
+    }
 
     /**
      * Returns the name of the user who used or is using the connection at the
@@ -126,6 +156,17 @@ public class APIActiveConnection {
      */
     public String getUsername() {
         return username;
+    }
+    
+    /**
+     * Sets the name of the user who used or is using the connection at the
+     * times given by this tunnel.
+     *
+     * @param username
+     *     The name of the user who used or is using the associated connection.
+     */
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     /**
@@ -139,6 +180,18 @@ public class APIActiveConnection {
     public String getIdentifier() {
         return identifier;
     }
+    
+    /**
+     * Sets the identifier of the active connection itself. This is
+     * distinct from the connection identifier, and uniquely identifies a
+     * specific use of a connection.
+     *
+     * @param identifier
+     *     The identifier of the active connection.
+     */
+    public void setIdentifier(String identifier) {
+        this.identifier = identifier;
+    }
 
     /***
      * Returns whether this active connection may be connected to, just as a
@@ -149,6 +202,17 @@ public class APIActiveConnection {
      */
     public boolean isConnectable() {
         return connectable;
+    }
+    
+    /***
+     * Sets whether this active connection may be connected to, just as a
+     * normal connection.
+     *
+     * @param isConnectable
+     *     true if this active connection may be connected to, false otherwise.
+     */
+    public void setConnectable(boolean isConnectable) {
+        this.isConnectable = isConnectable;
     }
 
 }
