@@ -160,7 +160,7 @@ public class ActiveConnectionPermissionService
             throws GuacamoleException {
 
         // Creating active connection permissions is not implemented
-        throw new GuacamoleSecurityException("Permission denied.");
+        throw new GuacamoleSecurityException("Create Permission denied.");
 
     }
 
@@ -171,7 +171,7 @@ public class ActiveConnectionPermissionService
             throws GuacamoleException {
 
         // Deleting active connection permissions is not implemented
-        throw new GuacamoleSecurityException("Permission denied.");
+        throw new GuacamoleSecurityException("Delete Permission denied.");
 
     }
 

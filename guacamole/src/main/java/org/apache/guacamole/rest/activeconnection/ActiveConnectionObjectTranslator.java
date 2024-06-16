@@ -61,7 +61,6 @@ public class ActiveConnectionObjectTranslator
         {
             existingObject.setStartDate(object.getStartDate());
         }
-        
 
     }
 
