@@ -53,7 +53,7 @@ public class ActiveConnectionObjectTranslator
             APIActiveConnection object) throws GuacamoleException {
 
         //Update the ActiveConnection
-        if (object.getStartDate == null)
+        if (object.getStartDate() == null)
         {
             throw new GuacamoleException("StartDate is null.");
         }
