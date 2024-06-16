@@ -55,11 +55,11 @@ public class ActiveConnectionObjectTranslator
         //Update the ActiveConnection
         if (object.getStartDate == null)
         {
-            throw new GuacamoleException("StartDate is null.")
+            throw new GuacamoleException("StartDate is null.");
         }
         else
         {
-            existingObject.setStartDate(object.getStartDate())
+            existingObject.setStartDate(object.getStartDate());
         }
         
 
