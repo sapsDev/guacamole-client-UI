@@ -124,7 +124,7 @@ public class RootConnectionGroup extends RestrictedObject
     @Override
     public GuacamoleTunnel connect(GuacamoleClientInformation info,
             Map<String, String> tokens) throws GuacamoleException {
-        throw new GuacamoleSecurityException("Permission denied.");
+        throw new GuacamoleSecurityException("RCG_Permission denied.");
     }
 
     @Override

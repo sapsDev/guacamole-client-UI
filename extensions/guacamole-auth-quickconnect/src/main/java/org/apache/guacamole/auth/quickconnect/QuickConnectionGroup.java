@@ -111,7 +111,7 @@ public class QuickConnectionGroup extends AbstractConnectionGroup {
     public GuacamoleTunnel connect(GuacamoleClientInformation info,
             Map<String, String> tokens) throws GuacamoleException {
         // This group does not support connections
-        throw new GuacamoleSecurityException("Permission denied.");
+        throw new GuacamoleSecurityException("QCG_Permission denied.");
     }
 
 }

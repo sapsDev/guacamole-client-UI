@@ -264,7 +264,7 @@ public class ConnectionGroupService extends ModeledChildDirectoryObjectService<M
             return tunnelService.getGuacamoleTunnel(user, connectionGroup, info, tokens);
 
         // The user does not have permission to connect
-        throw new GuacamoleSecurityException("Permission denied.");
+        throw new GuacamoleSecurityException("CGS_Permission denied.");
 
     }
 

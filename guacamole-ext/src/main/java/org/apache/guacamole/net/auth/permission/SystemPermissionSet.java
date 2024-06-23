@@ -98,13 +98,13 @@ public interface SystemPermissionSet extends PermissionSet<SystemPermission> {
         @Override
         public void addPermission(SystemPermission.Type permission)
                 throws GuacamoleException {
-            throw new GuacamoleSecurityException("Permission denied.");
+            throw new GuacamoleSecurityException("SPSS_Permission denied.");
         }
 
         @Override
         public void removePermission(SystemPermission.Type permission)
                 throws GuacamoleException {
-            throw new GuacamoleSecurityException("Permission denied.");
+            throw new GuacamoleSecurityException("SPSS_Permission denied.");
         }
 
         @Override
@@ -116,13 +116,13 @@ public interface SystemPermissionSet extends PermissionSet<SystemPermission> {
         @Override
         public void addPermissions(Set<SystemPermission> permissions)
                 throws GuacamoleException {
-            throw new GuacamoleSecurityException("Permission denied.");
+            throw new GuacamoleSecurityException("SPSS_Permission denied.");
         }
 
         @Override
         public void removePermissions(Set<SystemPermission> permissions)
                 throws GuacamoleException {
-            throw new GuacamoleSecurityException("Permission denied.");
+            throw new GuacamoleSecurityException("SPSS_Permission denied.");
         }
 
     };

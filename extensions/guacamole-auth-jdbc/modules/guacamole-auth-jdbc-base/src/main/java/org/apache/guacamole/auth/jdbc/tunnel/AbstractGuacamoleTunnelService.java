@@ -654,7 +654,7 @@ public abstract class AbstractGuacamoleTunnelService implements GuacamoleTunnelS
         // If group has no associated balanced connections, cannot connect
         List<ModeledConnection> connections = getBalancedConnections(user, connectionGroup);
         if (connections.isEmpty())
-            throw new GuacamoleSecurityException("Permission denied.");
+            throw new GuacamoleSecurityException("AGTS_Permission denied.");
 
         do {
 

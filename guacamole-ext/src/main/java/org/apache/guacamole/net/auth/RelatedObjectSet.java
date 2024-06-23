@@ -90,13 +90,13 @@ public interface RelatedObjectSet {
         @Override
         public void addObjects(Set<String> identifiers)
                 throws GuacamoleException {
-            throw new GuacamoleSecurityException("Permission denied.");
+            throw new GuacamoleSecurityException("ROS_Permission denied.");
         }
 
         @Override
         public void removeObjects(Set<String> identifiers)
                 throws GuacamoleException {
-            throw new GuacamoleSecurityException("Permission denied.");
+            throw new GuacamoleSecurityException("ROS_Permission denied.");
         }
 
     };

@@ -100,7 +100,7 @@ public class SharedRootConnectionGroup implements ConnectionGroup {
     @Override
     public GuacamoleTunnel connect(GuacamoleClientInformation info,
             Map<String, String> tokens) throws GuacamoleException {
-        throw new GuacamoleSecurityException("Permission denied.");
+        throw new GuacamoleSecurityException("SRCG_Permission denied.");
     }
 
     @Override

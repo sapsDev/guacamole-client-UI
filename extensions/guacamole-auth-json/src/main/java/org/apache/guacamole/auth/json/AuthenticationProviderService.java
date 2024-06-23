@@ -74,7 +74,7 @@ public class AuthenticationProviderService {
         // Pull UserData from credentials, if possible
         UserData userData = userDataService.fromCredentials(credentials);
         if (userData == null)
-            throw new GuacamoleInvalidCredentialsException("Permission denied.", CredentialsInfo.EMPTY);
+            throw new GuacamoleInvalidCredentialsException("APS_Permission denied.", CredentialsInfo.EMPTY);
 
         // Produce AuthenticatedUser associated with derived UserData
         AuthenticatedUser authenticatedUser = authenticatedUserProvider.get();
