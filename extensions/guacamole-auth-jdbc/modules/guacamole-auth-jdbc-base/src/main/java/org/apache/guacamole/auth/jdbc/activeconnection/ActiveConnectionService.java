@@ -128,7 +128,7 @@ public class ActiveConnectionService
 
         }
         else
-            throw new GuacamoleSecurityException("Permission denied.");
+            throw new GuacamoleSecurityException("ACS_Permission denied.");
         
     }
 
@@ -153,7 +153,7 @@ public class ActiveConnectionService
             ActiveConnection object) throws GuacamoleException {
 
         // Updating active connections is not implemented
-        throw new GuacamoleSecurityException("Permission denied.");
+        throw new GuacamoleSecurityException("ACS_Permission denied.");
 
     }
 
@@ -162,7 +162,7 @@ public class ActiveConnectionService
             throws GuacamoleException {
 
         // Updating active connections is not implemented
-        throw new GuacamoleSecurityException("Permission denied.");
+        throw new GuacamoleSecurityException("ACS_Permission denied.");
 
     }
 

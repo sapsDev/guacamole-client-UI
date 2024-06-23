@@ -272,7 +272,7 @@ public class TrackedActiveConnection extends RestrictedObject implements ActiveC
         if (isConnectable())
             return tunnelService.getGuacamoleTunnel(getCurrentUser(), share(null), info, tokens);
 
-        throw new GuacamoleSecurityException("Permission denied.");
+        throw new GuacamoleSecurityException("TAC_Permission denied.");
 
     }
 

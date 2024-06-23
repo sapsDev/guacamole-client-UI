@@ -160,7 +160,7 @@ public interface ActiveConnection extends Identifiable, Connectable,
     @Override
     default GuacamoleTunnel connect(GuacamoleClientInformation info,
             Map<String, String> tokens) throws GuacamoleException {
-        throw new GuacamoleSecurityException("Permission denied.");
+        throw new GuacamoleSecurityException("AC_Permission denied.");
     }
 
     @Override
