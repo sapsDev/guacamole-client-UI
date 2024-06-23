@@ -108,7 +108,7 @@ public class SystemPermissionService
         }
 
         // User lacks permission to create system permissions
-        throw new GuacamoleSecurityException("Permission denied.");
+        throw new GuacamoleSecurityException("SPS_Permission denied.");
         
     }
 
@@ -135,7 +135,7 @@ public class SystemPermissionService
         }
 
         // User lacks permission to delete system permissions
-        throw new GuacamoleSecurityException("Permission denied.");
+        throw new GuacamoleSecurityException("SPS_Permission denied.");
         
     }
 
@@ -176,7 +176,7 @@ public class SystemPermissionService
             return getPermissionMapper().selectOne(targetEntity.getModel(), type, effectiveGroups) != null;
 
         // User cannot read this entity's permissions
-        throw new GuacamoleSecurityException("Permission denied.");
+        throw new GuacamoleSecurityException("SPS_Permission denied.");
         
     }
 

@@ -143,7 +143,7 @@ public abstract class ModeledObjectPermissionService
         }
 
         // User lacks permission to create object permissions
-        throw new GuacamoleSecurityException("Permission denied.");
+        throw new GuacamoleSecurityException("MOPS_Permission denied.");
 
     }
 
@@ -166,7 +166,7 @@ public abstract class ModeledObjectPermissionService
         }
         
         // User lacks permission to delete object permissions
-        throw new GuacamoleSecurityException("Permission denied.");
+        throw new GuacamoleSecurityException("MOPS_Permission denied.");
 
     }
 
@@ -182,7 +182,7 @@ public abstract class ModeledObjectPermissionService
                     type, identifier, effectiveGroups) != null;
 
         // User cannot read this entity's permissions
-        throw new GuacamoleSecurityException("Permission denied.");
+        throw new GuacamoleSecurityException("MOPS_Permission denied.");
         
     }
 
@@ -208,7 +208,7 @@ public abstract class ModeledObjectPermissionService
                     effectiveGroups);
 
         // User cannot read this entity's permissions
-        throw new GuacamoleSecurityException("Permission denied.");
+        throw new GuacamoleSecurityException("MOPS_Permission denied.");
 
     }
 

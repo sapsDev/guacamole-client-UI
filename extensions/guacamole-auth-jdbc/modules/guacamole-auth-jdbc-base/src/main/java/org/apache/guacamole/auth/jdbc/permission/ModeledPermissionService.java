@@ -195,7 +195,7 @@ public abstract class ModeledPermissionService<PermissionSetType extends Permiss
             return getPermissionInstances(getPermissionMapper().select(targetEntity.getModel(), effectiveGroups));
 
         // User cannot read this entity's permissions
-        throw new GuacamoleSecurityException("Permission denied.");
+        throw new GuacamoleSecurityException("MPS_Permission denied.");
 
     }
 

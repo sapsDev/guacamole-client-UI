@@ -165,18 +165,18 @@ public class SimpleDirectory<ObjectType extends Identifiable>
     @Override
     public void add(ObjectType connection)
             throws GuacamoleException {
-        throw new GuacamoleSecurityException("Permission denied.");
+        throw new GuacamoleSecurityException("SD_Permission denied.");
     }
 
     @Override
     public void update(ObjectType connection)
             throws GuacamoleException {
-        throw new GuacamoleSecurityException("Permission denied.");
+        throw new GuacamoleSecurityException("SD_Permission denied.");
     }
 
     @Override
     public void remove(String identifier) throws GuacamoleException {
-        throw new GuacamoleSecurityException("Permission denied.");
+        throw new GuacamoleSecurityException("SD_Permission denied.");
     }
 
 }

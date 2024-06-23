@@ -140,17 +140,17 @@ public class SharedConnectionDirectory implements Directory<Connection> {
 
     @Override
     public void add(Connection object) throws GuacamoleException {
-        throw new GuacamoleSecurityException("Permission denied.");
+        throw new GuacamoleSecurityException("SCD_Permission denied.");
     }
 
     @Override
     public void update(Connection object) throws GuacamoleException {
-        throw new GuacamoleSecurityException("Permission denied.");
+        throw new GuacamoleSecurityException("SCD_Permission denied.");
     }
 
     @Override
     public void remove(String identifier) throws GuacamoleException {
-        throw new GuacamoleSecurityException("Permission denied.");
+        throw new GuacamoleSecurityException("SCD_Permission denied.");
     }
 
 }
