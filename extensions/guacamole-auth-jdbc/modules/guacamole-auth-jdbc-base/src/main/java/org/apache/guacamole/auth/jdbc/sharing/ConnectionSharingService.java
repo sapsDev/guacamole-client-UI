@@ -124,7 +124,7 @@ public class ConnectionSharingService {
             // requested connection
             String connectionIdentifier = activeConnection.getConnectionIdentifier();
             if (sharingProfile == null || !sharingProfile.getPrimaryConnectionIdentifier().equals(connectionIdentifier))
-                throw new GuacamoleSecurityException("Permission denied.");
+                throw new GuacamoleSecurityException("CSS_Permission denied.");
 
         }
 

@@ -188,7 +188,7 @@ public abstract class RelatedObjectSet<ParentObjectType extends ModeledDirectory
 
         // User lacks permission to add user groups
         else
-            throw new GuacamoleSecurityException("Permission denied.");
+            throw new GuacamoleSecurityException("ROS_Permission denied.");
 
     }
 
@@ -205,7 +205,7 @@ public abstract class RelatedObjectSet<ParentObjectType extends ModeledDirectory
 
         // User lacks permission to remove user groups
         else
-            throw new GuacamoleSecurityException("Permission denied.");
+            throw new GuacamoleSecurityException("ROS_Permission denied.");
 
     }
 

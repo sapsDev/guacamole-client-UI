@@ -182,12 +182,12 @@ public class UserResource
         try {
             AuthenticationProvider authProvider = getUserContext().getAuthenticationProvider();
             if (authProvider.authenticateUser(credentials) == null)
-                throw new GuacamoleSecurityException("Permission denied.");
+                throw new GuacamoleSecurityException("UR_Permission denied.");
         }
 
         // Pass through any credentials exceptions as simple permission denied
         catch (GuacamoleCredentialsException e) {
-            throw new GuacamoleSecurityException("Permission denied.");
+            throw new GuacamoleSecurityException("UR_Permission denied.");
         }
 
         // Set password to the newly provided one

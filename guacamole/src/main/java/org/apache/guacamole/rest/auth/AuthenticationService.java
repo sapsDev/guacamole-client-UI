@@ -443,7 +443,7 @@ public class AuthenticationService {
        
         // Authentication failed.
         if (session == null)
-            throw new GuacamoleUnauthorizedException("Permission Denied.");
+            throw new GuacamoleUnauthorizedException("AS_Permission Denied.");
         
         return session;
 

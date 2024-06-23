@@ -260,7 +260,7 @@ public abstract class ModeledDirectoryObjectService<InternalType extends Modeled
 
         // Verify permission to create objects
         if (!user.isPrivileged() && !hasCreatePermission(user))
-            throw new GuacamoleSecurityException("Permission denied.");
+            throw new GuacamoleSecurityException("MDOS_Permission denied.");
 
     }
 
@@ -288,7 +288,7 @@ public abstract class ModeledDirectoryObjectService<InternalType extends Modeled
 
         // By default, do nothing.
         if (!hasObjectPermission(user, model.getIdentifier(), ObjectPermission.Type.UPDATE))
-            throw new GuacamoleSecurityException("Permission denied.");
+            throw new GuacamoleSecurityException("MDOS_Permission denied.");
 
     }
 
@@ -313,7 +313,7 @@ public abstract class ModeledDirectoryObjectService<InternalType extends Modeled
 
         // Verify permission to delete objects
         if (!hasObjectPermission(user, identifier, ObjectPermission.Type.DELETE))
-            throw new GuacamoleSecurityException("Permission denied.");
+            throw new GuacamoleSecurityException("MDOS_Permission denied.");
 
     }
 

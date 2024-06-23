@@ -178,7 +178,7 @@ public abstract class ModeledChildDirectoryObjectService<InternalType extends Mo
         
         // Validate that we can update all applicable parents
         if (!canUpdateModifiedParents(user, null, model))
-            throw new GuacamoleSecurityException("Permission denied.");
+            throw new GuacamoleSecurityException("MCDOS_Permission denied.");
         
     }
 
@@ -190,7 +190,7 @@ public abstract class ModeledChildDirectoryObjectService<InternalType extends Mo
 
         // Validate that we can update all applicable parents
         if (!canUpdateModifiedParents(user, model.getIdentifier(), model))
-            throw new GuacamoleSecurityException("Permission denied.");
+            throw new GuacamoleSecurityException("MCDOS_Permission denied.");
         
     }
 
@@ -202,7 +202,7 @@ public abstract class ModeledChildDirectoryObjectService<InternalType extends Mo
 
         // Validate that we can update all applicable parents
         if (!canUpdateModifiedParents(user, identifier, null))
-            throw new GuacamoleSecurityException("Permission denied.");
+            throw new GuacamoleSecurityException("MCDOS_Permission denied.");
         
     }
 
