@@ -87,25 +87,25 @@ public class SimpleSystemPermissionSet implements SystemPermissionSet {
     @Override
     public void addPermission(SystemPermission.Type permission)
             throws GuacamoleException {
-        throw new GuacamoleSecurityException("Permission denied.");
+        throw new GuacamoleSecurityException("SSPS_Permission denied.");
     }
 
     @Override
     public void removePermission(SystemPermission.Type permission)
             throws GuacamoleException {
-        throw new GuacamoleSecurityException("Permission denied.");
+        throw new GuacamoleSecurityException("SSPS_Permission denied.");
     }
 
     @Override
     public void addPermissions(Set<SystemPermission> permissions)
             throws GuacamoleException {
-        throw new GuacamoleSecurityException("Permission denied.");
+        throw new GuacamoleSecurityException("SSPS_Permission denied.");
     }
 
     @Override
     public void removePermissions(Set<SystemPermission> permissions)
             throws GuacamoleException {
-        throw new GuacamoleSecurityException("Permission denied.");
+        throw new GuacamoleSecurityException("SSPS_Permission denied.");
     }
 
 }

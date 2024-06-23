@@ -83,7 +83,7 @@ public class GuacamoleAuthenticationProcessException extends GuacamoleException 
         // specific cause
         if (cause == null)
             return new GuacamoleInvalidCredentialsException(
-                "Permission Denied.",
+                "GAPE_Permission Denied.",
                 CredentialsInfo.USERNAME_PASSWORD
             );
 

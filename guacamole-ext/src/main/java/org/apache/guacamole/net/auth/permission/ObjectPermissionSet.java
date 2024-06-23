@@ -143,13 +143,13 @@ public interface ObjectPermissionSet extends PermissionSet<ObjectPermission> {
         @Override
         public void addPermission(ObjectPermission.Type permission,
                 String identifier) throws GuacamoleException {
-            throw new GuacamoleSecurityException("Permission denied.");
+            throw new GuacamoleSecurityException("OPS_Permission denied.");
         }
 
         @Override
         public void removePermission(ObjectPermission.Type permission,
                 String identifier) throws GuacamoleException {
-            throw new GuacamoleSecurityException("Permission denied.");
+            throw new GuacamoleSecurityException("OPS_Permission denied.");
         }
 
         @Override
@@ -167,13 +167,13 @@ public interface ObjectPermissionSet extends PermissionSet<ObjectPermission> {
         @Override
         public void addPermissions(Set<ObjectPermission> permissions)
                 throws GuacamoleException {
-            throw new GuacamoleSecurityException("Permission denied.");
+            throw new GuacamoleSecurityException("OPS_Permission denied.");
         }
 
         @Override
         public void removePermissions(Set<ObjectPermission> permissions)
                 throws GuacamoleException {
-            throw new GuacamoleSecurityException("Permission denied.");
+            throw new GuacamoleSecurityException("OPS_Permission denied.");
         }
 
     };
