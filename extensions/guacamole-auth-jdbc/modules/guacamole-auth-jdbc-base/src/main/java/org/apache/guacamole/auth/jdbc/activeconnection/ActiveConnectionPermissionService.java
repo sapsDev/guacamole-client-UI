@@ -108,7 +108,7 @@ public class ActiveConnectionPermissionService
             
         }
 
-        throw new GuacamoleSecurityException("Permission denied.");
+        throw new GuacamoleSecurityException("_Test_Permission denied.");
         
     }
 
