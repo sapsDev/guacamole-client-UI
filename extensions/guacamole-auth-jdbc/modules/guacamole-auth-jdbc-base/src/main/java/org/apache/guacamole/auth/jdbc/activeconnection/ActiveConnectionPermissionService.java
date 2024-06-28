@@ -89,13 +89,14 @@ public class ActiveConnectionPermissionService
             // Get all active connections
             Collection<ActiveConnectionRecord> records = tunnelService.getActiveConnections(user);
 
-            // We have READ, and possibly DELETE, on all active connections
+            // We have READ, UPDATE, and possibly DELETE, on all active connections
             Set<ObjectPermission> permissions = new HashSet<>();
             for (ActiveConnectionRecord record : records) {
 
-                // Add implicit READ
+                // Add implicit READ, UPDATE
                 String identifier = record.getUUID().toString();
                 permissions.add(new ObjectPermission(ObjectPermission.Type.READ, identifier));
+                permissions.add(new ObjectPermission(ObjectPermission.Type.UPDATE, identifier));
 
                 // If the target user is privileged, or the connection belongs
                 // to the target user, then they can DELETE
