@@ -151,6 +151,8 @@ public class ActiveConnectionService
     @Override
     public TrackedActiveConnection createObject(ModeledAuthenticatedUser user,
             ActiveConnection object){
+            
+            return null;
 
     }
 
