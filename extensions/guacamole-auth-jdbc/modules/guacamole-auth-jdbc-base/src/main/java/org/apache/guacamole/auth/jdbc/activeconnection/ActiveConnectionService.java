@@ -150,16 +150,19 @@ public class ActiveConnectionService
 
     @Override
     public TrackedActiveConnection createObject(ModeledAuthenticatedUser user,
-            ActiveConnection object){
-            
-            return null;
+            ActiveConnection object) throws GuacamoleException {
+
+        // Updating active connections is not implemented
+        throw new GuacamoleSecurityException("ACS_Permission denied.");
 
     }
 
     @Override
     public void updateObject(ModeledAuthenticatedUser user, TrackedActiveConnection object)
-    {
+            throws GuacamoleException {
 
+        // Updating active connections is not implemented
+        throw new GuacamoleSecurityException("ACS_Permission denied.");
     }
 
     /**
