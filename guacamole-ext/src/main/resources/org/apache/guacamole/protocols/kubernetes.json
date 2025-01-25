@@ -97,6 +97,22 @@
         },
 
         {
+            "name"  : "clipboard",
+            "fields" : [
+                {
+                    "name"    : "disable-copy",
+                    "type"    : "BOOLEAN",
+                    "options" : [ "true" ]
+                },
+                {
+                    "name"    : "disable-paste",
+                    "type"    : "BOOLEAN",
+                    "options" : [ "true" ]
+                }
+            ]
+        },
+
+        {
             "name" : "behavior",
             "fields" : [
                 {
@@ -120,6 +136,11 @@
                 },
                 {
                     "name"  : "create-typescript-path",
+                    "type"  : "BOOLEAN",
+                    "options" : [ "true" ]
+                },
+                {
+                    "name"  : "typescript-write-existing",
                     "type"  : "BOOLEAN",
                     "options" : [ "true" ]
                 }
@@ -154,6 +175,11 @@
                 },
                 {
                     "name"  : "create-recording-path",
+                    "type"  : "BOOLEAN",
+                    "options" : [ "true" ]
+                },
+                {
+                    "name"  : "recording-write-existing",
                     "type"  : "BOOLEAN",
                     "options" : [ "true" ]
                 }

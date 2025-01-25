@@ -12,6 +12,10 @@
                 {
                     "name"  : "port",
                     "type"  : "NUMERIC"
+                },
+                {
+                    "name"  : "timeout",
+                    "type"  : "NUMERIC"
                 }
             ]
         },
@@ -395,6 +399,11 @@
                     "name"  : "create-recording-path",
                     "type"  : "BOOLEAN",
                     "options" : [ "true" ]
+                },
+                {
+                    "name"  : "recording-write-existing",
+                    "type"  : "BOOLEAN",
+                    "options" : [ "true" ]
                 }
             ]
         },
@@ -416,6 +425,10 @@
                     "type"  : "NUMERIC"
                 },
                 {
+                    "name"  : "sftp-timeout",
+                    "type"  : "NUMERIC"
+                },
+                {
                     "name"  : "sftp-host-key",
                     "type"  : "TEXT"
                 },
@@ -434,6 +447,10 @@
                 {
                     "name"  : "sftp-passphrase",
                     "type"  : "PASSWORD"
+                },
+                {
+                    "name"  : "sftp-public-key",
+                    "type"  : "MULTILINE"
                 },
                 {
                     "name"  : "sftp-root-directory",
