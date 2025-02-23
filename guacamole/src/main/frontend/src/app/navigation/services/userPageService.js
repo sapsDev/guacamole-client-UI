@@ -86,6 +86,59 @@ angular.module('navigation').factory('userPageService', ['$injector',
     };
 
     /**
+     * Returns the watch page, if the user has administrator permissions
+     *
+     * @param {Object.<String, PermissionSet>} permissionSets
+     *     A map of all permissions granted to the current user, where each
+     *     key is the identifier of the corresponding data source.
+     *
+     * @returns {PageDefinition}
+     *     The user's watch page.
+     */
+    var generateWatchPage = function generateWatchPage(permissionSets) {
+        
+        var pages = [];
+        
+        var canWatchSessions = [];
+
+        // Inspect the contents of each provided permission set
+        angular.forEach(authenticationService.getAvailableDataSources(), function inspectPermissions(dataSource) {
+
+            // Get permissions for current data source, skipping if non-existent
+            var permissions = permissionSets[dataSource];
+            if (!permissions)
+                return;
+
+            // Do not modify original object
+            var systemPermissions = permissions.systemPermissions;
+            permissions = new PermissionSet();
+
+            // Add only system permissions
+            permissions.systemPermissions = angular.copy(systemPermissions);
+
+            // Determine whether the current user has administrator permissions
+            if (
+                // System permissions
+                PermissionSet.hasSystemPermission(permissions, PermissionSet.SystemPermissionType.ADMINISTER)
+            ) {
+                canWatchSessions.push(dataSource);
+            }
+
+            // If user hast administrator permissions, add link to watch page
+            if (canWatchSessions.length) {
+                pages.push(new PageDefinition({
+                    name : 'USER_MENU.ACTION_WATCH',
+                    url  : '/watch'
+                }));
+            }
+            console.log("[at generateWatchPage():systemPermissions] = " + systemPermissions);
+            console.log("[at generateWatchPage():pages] = " + pages);
+            return pages;
+            
+        });
+    }
+
+    /**
      * Adds to the given array all pages that the current user may use to
      * access connections or balancing groups that are descendants of the given
      * connection group.
@@ -411,6 +464,7 @@ angular.module('navigation').factory('userPageService', ['$injector',
 
         // Get home page and settings pages
         var homePage = generateHomePage(rootGroups, permissions);
+        var watchPage = generateWatchPage(permissions);
         var settingsPages = generateSettingsPages(permissions);
 
         // Only include the home page in the list of main pages if the user
@@ -426,6 +480,10 @@ angular.module('navigation').factory('userPageService', ['$injector',
             }));
         }
         
+        //Add watch page to the list of main pages
+        pages.push(watchPage);
+
+        console.log("[at generateMainPages():pages] = " + pages);
         return pages;
     };
 
