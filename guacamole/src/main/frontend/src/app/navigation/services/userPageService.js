@@ -100,7 +100,7 @@ angular.module('navigation').factory('userPageService', ['$injector',
         
         var pages = [];
         
-        var canWatchSessions = [];
+        var canWatchSessions = false;
 
         // Inspect the contents of each provided permission set
         angular.forEach(authenticationService.getAvailableDataSources(), function inspectPermissions(dataSource) {
@@ -125,13 +125,13 @@ angular.module('navigation').factory('userPageService', ['$injector',
                 // System permissions
                 PermissionSet.hasSystemPermission(permissions, PermissionSet.SystemPermissionType.ADMINISTER)
             ) {
-                canWatchSessions.push(dataSource);
+                canWatchSessions = true;
             }
             
         });
 
         // If user has administrator permissions, add link to watch page
-        if (canWatchSessions.length) {
+        if (canWatchSessions) {
             pages.push(new PageDefinition({
                 name : 'USER_MENU.ACTION_WATCH',
                 url  : '/watch'
