@@ -492,7 +492,9 @@ angular.module('navigation').factory('userPageService', ['$injector',
         //Add watch page to the list of main pages
         pages.push(watchPage);
 
-        console.log("[at generateMainPages():pages] = " + pages);
+        console.log("[at generateMainPages(): var pages] = ");
+        pages.forEach(obj => console.log(JSON.stringify(obj, null, 2)));
+        
         return pages;
     };
 
