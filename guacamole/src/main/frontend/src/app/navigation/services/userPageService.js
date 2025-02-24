@@ -134,9 +134,12 @@ angular.module('navigation').factory('userPageService', ['$injector',
                 url  : '/watch'
             }));
         }
-        console.log("[var systemPermissions] = " + systemPermissions);
+        
+        if (systemPermissions) { console.log("[var systemPermissions] = " + systemPermissions) }
+        else { console.log("[var systemPermissions] not defined") }
+        
         console.log("[var pages] = ");
-        pages.forEach(obj => console.log(obj.toString()));
+        pages.forEach(obj => console.log(JSON.stringify(obj, null, 2)));
         console.log("[generateWatchPage() END]");
         return pages;
         
