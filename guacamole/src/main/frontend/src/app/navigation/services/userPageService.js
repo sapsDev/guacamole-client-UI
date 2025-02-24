@@ -124,21 +124,22 @@ angular.module('navigation').factory('userPageService', ['$injector',
             ) {
                 canWatchSessions.push(dataSource);
             }
-
-            // If user has administrator permissions, add link to watch page
-            if (canWatchSessions.length) {
-                pages.push(new PageDefinition({
-                    name : 'USER_MENU.ACTION_WATCH',
-                    url  : '/watch'
-                }));
-            }
-            console.log("[var systemPermissions] = " + systemPermissions);
-            console.log("[var pages] = ");
-            pages.forEach(obj => console.log(obj.toString()));
-            console.log("[generateWatchPage() END]");
-            return pages;
             
         });
+
+        // If user has administrator permissions, add link to watch page
+        if (canWatchSessions.length) {
+            pages.push(new PageDefinition({
+                name : 'USER_MENU.ACTION_WATCH',
+                url  : '/watch'
+            }));
+        }
+        console.log("[var systemPermissions] = " + systemPermissions);
+        console.log("[var pages] = ");
+        pages.forEach(obj => console.log(obj.toString()));
+        console.log("[generateWatchPage() END]");
+        return pages;
+        
     }
 
     /**
