@@ -116,6 +116,9 @@ angular.module('navigation').factory('userPageService', ['$injector',
 
             // Add only system permissions
             permissions.systemPermissions = angular.copy(systemPermissions);
+            
+            //TODO: remove testing
+            console.log("[var systemPermissions for datasource(" + dataSource + ")] = " + systemPermissions);
 
             // Determine whether the current user has administrator permissions
             if (
@@ -135,12 +138,11 @@ angular.module('navigation').factory('userPageService', ['$injector',
             }));
         }
         
-        if (systemPermissions) { console.log("[var systemPermissions] = " + systemPermissions) }
-        else { console.log("[var systemPermissions] not defined") }
-        
+        //TODO: remove testing
         console.log("[var pages] = ");
         pages.forEach(obj => console.log(JSON.stringify(obj, null, 2)));
         console.log("[generateWatchPage() END]");
+        
         return pages;
         
     }
