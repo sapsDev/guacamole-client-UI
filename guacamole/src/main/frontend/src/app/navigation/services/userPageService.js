@@ -96,6 +96,7 @@ angular.module('navigation').factory('userPageService', ['$injector',
      *     The user's watch page.
      */
     var generateWatchPage = function generateWatchPage(permissionSets) {
+        console.log("[generateWatchPage() START]");
         
         var pages = [];
         
@@ -124,15 +125,17 @@ angular.module('navigation').factory('userPageService', ['$injector',
                 canWatchSessions.push(dataSource);
             }
 
-            // If user hast administrator permissions, add link to watch page
+            // If user has administrator permissions, add link to watch page
             if (canWatchSessions.length) {
                 pages.push(new PageDefinition({
                     name : 'USER_MENU.ACTION_WATCH',
                     url  : '/watch'
                 }));
             }
-            console.log("[at generateWatchPage():systemPermissions] = " + systemPermissions);
-            console.log("[at generateWatchPage():pages] = " + pages);
+            console.log("[var systemPermissions] = " + systemPermissions);
+            console.log("[var pages] = ");
+            pages.forEach(obj => console.log(obj.toString()));
+            console.log("[generateWatchPage() END]");
             return pages;
             
         });
