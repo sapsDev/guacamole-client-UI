@@ -52,6 +52,16 @@ angular.module('navigation').factory('userPageService', ['$injector',
     });
 
     /**
+     * The watch page to assign to a user if they have administrator permissions
+     *
+     * @type PageDefinition
+     */
+    var WATCH_PAGE = new PageDefinition({
+        name : 'USER_MENU.ACTION_WATCH',
+        url  : '/watch'
+    });
+
+    /**
      * Returns an appropriate home page for the current user.
      *
      * @param {Object.<String, ConnectionGroup>} rootGroups
@@ -96,9 +106,6 @@ angular.module('navigation').factory('userPageService', ['$injector',
      *     The user's watch page.
      */
     var generateWatchPage = function generateWatchPage(permissionSets) {
-        console.log("[generateWatchPage() START]");
-        
-        var pages = [];
         
         var canWatchSessions = false;
 
@@ -116,9 +123,6 @@ angular.module('navigation').factory('userPageService', ['$injector',
 
             // Add only system permissions
             permissions.systemPermissions = angular.copy(systemPermissions);
-            
-            //TODO: remove testing
-            console.log("[var systemPermissions for datasource(" + dataSource + ")] = " + systemPermissions);
 
             // Determine whether the current user has administrator permissions
             if (
@@ -130,20 +134,8 @@ angular.module('navigation').factory('userPageService', ['$injector',
             
         });
 
-        // If user has administrator permissions, add link to watch page
-        if (canWatchSessions) {
-            pages.push(new PageDefinition({
-                name : 'USER_MENU.ACTION_WATCH',
-                url  : '/watch'
-            }));
-        }
-        
-        //TODO: remove testing
-        console.log("[var pages] = ");
-        pages.forEach(obj => console.log(JSON.stringify(obj, null, 2)));
-        console.log("[generateWatchPage() END]");
-        
-        return pages;
+        // If user has administrator permissions, return watch page
+        return canWatchSessions ? WATCH_PAGE : undefined;
         
     }
 
