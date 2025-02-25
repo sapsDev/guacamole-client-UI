@@ -947,6 +947,15 @@
 
     },
 
+    "WATCH" : {
+
+        "FIELD_PLACEHOLDER_FILTER" : "@:APP.FIELD_PLACEHOLDER_FILTER",
+        "HELP_SESSIONS"            : "此页面将显示当前可加入的活动连接。",
+        "INFO_NO_SESSIONS"         : "没有可观看的会话",
+        "SECTION_HEADER_WATCH"     : "观看"
+
+    },
+
     "SETTINGS" : {
 
         "SECTION_HEADER_SETTINGS" : "设置"

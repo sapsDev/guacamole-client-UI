@@ -660,6 +660,15 @@
 
     },
 
+    "WATCH" : {
+
+        "FIELD_PLACEHOLDER_FILTER" : "@:APP.FIELD_PLACEHOLDER_FILTER",
+        "HELP_SESSIONS"            : "Эта страница будет заполнена активными соединениями, к которым можно присоединиться.",
+        "INFO_NO_SESSIONS"         : "Нет доступных сессий для просмотра",
+        "SECTION_HEADER_WATCH"     : "Смотреть"
+
+    },
+
     "SETTINGS" : {
 
         "SECTION_HEADER_SETTINGS" : "Настройки"

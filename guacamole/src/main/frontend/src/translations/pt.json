@@ -830,6 +830,15 @@
 
     },
 
+    "WATCH" : {
+
+        "FIELD_PLACEHOLDER_FILTER" : "@:APP.FIELD_PLACEHOLDER_FILTER",
+        "HELP_SESSIONS"            : "Esta página será preenchida com conexões ativas que podem ser acessadas.",
+        "INFO_NO_SESSIONS"         : "Nenhuma sessão disponível para assistir",
+        "SECTION_HEADER_WATCH"     : "Assistir"
+
+    },
+
     "SETTINGS" : {
 
         "SECTION_HEADER_SETTINGS" : "Configurações"

@@ -834,6 +834,15 @@
 
     },
 
+    "WATCH" : {
+
+        "FIELD_PLACEHOLDER_FILTER" : "@:APP.FIELD_PLACEHOLDER_FILTER",
+        "HELP_SESSIONS"            : "Esta página se llenará con conexiones activas actuales a las que se puede unir.",
+        "INFO_NO_SESSIONS"         : "No hay sesiones disponibles para ver",
+        "SECTION_HEADER_WATCH"     : "Ver"
+
+    },
+
     "SETTINGS" : {
 
         "SECTION_HEADER_SETTINGS" : "Configuraciones"

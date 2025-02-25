@@ -857,6 +857,15 @@
 
     },
 
+    "WATCH" : {
+
+        "FIELD_PLACEHOLDER_FILTER" : "@:APP.FIELD_PLACEHOLDER_FILTER",
+        "HELP_SESSIONS"            : "Aquesta pàgina s'omplirà amb connexions actives actuals a les quals es pot unir.",
+        "INFO_NO_SESSIONS"         : "No hi ha sessions visibles",
+        "SECTION_HEADER_WATCH"     : "Veure"
+
+    },
+
     "SETTINGS" : {
 
         "SECTION_HEADER_SETTINGS" : "Configuració"

@@ -809,6 +809,15 @@
 
     },
 
+    "WATCH" : {
+
+        "FIELD_PLACEHOLDER_FILTER" : "@:APP.FIELD_PLACEHOLDER_FILTER",
+        "HELP_SESSIONS"            : "이 페이지에는 현재 활성화된 연결이 표시되며, 참여할 수 있습니다.",
+        "INFO_NO_SESSIONS"         : "볼 수 있는 세션이 없습니다",
+        "SECTION_HEADER_WATCH"     : "보기"
+
+    },
+
     "SETTINGS" : {
 
         "SECTION_HEADER_SETTINGS" : "설정"

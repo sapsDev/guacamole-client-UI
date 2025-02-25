@@ -866,6 +866,15 @@
 
     },
 
+    "WATCH" : {
+
+        "FIELD_PLACEHOLDER_FILTER" : "@:APP.FIELD_PLACEHOLDER_FILTER",
+        "HELP_SESSIONS"            : "Ta strona zostanie wypełniona aktualnie aktywnymi połączeniami, do których można dołączyć.",
+        "INFO_NO_SESSIONS"         : "Brak dostępnych sesji do oglądania",
+        "SECTION_HEADER_WATCH"     : "Oglądać"
+
+    },
+
     "SETTINGS" : {
 
         "SECTION_HEADER_SETTINGS" : "Ustawienia"

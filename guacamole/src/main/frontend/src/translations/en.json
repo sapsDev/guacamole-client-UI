@@ -1013,6 +1013,15 @@
 
     },
 
+    "WATCH" : {
+        
+        "FIELD_PLACEHOLDER_FILTER"  : "@:APP.FIELD_PLACEHOLDER_FILTER",
+        "HELP_SESSIONS"             : "This page will be populated with currently-active connections that can be joined.",
+        "INFO_NO_SESSIONS"          : "No watchable sessions", 
+        "SECTION_HEADER_WATCH"      : "Watch"
+
+    },
+
     "SETTINGS" : {
 
         "SECTION_HEADER_SETTINGS" : "Settings"

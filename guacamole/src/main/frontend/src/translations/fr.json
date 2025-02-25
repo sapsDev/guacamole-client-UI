@@ -984,6 +984,15 @@
 
     },
 
+    "WATCH" : {
+
+        "FIELD_PLACEHOLDER_FILTER" : "@:APP.FIELD_PLACEHOLDER_FILTER",
+        "HELP_SESSIONS"            : "Cette page sera remplie avec des connexions actives actuellement disponibles.",
+        "INFO_NO_SESSIONS"         : "Aucune session à regarder",
+        "SECTION_HEADER_WATCH"     : "Regarder"
+
+    },
+
     "SETTINGS" : {
 
         "SECTION_HEADER_SETTINGS" : "Paramètres"

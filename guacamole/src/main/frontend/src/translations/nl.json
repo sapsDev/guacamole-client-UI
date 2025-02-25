@@ -544,6 +544,15 @@
 
     },
 
+    "WATCH" : {
+
+        "FIELD_PLACEHOLDER_FILTER" : "@:APP.FIELD_PLACEHOLDER_FILTER",
+        "HELP_SESSIONS"            : "Deze pagina wordt gevuld met actieve verbindingen die kunnen worden bekeken.",
+        "INFO_NO_SESSIONS"         : "Geen bekijkbare sessies",
+        "SECTION_HEADER_WATCH"     : "Bekijken"
+
+    },
+
     "SETTINGS" : {
 
         "SECTION_HEADER_SETTINGS" : "Instellingen"
