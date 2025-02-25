@@ -32,6 +32,7 @@
         "ACTION_UPDATE_PASSWORD"    : "Mettre à jour mot de passe",
         "ACTION_VIEW_HISTORY"       : "Historique",
         "ACTION_VIEW_RECORDING"     : "Voir",
+        "ACTION_WATCH"              : "Regarder",
 
         "DIALOG_HEADER_ERROR" : "Erreur",
 
@@ -1172,7 +1173,8 @@
         "ACTION_MANAGE_USERS"       : "@:APP.ACTION_MANAGE_USERS",
         "ACTION_MANAGE_USER_GROUPS" : "@:APP.ACTION_MANAGE_USER_GROUPS",
         "ACTION_NAVIGATE_HOME"      : "@:APP.ACTION_NAVIGATE_HOME",
-        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY"
+        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY",
+        "ACTION_WATCH"              : "@:APP.ACTION_WATCH"
 
     }
 

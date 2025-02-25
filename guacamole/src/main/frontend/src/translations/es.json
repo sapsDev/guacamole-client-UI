@@ -26,6 +26,7 @@
         "ACTION_SHARE"              : "Compartir",
         "ACTION_UPDATE_PASSWORD"    : "Actualizar Contraseña",
         "ACTION_VIEW_HISTORY"       : "Historial",
+        "ACTION_WATCH"              : "Ver",
 
         "DIALOG_HEADER_ERROR" : "Error",
 
@@ -1014,7 +1015,8 @@
         "ACTION_MANAGE_USERS"       : "@:APP.ACTION_MANAGE_USERS",
         "ACTION_MANAGE_USER_GROUPS" : "@:APP.ACTION_MANAGE_USER_GROUPS",
         "ACTION_NAVIGATE_HOME"      : "@:APP.ACTION_NAVIGATE_HOME",
-        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY"
+        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY",
+        "ACTION_WATCH"              : "@:APP.ACTION_WATCH"
 
     }
 

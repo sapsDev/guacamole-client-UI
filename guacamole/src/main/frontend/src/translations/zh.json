@@ -34,6 +34,7 @@
         "ACTION_UPDATE_PASSWORD"    : "更新密码",
         "ACTION_VIEW_HISTORY"       : "历史",
         "ACTION_VIEW_RECORDING"     : "查看",
+        "ACTION_WATCH"              : "觀賞",
 
         "DIALOG_HEADER_ERROR" : "错误",
 
@@ -1131,7 +1132,8 @@
         "ACTION_MANAGE_USERS"       : "@:APP.ACTION_MANAGE_USERS",
         "ACTION_MANAGE_USER_GROUPS" : "@:APP.ACTION_MANAGE_USER_GROUPS",
         "ACTION_NAVIGATE_HOME"      : "@:APP.ACTION_NAVIGATE_HOME",
-        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY"
+        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY",
+        "ACTION_WATCH"              : "@:APP.ACTION_WATCH"
 
     }
 

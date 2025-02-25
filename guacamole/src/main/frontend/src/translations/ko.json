@@ -26,6 +26,7 @@
         "ACTION_SHARE"              : "공유",
         "ACTION_UPDATE_PASSWORD"    : "패스워드 업데이트",
         "ACTION_VIEW_HISTORY"       : "히스토리",
+        "ACTION_WATCH"              : "시계",
 
         "DIALOG_HEADER_ERROR" : "에러",
 
@@ -989,7 +990,8 @@
         "ACTION_MANAGE_USERS"       : "@:APP.ACTION_MANAGE_USERS",
         "ACTION_MANAGE_USER_GROUPS" : "@:APP.ACTION_MANAGE_USER_GROUPS",
         "ACTION_NAVIGATE_HOME"      : "@:APP.ACTION_NAVIGATE_HOME",
-        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY"
+        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY",
+        "ACTION_WATCH"              : "@:APP.ACTION_WATCH"
 
     }
 

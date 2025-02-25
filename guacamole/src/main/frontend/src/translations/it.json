@@ -21,6 +21,7 @@
         "ACTION_NAVIGATE_HOME"      : "Home",
         "ACTION_SAVE"               : "Salva",
         "ACTION_UPDATE_PASSWORD"    : "Aggiorna Password",
+        "ACTION_WATCH"              : "Guarda",
 
         "DIALOG_HEADER_ERROR" : "Errore",
 
@@ -597,7 +598,8 @@
         "ACTION_MANAGE_SESSIONS"    : "@:APP.ACTION_MANAGE_SESSIONS",
         "ACTION_MANAGE_SETTINGS"    : "@:APP.ACTION_MANAGE_SETTINGS",
         "ACTION_MANAGE_USERS"       : "@:APP.ACTION_MANAGE_USERS",
-        "ACTION_NAVIGATE_HOME"      : "@:APP.ACTION_NAVIGATE_HOME"
+        "ACTION_NAVIGATE_HOME"      : "@:APP.ACTION_NAVIGATE_HOME",
+        "ACTION_WATCH"              : "@:APP.ACTION_WATCH"
 
     }
 

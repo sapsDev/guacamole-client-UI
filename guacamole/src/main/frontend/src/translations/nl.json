@@ -23,6 +23,7 @@
         "ACTION_SEARCH"             : "Zoeken",
         "ACTION_UPDATE_PASSWORD"    : "Wijzig Wachtwoord",
         "ACTION_VIEW_HISTORY"       : "Gebruikgeschiedenis",
+        "ACTION_WATCH"              : "Kijk op",
 
         "DIALOG_HEADER_ERROR" : "Fout",
 
@@ -685,7 +686,8 @@
         "ACTION_MANAGE_SETTINGS"    : "@:APP.ACTION_MANAGE_SETTINGS",
         "ACTION_MANAGE_USERS"       : "@:APP.ACTION_MANAGE_USERS",
         "ACTION_NAVIGATE_HOME"      : "@:APP.ACTION_NAVIGATE_HOME",
-        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY"
+        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY",
+        "ACTION_WATCH"              : "@:APP.ACTION_WATCH"
 
     }
 
