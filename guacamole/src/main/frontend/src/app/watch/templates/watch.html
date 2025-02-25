@@ -18,8 +18,24 @@
         <!-- List of current watchable sessions -->
         <table class="sorted session-list">
             <thead>
+                <tr>
+                    <th guac-sort-order="wrapperOrder" guac-sort-property="'username'">
+                        {{'WATCH.TABLE_HEADER_SESSION_USERNAME' | translate}}
+                    </th>
+                    <th guac-sort-order="wrapperOrder" guac-sort-property="'restriction'">
+                        {{'WATCH.TABLE_HEADER_SESSION_RESTRICTION' | translate}}
+                    </th>
+                    <th guac-sort-order="wrapperOrder" guac-sort-property="'link'">
+                        {{'WATCH.TABLE_HEADER_SESSION_LINK' | translate}}
+                    </th>
+                </tr>
             </thead>
             <tbody>
+                <tr ng-repeat="wrapper in wrapperPage" class="session">
+                    <td><guac-user-item username="wrapper.username"></guac-user-item></td>
+                    <td>{{wrapper.restriction}}</td>
+                    <td>{{wrapper.link}}</td>
+                </tr>
             </tbody>
         </table>
 
