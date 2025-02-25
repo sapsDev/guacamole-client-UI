@@ -950,9 +950,16 @@
     "WATCH" : {
 
         "FIELD_PLACEHOLDER_FILTER" : "@:APP.FIELD_PLACEHOLDER_FILTER",
-        "HELP_SESSIONS"            : "此页面将显示当前可加入的活动连接。",
-        "INFO_NO_SESSIONS"         : "没有可观看的会话",
-        "SECTION_HEADER_WATCH"     : "观看"
+        
+        "HELP_SESSIONS" : "此页面将显示当前可加入的活动连接。",
+        
+        "INFO_NO_SESSIONS" : "没有可观看的会话",
+        
+        "SECTION_HEADER_WATCH" : "观看",
+
+        "TABLE_HEADER_SESSION_LINK": "链接",
+        "TABLE_HEADER_SESSION_RESTRICTION": "限制",
+        "TABLE_HEADER_SESSION_USERNAME": "用户名"
 
     },
 

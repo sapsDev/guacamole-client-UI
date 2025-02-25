@@ -547,9 +547,16 @@
     "WATCH" : {
 
         "FIELD_PLACEHOLDER_FILTER" : "@:APP.FIELD_PLACEHOLDER_FILTER",
-        "HELP_SESSIONS"            : "Deze pagina wordt gevuld met actieve verbindingen die kunnen worden bekeken.",
-        "INFO_NO_SESSIONS"         : "Geen bekijkbare sessies",
-        "SECTION_HEADER_WATCH"     : "Bekijken"
+        
+        "HELP_SESSIONS" : "Deze pagina wordt gevuld met actieve verbindingen die kunnen worden bekeken.",
+        
+        "INFO_NO_SESSIONS" : "Geen bekijkbare sessies",
+        
+        "SECTION_HEADER_WATCH" : "Bekijken",
+
+        "TABLE_HEADER_SESSION_LINK"        : "Link",
+        "TABLE_HEADER_SESSION_RESTRICTION" : "Beperking",
+        "TABLE_HEADER_SESSION_USERNAME"    : "Gebruikersnaam"
 
     },
 

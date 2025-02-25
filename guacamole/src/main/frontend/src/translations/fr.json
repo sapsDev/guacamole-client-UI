@@ -987,9 +987,16 @@
     "WATCH" : {
 
         "FIELD_PLACEHOLDER_FILTER" : "@:APP.FIELD_PLACEHOLDER_FILTER",
-        "HELP_SESSIONS"            : "Cette page sera remplie avec des connexions actives actuellement disponibles.",
-        "INFO_NO_SESSIONS"         : "Aucune session à regarder",
-        "SECTION_HEADER_WATCH"     : "Regarder"
+        
+        "HELP_SESSIONS" : "Cette page sera remplie avec des connexions actives actuellement disponibles.",
+        
+        "INFO_NO_SESSIONS" : "Aucune session à regarder",
+        
+        "SECTION_HEADER_WATCH" : "Regarder",
+
+        "TABLE_HEADER_SESSION_LINK"        : "Lien",
+        "TABLE_HEADER_SESSION_RESTRICTION" : "Restriction",
+        "TABLE_HEADER_SESSION_USERNAME"    : "Nom d'utilisateur"
 
     },
 

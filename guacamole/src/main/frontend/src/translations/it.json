@@ -467,9 +467,16 @@
     "WATCH" : {
 
         "FIELD_PLACEHOLDER_FILTER" : "@:APP.FIELD_PLACEHOLDER_FILTER",
-        "HELP_SESSIONS"            : "Questa pagina verrà popolata con connessioni attive a cui è possibile unirsi.",
-        "INFO_NO_SESSIONS"         : "Nessuna sessione da guardare",
-        "SECTION_HEADER_WATCH"     : "Guarda"
+        
+        "HELP_SESSIONS" : "Questa pagina verrà popolata con connessioni attive a cui è possibile unirsi.",
+        
+        "INFO_NO_SESSIONS" : "Nessuna sessione da guardare",
+        
+        "SECTION_HEADER_WATCH" : "Guarda",
+
+        "TABLE_HEADER_SESSION_LINK"        : "Collegamento",
+        "TABLE_HEADER_SESSION_RESTRICTION" : "Restrizione",
+        "TABLE_HEADER_SESSION_USERNAME"    : "Nome utente"
 
     },
 

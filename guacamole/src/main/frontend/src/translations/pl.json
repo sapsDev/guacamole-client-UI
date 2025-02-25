@@ -869,9 +869,16 @@
     "WATCH" : {
 
         "FIELD_PLACEHOLDER_FILTER" : "@:APP.FIELD_PLACEHOLDER_FILTER",
-        "HELP_SESSIONS"            : "Ta strona zostanie wypełniona aktualnie aktywnymi połączeniami, do których można dołączyć.",
-        "INFO_NO_SESSIONS"         : "Brak dostępnych sesji do oglądania",
-        "SECTION_HEADER_WATCH"     : "Oglądać"
+        
+        "HELP_SESSIONS" : "Ta strona zostanie wypełniona aktualnie aktywnymi połączeniami, do których można dołączyć.",
+        
+        "INFO_NO_SESSIONS" : "Brak dostępnych sesji do oglądania",
+        
+        "SECTION_HEADER_WATCH" : "Oglądać",
+
+        "TABLE_HEADER_SESSION_LINK"        : "Link",
+        "TABLE_HEADER_SESSION_RESTRICTION" : "Ograniczenie",
+        "TABLE_HEADER_SESSION_USERNAME"    : "Nazwa użytkownika"
 
     },
 

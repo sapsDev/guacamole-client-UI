@@ -663,9 +663,16 @@
     "WATCH" : {
 
         "FIELD_PLACEHOLDER_FILTER" : "@:APP.FIELD_PLACEHOLDER_FILTER",
-        "HELP_SESSIONS"            : "Эта страница будет заполнена активными соединениями, к которым можно присоединиться.",
-        "INFO_NO_SESSIONS"         : "Нет доступных сессий для просмотра",
-        "SECTION_HEADER_WATCH"     : "Смотреть"
+        
+        "HELP_SESSIONS" : "Эта страница будет заполнена активными соединениями, к которым можно присоединиться.",
+        
+        "INFO_NO_SESSIONS" : "Нет доступных сессий для просмотра",
+        
+        "SECTION_HEADER_WATCH" : "Смотреть",
+
+        "TABLE_HEADER_SESSION_LINK"        : "Ссылка",
+        "TABLE_HEADER_SESSION_RESTRICTION" : "Ограничение",
+        "TABLE_HEADER_SESSION_USERNAME"    : "Имя пользователя"
 
     },
 

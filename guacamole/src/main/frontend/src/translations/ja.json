@@ -666,9 +666,16 @@
     "WATCH" : {
 
         "FIELD_PLACEHOLDER_FILTER" : "@:APP.FIELD_PLACEHOLDER_FILTER",
-        "HELP_SESSIONS"            : "このページには現在アクティブな接続が表示され、参加できます。",
-        "INFO_NO_SESSIONS"         : "視聴可能なセッションはありません",
-        "SECTION_HEADER_WATCH"     : "視聴する"
+        
+        "HELP_SESSIONS" : "このページには現在アクティブな接続が表示され、参加できます。",
+        
+        "INFO_NO_SESSIONS" : "視聴可能なセッションはありません",
+        
+        "SECTION_HEADER_WATCH" : "視聴する",
+
+        "TABLE_HEADER_SESSION_LINK"        : "リンク",
+        "TABLE_HEADER_SESSION_RESTRICTION" : "制限",
+        "TABLE_HEADER_SESSION_USERNAME"    : "ユーザー名"
 
     },
 

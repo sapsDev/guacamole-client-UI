@@ -528,9 +528,16 @@
     "WATCH" : {
 
         "FIELD_PLACEHOLDER_FILTER" : "@:APP.FIELD_PLACEHOLDER_FILTER",
-        "HELP_SESSIONS"            : "Denne siden vil bli fylt med aktive tilkoblinger som kan bli med på.",
-        "INFO_NO_SESSIONS"         : "Ingen tilgjengelige økter å se",
-        "SECTION_HEADER_WATCH"     : "Se"
+        
+        "HELP_SESSIONS" : "Denne siden vil bli fylt med aktive tilkoblinger som kan bli med på.",
+        
+        "INFO_NO_SESSIONS" : "Ingen tilgjengelige økter å se",
+        
+        "SECTION_HEADER_WATCH" : "Se",
+
+        "TABLE_HEADER_SESSION_LINK"        : "Lenke",
+        "TABLE_HEADER_SESSION_RESTRICTION" : "Begrensning",
+        "TABLE_HEADER_SESSION_USERNAME"    : "Brukernavn"
 
     },
 

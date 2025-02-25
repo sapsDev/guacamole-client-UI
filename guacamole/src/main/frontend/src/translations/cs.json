@@ -953,9 +953,16 @@
     "WATCH" : {
 
         "FIELD_PLACEHOLDER_FILTER" : "@:APP.FIELD_PLACEHOLDER_FILTER",
-        "HELP_SESSIONS"            : "Tato stránka bude naplněna aktuálně aktivními připojeními, ke kterým se lze připojit.",
-        "INFO_NO_SESSIONS"         : "Žádné sledovatelné relace",
-        "SECTION_HEADER_WATCH"     : "Sledovat"
+        
+        "HELP_SESSIONS" : "Tato stránka bude naplněna aktuálně aktivními připojeními, ke kterým se lze připojit.",
+        
+        "INFO_NO_SESSIONS" : "Žádné sledovatelné relace",
+        
+        "SECTION_HEADER_WATCH" : "Sledovat",
+
+        "TABLE_HEADER_SESSION_LINK"        : "Odkaz",
+        "TABLE_HEADER_SESSION_RESTRICTION" : "Omezení",
+        "TABLE_HEADER_SESSION_USERNAME"    : "Uživatelské jméno"
 
     },
 
