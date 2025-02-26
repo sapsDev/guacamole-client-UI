@@ -485,9 +485,6 @@ angular.module('navigation').factory('userPageService', ['$injector',
         if (watchPage) {
             pages.push(watchPage);
         }
-
-        console.log("[at generateMainPages(): var pages] = ");
-        pages.forEach(obj => console.log(JSON.stringify(obj, null, 2)));
         
         return pages;
     };
