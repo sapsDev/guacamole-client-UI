@@ -1,0 +1,43 @@
+<div class="watch section sessions" ng-class="{loading: !isLoaded()}">
+
+    <!-- Session management -->
+    <p>{{'WATCH.HELP_SESSIONS' | translate}}</p>
+
+    <!-- Session filter -->
+    <guac-filter filtered-items="filteredWrappers" items="wrappers"
+                 placeholder="'WATCH.FIELD_PLACEHOLDER_FILTER' | translate"
+                 properties="filteredWrapperProperties"></guac-filter>
+
+    <!-- List of current watchable sessions -->
+    <table class="sorted session-list">
+        <thead>
+        <tr>
+            <th guac-sort-order="wrapperOrder" guac-sort-property="'username'">
+                {{'WATCH.TABLE_HEADER_SESSION_USERNAME' | translate}}
+            </th>
+            <th guac-sort-order="wrapperOrder" guac-sort-property="'restriction'">
+                {{'WATCH.TABLE_HEADER_SESSION_RESTRICTION' | translate}}
+            </th>
+            <th guac-sort-order="wrapperOrder" guac-sort-property="'link'">
+                {{'WATCH.TABLE_HEADER_SESSION_LINK' | translate}}
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="wrapper in wrapperPage" class="session">
+            <td><guac-user-item username="wrapper.username"></guac-user-item></td>
+            <td>{{wrapper.restriction}}</td>
+            <td>{{wrapper.link}}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <!-- Text displayed if no watchable sessions exist -->
+    <p class="placeholder" ng-hide="wrapperPage.length">
+        {{'WATCH.INFO_NO_SESSIONS' | translate}}
+    </p>
+
+    <!-- Pager for session list -->
+    <guac-pager page="wrapperPage" page-size="25"
+                items="filteredWrappers | orderBy : wrapperOrder.predicate"></guac-pager>
+</div>
