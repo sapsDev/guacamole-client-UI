@@ -156,7 +156,7 @@ angular.module('index').config(['$routeProvider', '$locationProvider',
         .when('/watch', {
             title         : 'APP.NAME',
             bodyClassName : 'watch',
-            templateUrl   : 'app/watch/templates/watch.html',
+            templateUrl   : 'app/watch/templates/watchSession.html',
             resolve       : { updateCurrentToken: updateCurrentToken }
         })
 
