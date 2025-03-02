@@ -153,10 +153,11 @@ angular.module('index').config(['$routeProvider', '$locationProvider',
         })
         
         // Watch screen
-        .when('/watch', {
+        .when('/watch/:tab', {
             title         : 'APP.NAME',
             bodyClassName : 'watch',
-            templateUrl   : 'app/watch/templates/watchSessions.html',
+            templateUrl   : 'app/watch/templates/watch.html',
+            controller    : 'watchController',
             resolve       : { updateCurrentToken: updateCurrentToken }
         })
 
