@@ -52,16 +52,6 @@ angular.module('navigation').factory('userPageService', ['$injector',
     });
 
     /**
-     * The watch page to assign to a user if they have administrator permissions
-     *
-     * @type PageDefinition
-     */
-    var WATCH_PAGE = new PageDefinition({
-        name : 'USER_MENU.ACTION_WATCH',
-        url  : '/watch'
-    });
-
-    /**
      * Returns an appropriate home page for the current user.
      *
      * @param {Object.<String, ConnectionGroup>} rootGroups
@@ -96,17 +86,19 @@ angular.module('navigation').factory('userPageService', ['$injector',
     };
 
     /**
-     * Returns the watch page, if the user has administrator permissions
+     * Returns all settings pages that the current user can visit. At the 
+     * moment there is only one watch page available: 'sessions'
      *
      * @param {Object.<String, PermissionSet>} permissionSets
      *     A map of all permissions granted to the current user, where each
      *     key is the identifier of the corresponding data source.
      *
-     * @returns {PageDefinition}
-     *     The user's watch page.
+     * @returns {Page[]}
+     *     An array of all settings pages that the current user can visit.
      */
-    var generateWatchPage = function generateWatchPage(permissionSets) {
+    var generateWatchPages = function generateWatchPages(permissionSets) {
         
+        var pages = [];
         var canWatchSessions = false;
 
         // Inspect the contents of each provided permission set
@@ -134,10 +126,45 @@ angular.module('navigation').factory('userPageService', ['$injector',
             
         });
 
-        // If user has administrator permissions, return watch page
-        return canWatchSessions ? WATCH_PAGE : undefined;
+        // If user can watch sessions, add link to watch page
+        if (canWatchSessions.length) {
+            pages.push(new PageDefinition({
+                name : 'USER_MENU.ACTION_WATCH_SESSIONS',
+                url  : '/watch/sessions'
+            }));
+        }
         
-    }
+        return pages;
+    };
+
+    /**
+     * Returns a promise which resolves to an array of all watch pages that
+     * the current user can visit. At the moment there is only one watch 
+     * page available: 'sessions'
+     *
+     * @returns {Promise.<Page[]>}
+     *     A promise which resolves to an array of all watch pages that the
+     *     current user can visit.
+     */
+    service.getWatchPages = function getWatchPages() {
+
+        var deferred = $q.defer();
+
+        // Retrieve current permissions
+        dataSourceService.apply(
+            permissionService.getEffectivePermissions,
+            authenticationService.getAvailableDataSources(),
+            authenticationService.getCurrentUsername()
+        )
+            
+        // Resolve promise using watch pages derived from permissions
+        .then(function permissionsRetrieved(permissions) {
+            deferred.resolve(generateWatchPages(permissions));
+        }, requestService.DIE);
+
+        return deferred.promise;
+
+    };
 
     /**
      * Adds to the given array all pages that the current user may use to
@@ -465,7 +492,7 @@ angular.module('navigation').factory('userPageService', ['$injector',
 
         // Get home page and settings pages
         var homePage = generateHomePage(rootGroups, permissions);
-        var watchPage = generateWatchPage(permissions);
+        var watchPages = generateWatchPages(permissions);
         var settingsPages = generateSettingsPages(permissions);
 
         // Only include the home page in the list of main pages if the user
@@ -480,10 +507,13 @@ angular.module('navigation').factory('userPageService', ['$injector',
                 url  : settingsPages[0].url
             }));
         }
-        
-        //Add watch page to the list of main pages
-        if (watchPage) {
-            pages.push(watchPage);
+
+        // Add generic link to the first-available watch page
+        if (watchPages.length) {
+            pages.push(new PageDefinition({
+                name : 'USER_MENU.ACTION_WATCH',
+                url  : watchPages[0].url
+            }));
         }
         
         return pages;
