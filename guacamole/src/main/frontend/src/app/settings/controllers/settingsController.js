@@ -47,9 +47,6 @@ angular.module('settings').controller('settingsController', ['$scope', '$injecto
     userPageService.getSettingsPages()
     .then(function settingsPagesRetrieved(pages) {
         $scope.settingsPages = pages;
-        console.log("[settingsController | var pages: ]")
-        pages.forEach(obj => console.log(JSON.stringify(obj, null, 2)));
-        console.log("[settingsController | var activeTab: ]" + $scope.activeTab);
     });
 
 }]);
