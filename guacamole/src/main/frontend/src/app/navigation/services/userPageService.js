@@ -127,7 +127,7 @@ angular.module('navigation').factory('userPageService', ['$injector',
         });
 
         // If user can watch sessions, add link to watch page
-        if (canWatchSessions.length) {
+        if (canWatchSessions) {
             pages.push(new PageDefinition({
                 name : 'USER_MENU.ACTION_WATCH_SESSIONS',
                 url  : '/watch/sessions'
