@@ -42,6 +42,7 @@ angular.module('index', [
     'notification',
     'rest',
     'settings',
+    'watch',
 
     'templates-main'
 
