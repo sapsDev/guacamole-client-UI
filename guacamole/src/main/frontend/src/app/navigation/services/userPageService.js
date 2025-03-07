@@ -515,6 +515,9 @@ angular.module('navigation').factory('userPageService', ['$injector',
                 url  : watchPages[0].url
             }));
         }
+
+        console.log("[generateMainPages | var pages:]");
+        pages.forEach(obj => console.log(JSON.stringify(obj, null, 2)));
         
         return pages;
     };
