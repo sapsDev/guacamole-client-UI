@@ -47,6 +47,9 @@ angular.module('watch').controller('watchController', ['$scope', '$injector',
     userPageService.getWatchPages()
     .then(function watchPagesRetrieved(pages) {
         $scope.watchPages = pages;
+        console.log("[settingsController | var pages: ]")
+        pages.forEach(obj => console.log(JSON.stringify(obj, null, 2)));
+        console.log("[settingsController | var activeTab: ]" + $scope.activeTab);
     });
     
 }]);
