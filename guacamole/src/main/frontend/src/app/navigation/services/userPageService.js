@@ -133,10 +133,6 @@ angular.module('navigation').factory('userPageService', ['$injector',
                 url  : '/watch/sessions'
             }));
         }
-
-        console.log("[generateWatchPages() | var canWatchSessions:] " + canWatchSessions);
-        console.log("[generateWatchPages() | var pages:]");
-        pages.forEach(obj => console.log(JSON.stringify(obj, null, 2)));
         
         return pages;
     };
@@ -519,9 +515,6 @@ angular.module('navigation').factory('userPageService', ['$injector',
                 url  : watchPages[0].url
             }));
         }
-
-        console.log("[generateMainPages | var pages:]");
-        pages.forEach(obj => console.log(JSON.stringify(obj, null, 2)));
         
         return pages;
     };
