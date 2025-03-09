@@ -124,20 +124,24 @@ angular.module('watch').directive('guacWatchSessions', [function guacWatchSessio
             };
 
             // TODO: Remove Test
-            // Query watchable sessions
+            // Retrieve all watchable sessions
             dataSourceService.apply(
                 watchSessionService.getWatchSessionsTest,
                 dataSources
             )
-                .then(function sessionsRetrieved(retrievedWatchSessions) {
+            .then(function sessionsRetrieved(retrievedWatchSessions) {
 
-                    // Store received map of watchable sessions
-                    allWatchSessions = retrievedWatchSessions;
+                // Store received map of watchable sessions
+                allWatchSessions = retrievedWatchSessions;
+                
+                // TODO: Remove Test
+                console.log("sessionsRetrieved called");
+                console.log("var retrievedWatchSessions = " + JSON.stringify(allWatchSessions));
 
-                    // Attempt to produce wrapped list of watchable sessions
-                    wrapAllWatchableSessions();
+                // Attempt to produce wrapped list of watchable sessions
+                wrapAllWatchableSessions();
 
-                }, requestService.DIE);
+            }, requestService.DIE);
 
             /**
              * Returns whether critical data has completed being loaded.
