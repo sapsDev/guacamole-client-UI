@@ -109,7 +109,7 @@ angular.module('watch').directive('guacWatchSessions', [function guacWatchSessio
                     angular.forEach(watchSessions, function wrapWatchSession(watchSession, identifier) {
 
                         // Add wrapper
-                        if (watchableSession.username !== null) {
+                        if (watchSession.username !== null) {
                             $scope.wrappers.push(new WatchSessionWrapper({
                                 dataSource       : dataSource,
                                 username         : watchSession.username,
