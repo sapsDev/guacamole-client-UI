@@ -27,6 +27,9 @@ angular.module('rest').factory('watchSessionService', ['$injector',
         var requestService        = $injector.get('requestService');
         var authenticationService = $injector.get('authenticationService');
 
+        // Required types
+        var WatchSession = $injector.get('WatchSession');
+
         var service = {};
         
         service.getWatchSessionsTest = function getWatchSessionsTest() {
