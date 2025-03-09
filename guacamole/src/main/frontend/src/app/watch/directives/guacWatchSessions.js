@@ -149,9 +149,6 @@ angular.module('watch').directive('guacWatchSessions', [function guacWatchSessio
             $scope.isLoaded = function isLoaded() {
                 return $scope.wrappers !== null;
             };
-            
-            console.log("isLoaded: " + $scope.isLoaded());
-
 
         }]
     };
