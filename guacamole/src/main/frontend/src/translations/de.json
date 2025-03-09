@@ -945,7 +945,7 @@
 
         "FIELD_PLACEHOLDER_FILTER" : "@:APP.FIELD_PLACEHOLDER_FILTER",
         
-        "HELP_SESSIONS" : "Diese Seite wird mit aktuell aktiven Verbindungen gefüllt, die beigetreten werden können.",
+        "HELP_SESSIONS" : "Diese Seite wird mit aktuell aktiven Verbindungen gefüllt, denen beigetreten werden kann.",
         
         "INFO_NO_SESSIONS" : "Keine beobachtbaren Sitzungen",
         
