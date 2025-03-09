@@ -27,7 +27,7 @@
         <tr ng-repeat="wrapper in wrapperPage" class="session">
             <td><guac-user-item username="wrapper.username"></guac-user-item></td>
             <td>{{wrapper.restriction}}</td>
-            <td>{{wrapper.link}}</td>
+            <td><a ng-href="{{wrapper.link}}">{{wrapper.link}}</a></td>
         </tr>
         </tbody>
     </table>
