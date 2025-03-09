@@ -32,9 +32,9 @@ angular.module('rest').factory('watchSessionService', ['$injector',
 
         var service = {};
         
-        service.getWatchSessionsTest = function getWatchSessionsTest() {
+        service.getWatchSessionsTest = function getWatchSessionsTest(dataSource) {
 
-            testInput = Promise.resolve({
+            let testInputSql = Promise.resolve({
                 "session1": new WatchSession({
                     identifier: "abc123",
                     username: "testuser1",
@@ -42,14 +42,33 @@ angular.module('rest').factory('watchSessionService', ['$injector',
                     link: "https://google.com"
                 }),
                 "session2": new WatchSession({
-                    identifier: "xyz789",
+                    identifier: "abc456",
                     username: "testuser2",
                     restriction: false,
                     link: "https://youtube.com"
                 })
             });
+
+            let testInputSqlShared = Promise.resolve({
+                "session3": new WatchSession({
+                    identifier: "xyz123",
+                    username: "testuser3",
+                    restriction: true,
+                    link: "https://instagram.com"
+                }),
+                "session4": new WatchSession({
+                    identifier: "xyz456",
+                    username: "testuser4",
+                    restriction: false,
+                    link: "https://github.com"
+                })
+            });
             
-            return testInput;
+            if (dataSource === "mysql") {
+                return testInputSql;
+            } else {
+                return testInputSqlShared;
+            }
 
         };
 
