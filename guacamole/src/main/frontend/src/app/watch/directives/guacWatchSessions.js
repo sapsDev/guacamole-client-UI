@@ -133,10 +133,6 @@ angular.module('watch').directive('guacWatchSessions', [function guacWatchSessio
 
                 // Store received map of watchable sessions
                 allWatchSessions = retrievedWatchSessions;
-                
-                // TODO: Remove Test
-                console.log("sessionsRetrieved called");
-                console.log("var retrievedWatchSessions = " + JSON.stringify(allWatchSessions));
 
                 // Attempt to produce wrapped list of watchable sessions
                 wrapAllWatchableSessions();
