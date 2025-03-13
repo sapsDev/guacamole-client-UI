@@ -32,6 +32,7 @@
         "ACTION_UPDATE_PASSWORD"    : "Passwort aktualisieren",
         "ACTION_VIEW_HISTORY"       : "Verlauf",
         "ACTION_VIEW_RECORDING"     : "Ansicht",
+        "ACTION_WATCH"              : "Zusehen",
 
         "DIALOG_HEADER_ERROR" : "Fehler",
 
@@ -940,6 +941,22 @@
 
     },
 
+    "WATCH" : {
+
+        "FIELD_PLACEHOLDER_FILTER" : "@:APP.FIELD_PLACEHOLDER_FILTER",
+        
+        "HELP_SESSIONS" : "Diese Seite wird mit aktuell aktiven Verbindungen gefüllt, denen beigetreten werden kann.",
+        
+        "INFO_NO_SESSIONS" : "Keine beobachtbaren Sitzungen",
+        
+        "SECTION_HEADER_WATCH" : "Zusehen",
+
+        "TABLE_HEADER_SESSION_LINK"        : "Link",
+        "TABLE_HEADER_SESSION_RESTRICTION" : "Einschränkung",
+        "TABLE_HEADER_SESSION_USERNAME"    : "Benutzername"
+
+    },
+
     "SETTINGS" : {
 
         "SECTION_HEADER_SETTINGS" : "Einstellungen"
@@ -1125,7 +1142,8 @@
         "ACTION_MANAGE_USERS"       : "@:APP.ACTION_MANAGE_USERS",
         "ACTION_MANAGE_USER_GROUPS" : "@:APP.ACTION_MANAGE_USER_GROUPS",
         "ACTION_NAVIGATE_HOME"      : "@:APP.ACTION_NAVIGATE_HOME",
-        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY"
+        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY",
+        "ACTION_WATCH"              : "@:APP.ACTION_WATCH"
 
     }
 

@@ -34,6 +34,7 @@
         "ACTION_UPDATE_PASSWORD"    : "更新密码",
         "ACTION_VIEW_HISTORY"       : "历史",
         "ACTION_VIEW_RECORDING"     : "查看",
+        "ACTION_WATCH"              : "觀賞",
 
         "DIALOG_HEADER_ERROR" : "错误",
 
@@ -946,6 +947,22 @@
 
     },
 
+    "WATCH" : {
+
+        "FIELD_PLACEHOLDER_FILTER" : "@:APP.FIELD_PLACEHOLDER_FILTER",
+        
+        "HELP_SESSIONS" : "此页面将显示当前可加入的活动连接。",
+        
+        "INFO_NO_SESSIONS" : "没有可观看的会话",
+        
+        "SECTION_HEADER_WATCH" : "观看",
+
+        "TABLE_HEADER_SESSION_LINK": "链接",
+        "TABLE_HEADER_SESSION_RESTRICTION": "限制",
+        "TABLE_HEADER_SESSION_USERNAME": "用户名"
+
+    },
+
     "SETTINGS" : {
 
         "SECTION_HEADER_SETTINGS" : "设置"
@@ -1131,7 +1148,8 @@
         "ACTION_MANAGE_USERS"       : "@:APP.ACTION_MANAGE_USERS",
         "ACTION_MANAGE_USER_GROUPS" : "@:APP.ACTION_MANAGE_USER_GROUPS",
         "ACTION_NAVIGATE_HOME"      : "@:APP.ACTION_NAVIGATE_HOME",
-        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY"
+        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY",
+        "ACTION_WATCH"              : "@:APP.ACTION_WATCH"
 
     }
 

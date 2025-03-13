@@ -26,6 +26,7 @@
         "ACTION_SHARE"              : "Расшарить",
         "ACTION_UPDATE_PASSWORD"    : "Обновить пароль",
         "ACTION_VIEW_HISTORY"       : "История",
+        "ACTION_WATCH"              : "Смотреть",
 
         "DIALOG_HEADER_ERROR" : "Ошибка",
 
@@ -659,6 +660,22 @@
 
     },
 
+    "WATCH" : {
+
+        "FIELD_PLACEHOLDER_FILTER" : "@:APP.FIELD_PLACEHOLDER_FILTER",
+        
+        "HELP_SESSIONS" : "Эта страница будет заполнена активными соединениями, к которым можно присоединиться.",
+        
+        "INFO_NO_SESSIONS" : "Нет доступных сессий для просмотра",
+        
+        "SECTION_HEADER_WATCH" : "Смотреть",
+
+        "TABLE_HEADER_SESSION_LINK"        : "Ссылка",
+        "TABLE_HEADER_SESSION_RESTRICTION" : "Ограничение",
+        "TABLE_HEADER_SESSION_USERNAME"    : "Имя пользователя"
+
+    },
+
     "SETTINGS" : {
 
         "SECTION_HEADER_SETTINGS" : "Настройки"
@@ -837,7 +854,8 @@
         "ACTION_MANAGE_USERS"       : "@:APP.ACTION_MANAGE_USERS",
         "ACTION_MANAGE_USER_GROUPS" : "@:APP.ACTION_MANAGE_USER_GROUPS",
         "ACTION_NAVIGATE_HOME"      : "@:APP.ACTION_NAVIGATE_HOME",
-        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY"
+        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY",
+        "ACTION_WATCH"              : "@:APP.ACTION_WATCH"
 
     }
 

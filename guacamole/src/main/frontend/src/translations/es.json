@@ -26,6 +26,7 @@
         "ACTION_SHARE"              : "Compartir",
         "ACTION_UPDATE_PASSWORD"    : "Actualizar Contraseña",
         "ACTION_VIEW_HISTORY"       : "Historial",
+        "ACTION_WATCH"              : "Ver",
 
         "DIALOG_HEADER_ERROR" : "Error",
 
@@ -833,6 +834,22 @@
 
     },
 
+    "WATCH" : {
+
+        "FIELD_PLACEHOLDER_FILTER" : "@:APP.FIELD_PLACEHOLDER_FILTER",
+        
+        "HELP_SESSIONS" : "Esta página se llenará con conexiones activas actuales a las que se puede unir.",
+        
+        "INFO_NO_SESSIONS" : "No hay sesiones disponibles para ver",
+        
+        "SECTION_HEADER_WATCH" : "Ver",
+
+        "TABLE_HEADER_SESSION_LINK"        : "Enlace",
+        "TABLE_HEADER_SESSION_RESTRICTION" : "Restricción",
+        "TABLE_HEADER_SESSION_USERNAME"    : "Nombre de usuario"
+
+    },
+
     "SETTINGS" : {
 
         "SECTION_HEADER_SETTINGS" : "Configuraciones"
@@ -1014,7 +1031,8 @@
         "ACTION_MANAGE_USERS"       : "@:APP.ACTION_MANAGE_USERS",
         "ACTION_MANAGE_USER_GROUPS" : "@:APP.ACTION_MANAGE_USER_GROUPS",
         "ACTION_NAVIGATE_HOME"      : "@:APP.ACTION_NAVIGATE_HOME",
-        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY"
+        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY",
+        "ACTION_WATCH"              : "@:APP.ACTION_WATCH"
 
     }
 

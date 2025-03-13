@@ -17,39 +17,11 @@
  * under the License.
  */
 
-require('angular-module-shim.js');
-require('relocateParameters.js');
-
-require('angular-translate-interpolation-messageformat');
-require('angular-translate-loader-static-files');
-
 /**
- * The module for the root of the application.
+ * The module to join and watch sessions. Users must 
+ * allow this in advance and can set access restrictions.
  */
-angular.module('index', [
-
-    require('angular-route'),
-    require('angular-translate'),
-
-    'auth',
-    'client',
-    'clipboard',
-    'home',
-    'import',
-    'login',
-    'manage',
-    'navigation',
-    'notification',
+angular.module('watch', [
+    'list',
     'rest',
-    'settings',
-    'watch',
-
-    'templates-main'
-
 ]);
-
-// Recursively pull in all other JavaScript and CSS files as requirements (just
-// like old minify-maven-plugin build)
-const context = require.context('../', true, /.*\.(css|js)$/);
-context.keys().forEach(key => context(key));
-

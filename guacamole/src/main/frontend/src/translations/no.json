@@ -23,6 +23,7 @@
         "ACTION_SEARCH"             : "Søk",
         "ACTION_UPDATE_PASSWORD"    : "Oppdater Passord",
         "ACTION_VIEW_HISTORY"       : "Historie",
+        "ACTION_WATCH"              : "Se på",
 
         "DIALOG_HEADER_ERROR" : "Feil",
 
@@ -524,6 +525,22 @@
 
     },
 
+    "WATCH" : {
+
+        "FIELD_PLACEHOLDER_FILTER" : "@:APP.FIELD_PLACEHOLDER_FILTER",
+        
+        "HELP_SESSIONS" : "Denne siden vil bli fylt med aktive tilkoblinger som kan bli med på.",
+        
+        "INFO_NO_SESSIONS" : "Ingen tilgjengelige økter å se",
+        
+        "SECTION_HEADER_WATCH" : "Se",
+
+        "TABLE_HEADER_SESSION_LINK"        : "Lenke",
+        "TABLE_HEADER_SESSION_RESTRICTION" : "Begrensning",
+        "TABLE_HEADER_SESSION_USERNAME"    : "Brukernavn"
+
+    },
+
     "SETTINGS" : {
 
         "SECTION_HEADER_SETTINGS" : "Innstillinger"
@@ -666,7 +683,8 @@
         "ACTION_MANAGE_SETTINGS"    : "@:APP.ACTION_MANAGE_SETTINGS",
         "ACTION_MANAGE_USERS"       : "@:APP.ACTION_MANAGE_USERS",
         "ACTION_NAVIGATE_HOME"      : "@:APP.ACTION_NAVIGATE_HOME",
-        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY"
+        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY",
+        "ACTION_WATCH"              : "@:APP.ACTION_WATCH"
 
     }
 

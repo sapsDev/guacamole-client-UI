@@ -32,6 +32,7 @@
         "ACTION_UPDATE_PASSWORD"    : "Mettre à jour mot de passe",
         "ACTION_VIEW_HISTORY"       : "Historique",
         "ACTION_VIEW_RECORDING"     : "Voir",
+        "ACTION_WATCH"              : "Regarder",
 
         "DIALOG_HEADER_ERROR" : "Erreur",
 
@@ -983,6 +984,22 @@
 
     },
 
+    "WATCH" : {
+
+        "FIELD_PLACEHOLDER_FILTER" : "@:APP.FIELD_PLACEHOLDER_FILTER",
+        
+        "HELP_SESSIONS" : "Cette page sera remplie avec des connexions actives actuellement disponibles.",
+        
+        "INFO_NO_SESSIONS" : "Aucune session à regarder",
+        
+        "SECTION_HEADER_WATCH" : "Regarder",
+
+        "TABLE_HEADER_SESSION_LINK"        : "Lien",
+        "TABLE_HEADER_SESSION_RESTRICTION" : "Restriction",
+        "TABLE_HEADER_SESSION_USERNAME"    : "Nom d'utilisateur"
+
+    },
+
     "SETTINGS" : {
 
         "SECTION_HEADER_SETTINGS" : "Paramètres"
@@ -1172,7 +1189,8 @@
         "ACTION_MANAGE_USERS"       : "@:APP.ACTION_MANAGE_USERS",
         "ACTION_MANAGE_USER_GROUPS" : "@:APP.ACTION_MANAGE_USER_GROUPS",
         "ACTION_NAVIGATE_HOME"      : "@:APP.ACTION_NAVIGATE_HOME",
-        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY"
+        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY",
+        "ACTION_WATCH"              : "@:APP.ACTION_WATCH"
 
     }
 

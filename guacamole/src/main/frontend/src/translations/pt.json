@@ -26,6 +26,7 @@
         "ACTION_SHARE"              : "Compartilhar",
         "ACTION_UPDATE_PASSWORD"    : "Alterar senha",
         "ACTION_VIEW_HISTORY"       : "Histórico",
+        "ACTION_WATCH"              : "Ver",
 
         "DIALOG_HEADER_ERROR" : "Erro",
 
@@ -829,6 +830,22 @@
 
     },
 
+    "WATCH" : {
+
+        "FIELD_PLACEHOLDER_FILTER" : "@:APP.FIELD_PLACEHOLDER_FILTER",
+        
+        "HELP_SESSIONS" : "Esta página será preenchida com conexões ativas que podem ser acessadas.",
+        
+        "INFO_NO_SESSIONS" : "Nenhuma sessão disponível para assistir",
+        
+        "SECTION_HEADER_WATCH" : "Assistir",
+
+        "TABLE_HEADER_SESSION_LINK"        : "Link",
+        "TABLE_HEADER_SESSION_RESTRICTION" : "Restrição",
+        "TABLE_HEADER_SESSION_USERNAME"    : "Nome de usuário"
+
+    },
+
     "SETTINGS" : {
 
         "SECTION_HEADER_SETTINGS" : "Configurações"
@@ -1009,7 +1026,8 @@
         "ACTION_MANAGE_USERS"       : "@:APP.ACTION_MANAGE_USERS",
         "ACTION_MANAGE_USER_GROUPS" : "@:APP.ACTION_MANAGE_USER_GROUPS",
         "ACTION_NAVIGATE_HOME"      : "@:APP.ACTION_NAVIGATE_HOME",
-        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY"
+        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY",
+        "ACTION_WATCH"              : "@:APP.ACTION_WATCH"
 
     }
 

@@ -23,6 +23,7 @@
         "ACTION_SEARCH"             : "Zoeken",
         "ACTION_UPDATE_PASSWORD"    : "Wijzig Wachtwoord",
         "ACTION_VIEW_HISTORY"       : "Gebruikgeschiedenis",
+        "ACTION_WATCH"              : "Kijk op",
 
         "DIALOG_HEADER_ERROR" : "Fout",
 
@@ -543,6 +544,22 @@
 
     },
 
+    "WATCH" : {
+
+        "FIELD_PLACEHOLDER_FILTER" : "@:APP.FIELD_PLACEHOLDER_FILTER",
+        
+        "HELP_SESSIONS" : "Deze pagina wordt gevuld met actieve verbindingen die kunnen worden bekeken.",
+        
+        "INFO_NO_SESSIONS" : "Geen bekijkbare sessies",
+        
+        "SECTION_HEADER_WATCH" : "Bekijken",
+
+        "TABLE_HEADER_SESSION_LINK"        : "Link",
+        "TABLE_HEADER_SESSION_RESTRICTION" : "Beperking",
+        "TABLE_HEADER_SESSION_USERNAME"    : "Gebruikersnaam"
+
+    },
+
     "SETTINGS" : {
 
         "SECTION_HEADER_SETTINGS" : "Instellingen"
@@ -685,7 +702,8 @@
         "ACTION_MANAGE_SETTINGS"    : "@:APP.ACTION_MANAGE_SETTINGS",
         "ACTION_MANAGE_USERS"       : "@:APP.ACTION_MANAGE_USERS",
         "ACTION_NAVIGATE_HOME"      : "@:APP.ACTION_NAVIGATE_HOME",
-        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY"
+        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY",
+        "ACTION_WATCH"              : "@:APP.ACTION_WATCH"
 
     }
 

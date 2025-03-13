@@ -17,39 +17,45 @@
  * under the License.
  */
 
-require('angular-module-shim.js');
-require('relocateParameters.js');
+.watch table.properties th {
+    text-align: left;
+    font-weight: normal;
+    padding-right: 1em;
+}
 
-require('angular-translate-interpolation-messageformat');
-require('angular-translate-loader-static-files');
+.watch .toolbar {
 
-/**
- * The module for the root of the application.
- */
-angular.module('index', [
+    /* IE10 */
+    display: -ms-flexbox;
+    -ms-flex-align: center;
+    -ms-flex-direction: row;
 
-    require('angular-route'),
-    require('angular-translate'),
+    /* Ancient Mozilla */
+    display: -moz-box;
+    -moz-box-align: center;
+    -moz-box-orient: horizontal;
 
-    'auth',
-    'client',
-    'clipboard',
-    'home',
-    'import',
-    'login',
-    'manage',
-    'navigation',
-    'notification',
-    'rest',
-    'settings',
-    'watch',
+    /* Ancient WebKit */
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-orient: horizontal;
 
-    'templates-main'
+    /* Old WebKit */
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    -webkit-flex-direction: row;
 
-]);
+    /* W3C */
+    display: flex;
+    align-items: center;
+    flex-direction: row;
 
-// Recursively pull in all other JavaScript and CSS files as requirements (just
-// like old minify-maven-plugin build)
-const context = require.context('../', true, /.*\.(css|js)$/);
-context.keys().forEach(key => context(key));
+}
 
+.watch .toolbar .filter {
+    -ms-flex: 1 1 auto;
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+}

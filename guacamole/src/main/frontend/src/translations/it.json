@@ -21,6 +21,7 @@
         "ACTION_NAVIGATE_HOME"      : "Home",
         "ACTION_SAVE"               : "Salva",
         "ACTION_UPDATE_PASSWORD"    : "Aggiorna Password",
+        "ACTION_WATCH"              : "Guarda",
 
         "DIALOG_HEADER_ERROR" : "Errore",
 
@@ -463,6 +464,22 @@
 
     },
 
+    "WATCH" : {
+
+        "FIELD_PLACEHOLDER_FILTER" : "@:APP.FIELD_PLACEHOLDER_FILTER",
+        
+        "HELP_SESSIONS" : "Questa pagina verrà popolata con connessioni attive a cui è possibile unirsi.",
+        
+        "INFO_NO_SESSIONS" : "Nessuna sessione da guardare",
+        
+        "SECTION_HEADER_WATCH" : "Guarda",
+
+        "TABLE_HEADER_SESSION_LINK"        : "Collegamento",
+        "TABLE_HEADER_SESSION_RESTRICTION" : "Restrizione",
+        "TABLE_HEADER_SESSION_USERNAME"    : "Nome utente"
+
+    },
+
     "SETTINGS" : {
 
         "SECTION_HEADER_SETTINGS" : "Impostazioni"
@@ -597,7 +614,8 @@
         "ACTION_MANAGE_SESSIONS"    : "@:APP.ACTION_MANAGE_SESSIONS",
         "ACTION_MANAGE_SETTINGS"    : "@:APP.ACTION_MANAGE_SETTINGS",
         "ACTION_MANAGE_USERS"       : "@:APP.ACTION_MANAGE_USERS",
-        "ACTION_NAVIGATE_HOME"      : "@:APP.ACTION_NAVIGATE_HOME"
+        "ACTION_NAVIGATE_HOME"      : "@:APP.ACTION_NAVIGATE_HOME",
+        "ACTION_WATCH"              : "@:APP.ACTION_WATCH"
 
     }
 

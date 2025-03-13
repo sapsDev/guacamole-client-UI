@@ -25,6 +25,7 @@
         "ACTION_SHARE"              : "シェア",
         "ACTION_UPDATE_PASSWORD"    : "パスワードの更新",
         "ACTION_VIEW_HISTORY"       : "履歴",
+        "ACTION_WATCH"              : "観る",
 
         "DIALOG_HEADER_ERROR" : "エラー",
 
@@ -662,6 +663,22 @@
 
     },
 
+    "WATCH" : {
+
+        "FIELD_PLACEHOLDER_FILTER" : "@:APP.FIELD_PLACEHOLDER_FILTER",
+        
+        "HELP_SESSIONS" : "このページには現在アクティブな接続が表示され、参加できます。",
+        
+        "INFO_NO_SESSIONS" : "視聴可能なセッションはありません",
+        
+        "SECTION_HEADER_WATCH" : "視聴する",
+
+        "TABLE_HEADER_SESSION_LINK"        : "リンク",
+        "TABLE_HEADER_SESSION_RESTRICTION" : "制限",
+        "TABLE_HEADER_SESSION_USERNAME"    : "ユーザー名"
+
+    },
+
     "SETTINGS" : {
 
         "SECTION_HEADER_SETTINGS" : "設定"
@@ -839,7 +856,8 @@
         "ACTION_MANAGE_USERS"       : "@:APP.ACTION_MANAGE_USERS",
         "ACTION_MANAGE_USER_GROUPS" : "@:APP.ACTION_MANAGE_USER_GROUPS",
         "ACTION_NAVIGATE_HOME"      : "@:APP.ACTION_NAVIGATE_HOME",
-        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY"
+        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY",
+        "ACTION_WATCH"              : "@:APP.ACTION_WATCH"
 
     }
 
