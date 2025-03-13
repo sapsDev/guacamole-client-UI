@@ -543,6 +543,11 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
     $scope.share = function share(sharingProfile) {
         if ($scope.focusedClient)
             ManagedClient.createShareLink($scope.focusedClient, sharingProfile);
+        console.log("Sharing Profile name: " + sharingProfile.name);
+        console.log("Sharing Profile identifier: " + sharingProfile.identifier);
+        console.log("Sharing Profile primaryConnectionIdentifier: " + sharingProfile.primaryConnectionIdentifier);
+        console.log("Sharing Profile attributes: " + sharingProfile.attributes);
+        console.log("Sharing Profile parameters: " + sharingProfile.parameters);
     };
 
     /**
