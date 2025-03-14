@@ -91,15 +91,12 @@ angular.module('client').factory('ManagedShareLink', ['$injector',
     ManagedShareLink.getInstance = function getInstance(sharingProfile, sharingCredentials) {
 
         // Generate new share link using the given profile and credentials
-        //TODO: remove testing
-        managedShareLink =  new ManagedShareLink({
+        return new ManagedShareLink({
             'name'               : sharingProfile.name,
             'href'               : UserCredentials.getLink(sharingCredentials),
             'sharingProfile'     : sharingProfile,
             'sharingCredentials' : sharingCredentials
         });
-        console.log(JSON.stringify(managedShareLink, null, 2));
-        return managedShareLink;
 
     };
 
