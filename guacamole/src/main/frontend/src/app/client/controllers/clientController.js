@@ -547,9 +547,10 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
         console.log("Sharing Profile identifier: " + sharingProfile.identifier);
         console.log("Sharing Profile primaryConnectionIdentifier: " + sharingProfile.primaryConnectionIdentifier);
         console.log("Sharing Profile attributes: ");
-        sharingProfile.attributes.forEach(attribute => {console.log(attribute)});
+        console.log(JSON.stringify(sharingProfile.attributes, null, 2));
         console.log("Sharing Profile parameters: ");
-        sharingProfile.parameters.forEach(parameter => {console.log(parameter)});
+        console.log(JSON.stringify(sharingProfile.parameters, null, 2));
+        console.log("/n");
     };
 
     /**
