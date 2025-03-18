@@ -97,15 +97,29 @@
                                 <td><a href="{{link.value.href}}" target="_blank">{{link.value.href}}</a></td>
                             </tr>
                         </table>
-                        <h3>This session can be joined by a lecturer</h3>
-                        <p class="description">
-                            Currently, a lecturer can automatically join this session 
-                            with the permissions of the following sharing profile:</p>
-                        <table>
-                            <tr>
-                                <th>read-only</th>
-                            </tr>
-                        </table>
+                        <div ng-show="isWatchable()">
+                            <h3>{{'CLIENT.INFO_CONNECTION_WATCHABLE' | translate}}</h3>
+                            <p class="description"
+                               translate="CLIENT.HELP_WATCHABLE"></p>
+                            <table>
+                                <tr>
+                                    <th>{{focusedClient.watchProfile.name}}</th>
+                                </tr>
+                            </table> 
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Connection watching -->
+                <div class="menu-section" id="connection-watching" ng-show="canShareConnection()">
+                    <h3>{{'CLIENT.SECTION_CONNECTION_WATCHING' | translate}}</h3>
+                    <div class="content">
+                        <p class="description">{{'CLIENT.HELP_CONNECTION_WATCHING' | translate}}</p>
+                        <guac-menu menu-title="'CLIENT.ACTION_ALLOW_WATCHING' | translate">
+                            <ul ng-repeat="sharingProfile in sharingProfiles">
+                                <li><a ng-click="watchable(sharingProfile)">{{sharingProfile.name}}</a></li>
+                            </ul>
+                        </guac-menu>
                     </div>
                 </div>
 
