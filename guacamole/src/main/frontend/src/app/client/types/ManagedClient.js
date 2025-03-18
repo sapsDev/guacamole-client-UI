@@ -242,6 +242,14 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
         this.shareLinks = template.shareLinks || {};
 
         /**
+         * The selected sharingProfile with which the lecturer can automatically 
+         * join this ManagedClient.
+         * 
+         * @type SharingProfile
+         */
+        this.watchProfile = template.watchProfile || {};
+
+        /**
          * The number of simultaneous touch contacts supported by the remote
          * desktop. Unless explicitly declared otherwise by the remote desktop
          * after connecting, this will be 0 (multi-touch unsupported).
@@ -1011,6 +1019,29 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
             return true;
 
         // No share links currently exist
+        return false;
+
+    };
+
+    /**
+     * Returns whether the given ManagedClient is watchable by lecturers. 
+     * A ManagedClient is watchable if it has a defined watch profile
+     *
+     * @param {ManagedClient} client
+     *     The ManagedClient to check.
+     *
+     * @returns {Boolean}
+     *     true if the ManagedClient has a defined watch profile,
+     *     false otherwise.
+     */
+    ManagedClient.isWatchable = function isWatchable(client) {
+
+        // The connection is watchable if it has a defined watch profile
+        if (client.watchProfile) {
+            return true;
+        }
+
+        // No watch profile currently defined
         return false;
 
     };

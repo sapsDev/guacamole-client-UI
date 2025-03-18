@@ -557,6 +557,28 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
     };
 
     /**
+     * Sets the sharingProfile that the lecturer uses to automatically join
+     * the actual connection. 
+     * 
+     * @param {SharingProfile} sharingProfile
+     *     The sharing profile to allow the lecturer joining.
+     */
+    $scope.watchable = function watchable(sharingProfile) {
+        console.log('watchable: ' + sharingProfile);
+    };
+
+    /**
+     * Returns whether the current connection is currently watchable by lecturers.
+     *
+     * @returns {Boolean}
+     *      true if the current connection has a defined watch profile,
+     *      false otherwise
+     */
+    $scope.isWatchable = function isWatchable() {
+        return !!$scope.focusedClient && ManagedClient.isWatchable($scope.focusedClient);
+    };
+
+    /**
      * Returns the total number of share links associated with the current
      * connection.
      *
