@@ -62,6 +62,7 @@
         "ACTION_SAVE_FILE"                 : "@:APP.ACTION_SAVE",
         "ACTION_SHARE"                     : "@:APP.ACTION_SHARE",
         "ACTION_UPLOAD_FILES"              : "Subir ficheros",
+        "ACTION_ALLOW_WATCHING"            : "Permitir ver",
 
         "DIALOG_HEADER_CONNECTING"       : "Conectando",
         "DIALOG_HEADER_CONNECTION_ERROR" : "Error de conexión",

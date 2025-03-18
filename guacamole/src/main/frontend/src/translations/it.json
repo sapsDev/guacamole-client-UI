@@ -50,6 +50,7 @@
         "ACTION_RECONNECT"                 : "Riconnetti",
         "ACTION_SAVE_FILE"                 : "@:APP.ACTION_SAVE",
         "ACTION_UPLOAD_FILES"              : "Carica un file",
+        "ACTION_ALLOW_WATCHING"            : "Consenti la visione",
 
         "DIALOG_HEADER_CONNECTING"       : "Connessione in corso",
         "DIALOG_HEADER_CONNECTION_ERROR" : "Errore di Connessione",
