@@ -152,6 +152,7 @@
         "SECTION_HEADER_DISPLAY"         : "显示",
         "SECTION_HEADER_FILE_TRANSFERS"  : "文件传输",
         "SECTION_HEADER_INPUT_METHOD"    : "输入方式",
+        "SECTION_HEADER_WATCHING"        : "为教师共享会话",
 
         "SECTION_HEADER_MOUSE_MODE"     : "模拟鼠标模式",
 

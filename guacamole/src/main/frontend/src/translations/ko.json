@@ -138,6 +138,7 @@
         "SECTION_HEADER_FILE_TRANSFERS" : "파일 전송",
         "SECTION_HEADER_INPUT_METHOD"   : "입력 방법",
         "SECTION_HEADER_MOUSE_MODE"     : "마우스 에뮬레이션 모드",
+        "SECTION_HEADER_WATCHING"       : "강사를 위한 세션 공유",
 
         "TEXT_ZOOM_AUTO_FIT"              : "브라우저 창에 자동으로 맞춤",
         "TEXT_CLIENT_STATUS_IDLE"         : "유휴 상태.",

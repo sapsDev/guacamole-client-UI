@@ -129,6 +129,7 @@
         "SECTION_HEADER_FILE_TRANSFERS" : "Загрузки файлов",
         "SECTION_HEADER_INPUT_METHOD"   : "Метод ввода",
         "SECTION_HEADER_MOUSE_MODE"     : "Режим эмуляции мыши",
+        "SECTION_HEADER_WATCHING"       : "Поделиться сеансом для преподавателей",
 
         "TEXT_ZOOM_AUTO_FIT"              : "Автоматически умещать в браузере",
         "TEXT_CLIENT_STATUS_IDLE"         : "Бездействие.",

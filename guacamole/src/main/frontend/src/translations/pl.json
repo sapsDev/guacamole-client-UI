@@ -146,6 +146,7 @@
         "SECTION_HEADER_FILE_TRANSFERS" : "Transfer Plików",
         "SECTION_HEADER_INPUT_METHOD"   : "Metoda wejścia",
         "SECTION_HEADER_MOUSE_MODE"     : "Tryb emulacji myszy",
+        "SECTION_HEADER_WATCHING"       : "Udostępnij sesję dla wykładowców",
 
         "TEXT_ZOOM_AUTO_FIT"              : "Automatycznie dopasuj do okna przeglądarki",
         "TEXT_CLIENT_STATUS_IDLE"         : "Bezczynne.",

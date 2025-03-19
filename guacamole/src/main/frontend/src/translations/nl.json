@@ -121,6 +121,7 @@
         "SECTION_HEADER_FILE_TRANSFERS" : "Bestandsoverdrachten",
         "SECTION_HEADER_INPUT_METHOD"   : "Invoer methode",
         "SECTION_HEADER_MOUSE_MODE"     : "Muis emulatie modus",
+        "SECTION_HEADER_WATCHING"       : "Sessie delen voor docenten",
 
         "TEXT_ZOOM_AUTO_FIT"              : "Automatisch aan browser venster aanpassen",
         "TEXT_CLIENT_STATUS_IDLE"         : "Inactief.",

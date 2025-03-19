@@ -138,6 +138,7 @@
         "SECTION_HEADER_FILE_TRANSFERS" : "Transferências de Arquivos",
         "SECTION_HEADER_INPUT_METHOD"   : "Método de entrada",
         "SECTION_HEADER_MOUSE_MODE"     : "Modo de emulação do mouse",
+        "SECTION_HEADER_WATCHING"       : "Compartilhar sessão para instrutores",
 
         "TEXT_ZOOM_AUTO_FIT"              : "Ajustar automaticamente à janela do navegador",
         "TEXT_CLIENT_STATUS_IDLE"         : "Ocioso.",

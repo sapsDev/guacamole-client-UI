@@ -117,6 +117,7 @@
         "SECTION_HEADER_FILE_TRANSFERS" : "Trasferimento file",
         "SECTION_HEADER_INPUT_METHOD"   : "Metodo di input",
         "SECTION_HEADER_MOUSE_MODE"     : "Modalità di emulazione del mouse",
+        "SECTION_HEADER_WATCHING"       : "Condividi sessione per docenti",
 
         "TEXT_ZOOM_AUTO_FIT"              : "Automatically fit to browser window",
         "TEXT_CLIENT_STATUS_IDLE"         : "Inattivo.",

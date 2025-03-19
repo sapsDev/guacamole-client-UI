@@ -123,6 +123,7 @@
         "SECTION_HEADER_FILE_TRANSFERS" : "Filoverføringer",
         "SECTION_HEADER_INPUT_METHOD"   : "Standard Innenhet",
         "SECTION_HEADER_MOUSE_MODE"     : "Metode for musemulering",
+        "SECTION_HEADER_WATCHING"       : "Del økt for undervisere",
 
         "TEXT_ZOOM_AUTO_FIT"              : "Skaler automatisk til nettleservindu.",
         "TEXT_CLIENT_STATUS_IDLE"         : "Passiv.",

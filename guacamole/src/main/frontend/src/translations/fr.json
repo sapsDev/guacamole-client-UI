@@ -153,6 +153,7 @@
         "SECTION_HEADER_DISPLAY"         : "Affichage",
         "SECTION_HEADER_FILE_TRANSFERS"  : "Transferts de fichiers",
         "SECTION_HEADER_INPUT_METHOD"    : "Méthode de saisie",
+        "SECTION_HEADER_WATCHING"        : "Partager la session pour les enseignants",
 
         "SECTION_HEADER_MOUSE_MODE"     : "Mode d'émulation de la souris",
 

@@ -151,6 +151,7 @@
         "SECTION_HEADER_DISPLAY"         : "Anzeige",
         "SECTION_HEADER_FILE_TRANSFERS"  : "Dateiübertragung",
         "SECTION_HEADER_INPUT_METHOD"    : "Eingabemethode",
+        "SECTION_HEADER_WATCHING"        : "Sitzung für Dozenten freigeben", 
 
         "SECTION_HEADER_MOUSE_MODE"     : "Mausemulationsmodus",
 
