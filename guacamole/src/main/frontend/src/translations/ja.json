@@ -114,8 +114,9 @@
         "HELP_CONNECTION_WATCHING": "現在の接続は教員と自動的に共有できます。プロファイルを選択する必要があります。",
         "HELP_WATCHABLE": "このセッションには教員が参加できます",
 
-        "INFO_CONNECTION_SHARED": "この接続は現在共有されています。",
-        "INFO_NO_FILE_TRANSFERS": "ファイル転送はありません。",
+        "INFO_CONNECTION_SHARED"    : "この接続は現在共有されています。",
+        "INFO_NO_FILE_TRANSFERS"    : "ファイル転送はありません。",
+        "INFO_CONNECTION_WATCHABLE" : "現在、講師は次のプロファイルの権限で自動的にこのセッションに参加できます。",
 
 
         "NAME_INPUT_METHOD_NONE"   : "なし",

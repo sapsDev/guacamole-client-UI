@@ -129,8 +129,9 @@
         "HELP_CONNECTION_WATCHING" : "Aktualne połączenie może zostać automatycznie udostępnione wykładowcy. Należy wybrać profil.",
         "HELP_WATCHABLE"           : "Wykładowca może dołączyć do tej sesji",
 
-        "INFO_CONNECTION_SHARED" : "To połączenie jest teraz udostępniane.",
-        "INFO_NO_FILE_TRANSFERS" : "Brak transferów plików.",
+        "INFO_CONNECTION_SHARED"    : "To połączenie jest teraz udostępniane.",
+        "INFO_NO_FILE_TRANSFERS"    : "Brak transferów plików.",
+        "INFO_CONNECTION_WATCHABLE" : "Obecnie wykładowca może automatycznie dołączyć do tej sesji z uprawnieniami następującego profilu:",
 
         "NAME_INPUT_METHOD_NONE"   : "Brak",
         "NAME_INPUT_METHOD_OSK"    : "Klawiatura ekranowa",

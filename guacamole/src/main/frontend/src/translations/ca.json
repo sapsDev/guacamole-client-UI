@@ -121,6 +121,7 @@
         "INFO_CONNECTION_SHARED"    : "Aquesta connexió es comparteix ara.",
         "INFO_NO_FILE_TRANSFERS"    : "No hi ha transferències de fitxers.",
         "INFO_USER_COUNT"           : "{USERNAME}{COUNT, plural, one{} other{ (#)}}",
+        "INFO_CONNECTION_WATCHABLE" : "Actualment, un professor pot unir-se automàticament a aquesta sessió amb els permisos del següent perfil:",
     
         "NAME_INPUT_METHOD_NONE"   : "Cap",
         "NAME_INPUT_METHOD_OSK"    : "Teclat a la pantalla",

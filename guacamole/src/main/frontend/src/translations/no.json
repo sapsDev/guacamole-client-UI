@@ -107,7 +107,8 @@
         "HELP_CONNECTION_WATCHING" : "Den nåværende tilkoblingen kan automatisk deles med en underviser. En profil må velges.",
         "HELP_WATCHABLE"           : "En underviser kan bli med i denne økten",
 
-        "INFO_NO_FILE_TRANSFERS" : "Ingen filoverføringer.",
+        "INFO_NO_FILE_TRANSFERS"    : "Ingen filoverføringer.",
+        "INFO_CONNECTION_WATCHABLE" : "For øyeblikket kan en foreleser automatisk bli med i denne økten med tillatelsene til følgende profil:",
 
         "NAME_INPUT_METHOD_NONE"   : "Ingen",
         "NAME_INPUT_METHOD_OSK"    : "Skjermtastatur",

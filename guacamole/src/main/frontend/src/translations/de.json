@@ -136,6 +136,7 @@
         "INFO_CONNECTION_SHARED"    : "Diese Verbindung wird nun geteilt.",
         "INFO_NO_FILE_TRANSFERS"    : "Keine Dateiübertragungen.",
         "INFO_USER_COUNT"           : "{USERNAME}{COUNT, plural, one{} other{ (#)}}",
+        "INFO_CONNECTION_WATCHABLE" : "Der Sitzung kann ein Dozent beitreten. Hierfür werden die Berechtigungen des folgenden Profiles genutzt:",
 
         "NAME_INPUT_METHOD_NONE"   : "Keine",
         "NAME_INPUT_METHOD_OSK"    : "Bildschirmtastatur",

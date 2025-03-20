@@ -105,7 +105,8 @@
         "HELP_CONNECTION_WATCHING" : "De huidige verbinding kan automatisch met een docent worden gedeeld. Er moet een profiel worden geselecteerd.",
         "HELP_WATCHABLE"           : "Een docent kan deelnemen aan deze sessie",
 
-        "INFO_NO_FILE_TRANSFERS" : "Geen bestandsoverdrachten.",
+        "INFO_NO_FILE_TRANSFERS"    : "Geen bestandsoverdrachten.",
+        "INFO_CONNECTION_WATCHABLE" : "Momenteel kan een docent automatisch deelnemen aan deze sessie met de machtigingen van het volgende profiel:",
 
         "NAME_INPUT_METHOD_NONE"   : "Geen",
         "NAME_INPUT_METHOD_OSK"    : "Scherm toetsenbord",

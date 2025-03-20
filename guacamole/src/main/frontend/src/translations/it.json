@@ -101,7 +101,8 @@
         "HELP_CONNECTION_WATCHING" : "La connessione attuale può essere condivisa automaticamente con un docente. È necessario selezionare un profilo.",
         "HELP_WATCHABLE"           : "Un docente può unirsi a questa sessione",
 
-        "INFO_NO_FILE_TRANSFERS" : "Nessun trasferimento di file.",
+        "INFO_NO_FILE_TRANSFERS"    : "Nessun trasferimento di file.",
+        "INFO_CONNECTION_WATCHABLE" : "Attualmente, un docente può unirsi automaticamente a questa sessione con i permessi del seguente profilo:",
 
         "NAME_INPUT_METHOD_NONE"   : "Nessuno",
         "NAME_INPUT_METHOD_OSK"    : "Tastiera su schermo",

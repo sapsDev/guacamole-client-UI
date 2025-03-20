@@ -136,6 +136,7 @@
         "INFO_CONNECTION_SHARED"    : "Toto připojení je nyní sdíleno.",
         "INFO_NO_FILE_TRANSFERS"    : "Žádné přenosy souborů.",
         "INFO_USER_COUNT"           : "{USERNAME}{COUNT, plural, one{} other{ (#)}}",
+        "INFO_CONNECTION_WATCHABLE" : "V současné době se může přednášející automaticky připojit k této relaci s oprávněními následujícího profilu:",
 
         "NAME_INPUT_METHOD_NONE"   : "Žádné",
         "NAME_INPUT_METHOD_OSK"    : "Klávesnice na obrazovce",

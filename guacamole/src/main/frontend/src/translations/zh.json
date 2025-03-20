@@ -137,6 +137,7 @@
         "INFO_CONNECTION_SHARED"    : "此连接已被共享。",
         "INFO_NO_FILE_TRANSFERS"    : "无文件传输任务。",
         "INFO_USER_COUNT"           : "{USERNAME}{COUNT, plural, one{} other{ (#)}}",
+        "INFO_CONNECTION_WATCHABLE" : "当前，讲师可以自动使用以下配置文件的权限加入此会话：",
 
         "NAME_INPUT_METHOD_NONE"   : "无",
         "NAME_INPUT_METHOD_OSK"    : "屏幕键盘",

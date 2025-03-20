@@ -121,8 +121,9 @@
         "HELP_SHARE_LINK"          : "현재 연결이 공유되고 있으며, 다음 링크를 가진 사람이라면 누구나 접근할 수 있습니다:",
         "HELP_CONNECTION_WATCHING" : "현재 연결은 강사와 자동으로 공유될 수 있습니다. 프로필을 선택해야 합니다.",
         "HELP_WATCHABLE"           : "강사가 이 세션에 참여할 수 있습니다",
-        "INFO_CONNECTION_SHARED" : "이 연결은 이제 공유됩니다.",
-        "INFO_NO_FILE_TRANSFERS" : "파일 전송이 없습니다.",
+        "INFO_CONNECTION_SHARED"    : "이 연결은 이제 공유됩니다.",
+        "INFO_NO_FILE_TRANSFERS"    : "파일 전송이 없습니다.",
+        "INFO_CONNECTION_WATCHABLE" : "현재 강사는 다음 프로필의 권한으로 이 세션에 자동으로 참가할 수 있습니다.",
 
         "NAME_INPUT_METHOD_NONE"   : "없음",
         "NAME_INPUT_METHOD_OSK"    : "화상 키보드",

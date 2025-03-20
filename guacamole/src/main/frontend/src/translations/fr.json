@@ -138,6 +138,7 @@
         "INFO_CONNECTION_SHARED"    : "Cette connexion est partagée maintenant.",
         "INFO_NO_FILE_TRANSFERS"    : "Pas de transfert de fichier.",
         "INFO_USER_COUNT"           : "{USERNAME}{COUNT, plural, one{} other{ (#)}}",
+        "INFO_CONNECTION_WATCHABLE" : "Actuellement, un enseignant peut rejoindre automatiquement cette session avec les autorisations du profil suivant :",
 
         "NAME_INPUT_METHOD_NONE"   : "Aucune",
         "NAME_INPUT_METHOD_OSK"    : "Clavier virtuel",

@@ -141,6 +141,7 @@
         "INFO_CONNECTION_SHARED"    : "This connection is now shared.",
         "INFO_NO_FILE_TRANSFERS"    : "No file transfers.",
         "INFO_USER_COUNT"           : "{USERNAME}{COUNT, plural, one{} other{ (#)}}",
+        "INFO_CONNECTION_WATCHABLE" : "Currently, a lecturer can automatically join this session with the permissions of the following profile:",
 
         "NAME_INPUT_METHOD_NONE"   : "None",
         "NAME_INPUT_METHOD_OSK"    : "On-screen keyboard",
