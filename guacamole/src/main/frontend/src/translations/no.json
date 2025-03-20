@@ -104,6 +104,8 @@
         "HELP_MOUSE_MODE"          : "Bestemmer hvordan den fjernstyrte musen reagerer på berøringer.",
         "HELP_MOUSE_MODE_ABSOLUTE" : "Trykk for å klikke. Klikket oppstår der man berører.",
         "HELP_MOUSE_MODE_RELATIVE" : "Dra for å flytte musemarkøren og trykk for å klikke. Klikket oppstår på plasseringen til musepekeren.",
+        "HELP_CONNECTION_WATCHING" : "Den nåværende tilkoblingen kan automatisk deles med en underviser. En profil må velges.",
+        "HELP_WATCHABLE"           : "En underviser kan bli med i denne økten",
 
         "INFO_NO_FILE_TRANSFERS" : "Ingen filoverføringer.",
 

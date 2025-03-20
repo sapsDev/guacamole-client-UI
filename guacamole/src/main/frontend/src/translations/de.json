@@ -129,6 +129,8 @@
         "HELP_MOUSE_MODE_ABSOLUTE" : "Tippen Sie auf die Zielposition, der Klick erfolgt am Ort der Berührung des Touchscreen's.",
         "HELP_MOUSE_MODE_RELATIVE" : "Den Mauszeiger zur Zielposition bewegen und klicken. Der Klick erfolgt an der Position des Mauszeigers.",
         "HELP_SHARE_LINK"          : "Die aktuelle Verbindung wird gegenwärtig geteilt und kann von jeder Person über den folgenden Link erreicht werden:",
+        "HELP_CONNECTION_WATCHING" : "Die aktuelle Verbindung kann automatisch mit einem Dozenten geteilt werden. Dafür muss ein Profil ausgewählt werden.", 
+        "HELP_WATCHABLE"           : "Dieser Sitzung kann ein Dozent beitreten", 
 
         "INFO_ANONYMOUS_USER_COUNT" : "Anonym{COUNT, plural, one{} other{ (#)}}",
         "INFO_CONNECTION_SHARED"    : "Diese Verbindung wird nun geteilt.",

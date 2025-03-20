@@ -118,6 +118,8 @@
         "HELP_MOUSE_MODE_ABSOLUTE" : "Toque para clicar. O clique ocorre no local do toque.",
         "HELP_MOUSE_MODE_RELATIVE" : "Arraste para mover o ponteiro do mouse e toque para clicar. O clique ocorre no local em que o mouse aponta.",
         "HELP_SHARE_LINK"          : "A conexão atual está sendo compartilhada e pode ser acessado com qualquer um que possuir o seguinte {LINKS, plural, one{link} other{links}}:",
+        "HELP_CONNECTION_WATCHING" : "A conexão atual pode ser compartilhada automaticamente com um instrutor. Um perfil deve ser selecionado.",
+        "HELP_WATCHABLE"           : "Um instrutor pode participar desta sessão",
 
         "INFO_CONNECTION_SHARED" : "Está conexão agora está compartilhada.",
         "INFO_NO_FILE_TRANSFERS" : "Nenhuma transferência de arquivo.",

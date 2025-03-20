@@ -114,6 +114,8 @@
         "HELP_MOUSE_MODE_ABSOLUTE" : "Toqueu per fer clic. El clic es produeix a la ubicació del toc.",
         "HELP_MOUSE_MODE_RELATIVE" : "Arrossegueu per moure el punter del ratolí i toqueu per fer clic. El clic es produeix a la ubicació del punter.",
         "HELP_SHARE_LINK"          : "La connexió actual s'està compartint i qualsevol usuari pot accedir amb els següents {LINKS, plural, one{enllaç} other{enllaços}}:",
+        "HELP_CONNECTION_WATCHING" : "La connexió actual es pot compartir automàticament amb un docent. Cal seleccionar un perfil.",
+        "HELP_WATCHABLE"           : "Un docent es pot unir a aquesta sessió",
 
         "INFO_ANONYMOUS_USER_COUNT" : "Anònim{COUNT, plural, one{} other{s (#)}}",
         "INFO_CONNECTION_SHARED"    : "Aquesta connexió es comparteix ara.",

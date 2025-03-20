@@ -102,6 +102,8 @@
         "HELP_MOUSE_MODE"          : "Bepaalt hoe de muis met aanraak-klikken omgaat.",
         "HELP_MOUSE_MODE_ABSOLUTE" : "Tik om te klikken. De klik vindt plaats op de locatie van de tik.",
         "HELP_MOUSE_MODE_RELATIVE" : "Sleep om de aanwijzer te bewegen en tik om te klikken. De klik vindt plaats op de locatie van de aanwijzer.",
+        "HELP_CONNECTION_WATCHING" : "De huidige verbinding kan automatisch met een docent worden gedeeld. Er moet een profiel worden geselecteerd.",
+        "HELP_WATCHABLE"           : "Een docent kan deelnemen aan deze sessie",
 
         "INFO_NO_FILE_TRANSFERS" : "Geen bestandsoverdrachten.",
 

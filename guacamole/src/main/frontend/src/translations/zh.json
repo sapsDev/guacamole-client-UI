@@ -130,6 +130,8 @@
         "HELP_MOUSE_MODE_ABSOLUTE" : "点击时立即触发按键。在点击的位置触发鼠标按键事件。",
         "HELP_MOUSE_MODE_RELATIVE" : "拖拽时移动鼠标，再点击时触发按键。在鼠标当前所在的位置触发按键事件。",
         "HELP_SHARE_LINK"          : "正在共享当前连接，并可被使用以下链接的任何人使用：",
+        "HELP_CONNECTION_WATCHING" : "当前连接可以自动与教师共享。必须选择一个配置文件。",
+        "HELP_WATCHABLE"           : "教师可以加入此会话",
 
         "INFO_ANONYMOUS_USER_COUNT" : "匿名用户{COUNT, plural, one{} other{ (#)}}",
         "INFO_CONNECTION_SHARED"    : "此连接已被共享。",

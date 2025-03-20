@@ -98,6 +98,8 @@
         "HELP_MOUSE_MODE"          : "Determina come si deve comportare il mouse remoto in base al touch.",
         "HELP_MOUSE_MODE_ABSOLUTE" : "Tap to click. Il click è sostituito dal tocco.",
         "HELP_MOUSE_MODE_RELATIVE" : "Trascina il dito per muovere il puntatore del mouse e fai tap al posto del click. Il click sarà effettuato dove si trova il puntatore.",
+        "HELP_CONNECTION_WATCHING" : "La connessione attuale può essere condivisa automaticamente con un docente. È necessario selezionare un profilo.",
+        "HELP_WATCHABLE"           : "Un docente può unirsi a questa sessione",
 
         "INFO_NO_FILE_TRANSFERS" : "Nessun trasferimento di file.",
 

@@ -126,6 +126,8 @@
         "HELP_MOUSE_MODE_ABSOLUTE" : "Dotknij, aby kliknąć. Kliknięcie następuje w miejscu dotknięcia.",
         "HELP_MOUSE_MODE_RELATIVE" : "Przeciągnij, aby przesunąć wskaźnik myszy i dotknij, aby kliknąć. Kliknięcie następuje w miejscu, w którym znajduje się wskaźnik.",
         "HELP_SHARE_LINK"          : "Aktualne połączenie jest udostępniane, dostęp może uzyskać każdy posiadający {LINKS, plural, one{link} other{linki}}:",
+        "HELP_CONNECTION_WATCHING" : "Aktualne połączenie może zostać automatycznie udostępnione wykładowcy. Należy wybrać profil.",
+        "HELP_WATCHABLE"           : "Wykładowca może dołączyć do tej sesji",
 
         "INFO_CONNECTION_SHARED" : "To połączenie jest teraz udostępniane.",
         "INFO_NO_FILE_TRANSFERS" : "Brak transferów plików.",

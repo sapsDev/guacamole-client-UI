@@ -131,6 +131,8 @@
         "HELP_MOUSE_MODE_ABSOLUTE" : "Appuyer pour cliquer. Le clic s'effectue à l'endroit de l'appui.",
         "HELP_MOUSE_MODE_RELATIVE" : "Glisser pour déplacer le pointeur de la souris et appuyer pour cliquer. Le clic s'effectue à l'endroit du pointeur.",
         "HELP_SHARE_LINK"          : "La connexion actuelle est en cours de partage et est accessible à toute personne possédant {LINKS, plural, one{le lien suivant} other{les liens suivants}}:",
+        "HELP_CONNECTION_WATCHING" : "La connexion actuelle peut être partagée automatiquement avec un enseignant. Un profil doit être sélectionné.",
+        "HELP_WATCHABLE"           : "Un enseignant peut rejoindre cette session",
 
         "INFO_ANONYMOUS_USER_COUNT" : "Anonyme{COUNT, plural, one{} other{s (#)}}",
         "INFO_CONNECTION_SHARED"    : "Cette connexion est partagée maintenant.",

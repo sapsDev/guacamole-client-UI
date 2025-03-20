@@ -134,6 +134,8 @@
         "HELP_MOUSE_MODE_ABSOLUTE" : "Tap to click. The click occurs at the location of the touch.",
         "HELP_MOUSE_MODE_RELATIVE" : "Drag to move the mouse pointer and tap to click. The click occurs at the location of the pointer.",
         "HELP_SHARE_LINK"          : "The current connection is being shared, and can be accessed by anyone with the following {LINKS, plural, one{link} other{links}}:",
+        "HELP_CONNECTION_WATCHING" : "The current connection can be automatically shared with an instructor. A profile must be selected.",
+        "HELP_WATCHABLE"           : "An instructor can join this session",
 
         "INFO_ANONYMOUS_USER_COUNT" : "Anonymous{COUNT, plural, one{} other{ (#)}}",
         "INFO_CONNECTION_SHARED"    : "This connection is now shared.",

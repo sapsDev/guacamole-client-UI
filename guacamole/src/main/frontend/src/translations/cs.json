@@ -129,6 +129,8 @@
         "HELP_MOUSE_MODE_ABSOLUTE" : "Tap to click. Kliknutí nastane v místě dotyku.",
         "HELP_MOUSE_MODE_RELATIVE" : "Přetažením myši posuňte ukazatel myši a klepněte na tlačítko. Kliknutí nastane v místě ukazatele.",
         "HELP_SHARE_LINK"          : "Aktuální připojení je sdíleno a může k němu přistupovat kdokoli s následujícím {LINKS, plural, one{odkazem} other{odkazy}}:",
+        "HELP_CONNECTION_WATCHING" : "Aktuální připojení lze automaticky sdílet s vyučujícím. Je nutné vybrat profil.",
+        "HELP_WATCHABLE"           : "Této relaci se může připojit vyučující",
 
         "INFO_ANONYMOUS_USER_COUNT" : "Anonymní{COUNT, plural, one{} other{ (#)}}",
         "INFO_CONNECTION_SHARED"    : "Toto připojení je nyní sdíleno.",

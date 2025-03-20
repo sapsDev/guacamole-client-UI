@@ -111,6 +111,8 @@
         "HELP_MOUSE_MODE_ABSOLUTE": "タッチによってクリックを行います。タッチの位置でクリックしたとみなされます。 ",
         "HELP_MOUSE_MODE_RELATIVE": "マウスポインタをドラッグしてからクリックします。マウスポインタの位置でクリックしたとみなされます。 ",
         "HELP_SHARE_LINK": "現在の接続は共有されており、次の{LINKS、multiple、one {link} other {links}}を持つ人なら誰でもアクセスできます:",
+        "HELP_CONNECTION_WATCHING": "現在の接続は教員と自動的に共有できます。プロファイルを選択する必要があります。",
+        "HELP_WATCHABLE": "このセッションには教員が参加できます",
 
         "INFO_CONNECTION_SHARED": "この接続は現在共有されています。",
         "INFO_NO_FILE_TRANSFERS": "ファイル転送はありません。",
