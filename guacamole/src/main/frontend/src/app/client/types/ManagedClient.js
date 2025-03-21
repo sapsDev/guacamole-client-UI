@@ -247,7 +247,7 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
          * 
          * @type SharingProfile
          */
-        this.watchProfile = template.watchProfile || {};
+        this.watchProfile = template.watchProfile || null;
 
         /**
          * The number of simultaneous touch contacts supported by the remote
