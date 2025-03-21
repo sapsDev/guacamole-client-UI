@@ -1038,8 +1038,10 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
 
         // The connection is watchable if it has a defined watch profile
         if (client.watchProfile) {
+            console.log("client.watchProfile: true");
             return true;
         }
+        console.log("client.watchProfile: false");
 
         // No watch profile currently defined
         return false;
