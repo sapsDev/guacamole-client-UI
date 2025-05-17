@@ -120,7 +120,7 @@
                                 <li><a ng-click="setWatchable(sharingProfile)">{{sharingProfile.name}}</a></li>
                             </ul>
                         </guac-menu>
-                        <guac-menu menu-title="focusedClient?.watchProfiles? || 'None'">
+                        <guac-menu menu-title="currentMenuTitle" ng-init="currentMenuTitle = 'NONE'">
                             <ul>
                                 <li>
                                     <a ng-click="setWatchable(null)">{{ 'NONE' }}</a>
