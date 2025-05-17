@@ -118,10 +118,10 @@
                         <guac-menu menu-title="currentMenuTitle" ng-init="currentMenuTitle = 'NONE'">
                             <ul>
                                 <li>
-                                    <a ng-click="setWatchable(null); currentMenuTile = 'NONE'">{{ 'NONE' }}</a>
+                                    <a ng-click="setWatchable(null); currentMenuTitle = 'NONE'">{{ 'NONE' }}</a>
                                 </li>
                                 <li ng-repeat="sharingProfile in sharingProfiles">
-                                    <a ng-click="setWatchable(sharingProfile); currentMenuTile = sharingProfile.name">{{sharingProfile.name}}</a>
+                                    <a ng-click="setWatchable(sharingProfile); currentMenuTitle = sharingProfile.name">{{sharingProfile.name}}</a>
                                 </li>
                             </ul>
                         </guac-menu>
