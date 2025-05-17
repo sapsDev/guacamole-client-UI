@@ -117,7 +117,18 @@
                         <p class="description">{{'CLIENT.HELP_CONNECTION_WATCHING' | translate}}</p>
                         <guac-menu menu-title="'CLIENT.ACTION_ALLOW_WATCHING' | translate">
                             <ul ng-repeat="sharingProfile in sharingProfiles">
-                                <li><a ng-click="watchable(sharingProfile)">{{sharingProfile.name}}</a></li>
+                                <li><a ng-click="setWatchable(sharingProfile)">{{sharingProfile.name}}</a></li>
+                            </ul>
+                        </guac-menu>
+                        <guac-menu>
+                            <a class="menu-title">{{ focusedClient.watchProfile || 'NONE' }}</a>
+                            <ul>
+                                <li>
+                                    <a ng-click="setWatchable(null)">{{ 'NONE' }}</a>
+                                </li>
+                                <li ng-repeat="sharingProfile in sharingProfiles">
+                                    <a ng-click="setWatchable(sharingProfile)">{{sharingProfile.name}}</a>
+                                </li>
                             </ul>
                         </guac-menu>
                     </div>

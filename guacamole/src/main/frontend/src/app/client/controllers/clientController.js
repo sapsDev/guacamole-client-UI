@@ -563,7 +563,7 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
      * @param {SharingProfile} sharingProfile
      *     The sharing profile to allow the lecturer joining.
      */
-    $scope.watchable = function watchable(sharingProfile) {
+    $scope.setWatchable = function setWatchable(sharingProfile) {
         console.log('watchable: ' + sharingProfile);
     };
 
