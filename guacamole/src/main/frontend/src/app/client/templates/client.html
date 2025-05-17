@@ -131,6 +131,13 @@
                                 </li>
                             </ul>
                         </guac-menu>
+                        <select
+                                ng-model="focusedClient.watchProfile"
+                                ng-change="setWatchable(selectedProfile)"
+                                ng-options="profile as profile.name for profile in sharingProfiles track by profile.id">
+                            <option value="None">Standard</option>
+                        </select>
+
                     </div>
                 </div>
 
