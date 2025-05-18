@@ -1001,6 +1001,22 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
 
     };
 
+        /**
+         * TODO: add description
+         *
+         * @param {ManagedClient} client
+         *     The ManagedClient which will be watchable via the sharing
+         *     profile.
+         *
+         * @param {SharingProfile} sharingProfile
+         *     The sharing profile to use to watch the session.
+         */
+    ManagedClient.setWatchAccess = function setWatchAccess(client, sharingProfile) {
+        client.watchProfile = sharingProfile; 
+        console.log("client.watchProfile: " + JSON.stringify(client.watchProfile));
+        //TODO watchSession Objekt erstellen und per API an Server schicken
+    }
+
     /**
      * Returns whether the given ManagedClient is being shared. A ManagedClient
      * is shared if it has any associated share links.
