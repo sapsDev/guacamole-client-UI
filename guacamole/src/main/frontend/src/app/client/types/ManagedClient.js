@@ -36,6 +36,7 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
     const ManagedFilesystem      = $injector.get('ManagedFilesystem');
     const ManagedFileUpload      = $injector.get('ManagedFileUpload');
     const ManagedShareLink       = $injector.get('ManagedShareLink');
+    const WatchSession           = $injector.get('WatchSession');
 
     // Required services
     const $document               = $injector.get('$document');
