@@ -1016,19 +1016,20 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
         client.watchProfile = sharingProfile; 
 
         //ShareLink erstellen, falls dieser noch nicht existiert
-        if (client.shareLinks[sharingProfile.identifier]) {
+        if (!client.shareLinks[sharingProfile.identifier]) {
             ManagedClient.createShareLink(client, sharingProfile);
             console.log("shareLink created!")
         }
         
         console.log("SharingProfile: " + JSON.stringify(sharingProfile));
+        console.log("ShareLink: " + JSON.stringify(client.shareLinks[sharingProfile.identifier]));
         
         //watchSession Objekt bauen
         var newSession = new WatchSession({
-            id:          client.id,  //TODO
-            username:    "",   //TODO
+            id:          1,  //TODO
+            username:    authenticationService.getCurrentUsername(),   //TODO
             restriction: true, //TODO
-            link:        client.shareLinks[sharingProfile.identifier]
+            link:        client.shareLinks[sharingProfile.identifier].link
         }); 
         
         console.log("newSession: " + JSON.stringify(newSession));
