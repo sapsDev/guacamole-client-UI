@@ -1012,13 +1012,13 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
      * @param {SharingProfile} sharingProfile
      *     The sharing profile to use to watch the session.
      */
-    ManagedClient.setWatchAccess = function setWatchAccess(client, sharingProfile) {
+    ManagedClient.setWatchAccess = async function setWatchAccess(client, sharingProfile) {
         client.watchProfile = sharingProfile; 
 
         //ShareLink erstellen, falls dieser noch nicht existiert
         if (!client.shareLinks[sharingProfile.identifier]) {
-            ManagedClient.createShareLink(client, sharingProfile);
-            console.log("shareLink created!")
+            await ManagedClient.createShareLink(client, sharingProfile);
+            console.log("new shareLink created!")
         }
         
         console.log("SharingProfile: " + JSON.stringify(sharingProfile));
