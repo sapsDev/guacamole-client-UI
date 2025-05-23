@@ -1001,20 +1001,40 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
 
     };
 
-        /**
-         * TODO: add description
-         *
-         * @param {ManagedClient} client
-         *     The ManagedClient which will be watchable via the sharing
-         *     profile.
-         *
-         * @param {SharingProfile} sharingProfile
-         *     The sharing profile to use to watch the session.
-         */
+    /**
+     * TODO: add description
+     *
+     * @param {ManagedClient} client
+     *     The ManagedClient which will be watchable via the sharing
+     *     profile.
+     *
+     * @param {SharingProfile} sharingProfile
+     *     The sharing profile to use to watch the session.
+     */
     ManagedClient.setWatchAccess = function setWatchAccess(client, sharingProfile) {
         client.watchProfile = sharingProfile; 
-        console.log("client.watchProfile: " + JSON.stringify(client.watchProfile));
-        //TODO watchSession Objekt erstellen und per API an Server schicken
+
+        //ShareLink erstellen, falls dieser noch nicht existiert
+        if (client.shareLinks[sharingProfile.identifier]) {
+            ManagedClient.createShareLink(client, sharingProfile);
+            console.log("shareLink created!")
+        }
+        
+        console.log("SharingProfile: " + JSON.stringify(sharingProfile));
+        
+        //watchSession Objekt bauen
+        var newSession = new WatchSession({
+            id:          client.id,  //TODO
+            username:    "",   //TODO
+            restriction: true, //TODO
+            link:        client.shareLinks[sharingProfile.identifier]
+        }); 
+        
+        console.log("newSession: " + JSON.stringify(newSession));
+        console.log("client: " + JSON.stringify(client));
+        
+        //Bestehendes watchSession-Objekt per API für diese ActiveConnection entfernen
+        //Neu erstelltes watchSession-Objekt per API registrieren
     }
 
     /**
