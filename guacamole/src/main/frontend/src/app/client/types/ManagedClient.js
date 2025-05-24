@@ -1022,14 +1022,13 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
             console.log("new shareLink created!")
         }
         
-        console.log("SharingProfile: " + JSON.stringify(sharingProfile));
-        console.log("ShareLink: " + JSON.stringify(client.shareLinks[sharingProfile.identifier]));
         const clientIdentifier = ClientIdentifier.fromString(client.id);
         
         sharingProfileService.getSharingProfileParameters(
             clientIdentifier.dataSource, sharingProfile.identifier
         ).then(function(parameters) {
-            console.log("Parameters: " + JSON.stringify(parameters))
+            const isReadOnly = (parameters["read-only"] || "").toLowerCase() === "true";
+            console.log("isReadOnly: " + isReadOnly);
         });
         
         //watchSession Objekt bauen
