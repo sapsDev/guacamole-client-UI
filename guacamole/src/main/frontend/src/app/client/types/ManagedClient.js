@@ -1023,13 +1023,16 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
         
         console.log("SharingProfile: " + JSON.stringify(sharingProfile));
         console.log("ShareLink: " + JSON.stringify(client.shareLinks[sharingProfile.identifier]));
+        const clientIdentifier = ClientIdentifier.fromString(client.id);
+        console.log("ClientIdentifier: " + clientIdentifier);
+        console.log("ClientIdentifier.dataSource: " + clientIdentifier.dataSource);
         
         //watchSession Objekt bauen
         var newSession = new WatchSession({
-            id:          1,  //TODO
-            username:    authenticationService.getCurrentUsername(),   //TODO
-            restriction: true, //TODO
-            link:        client.shareLinks[sharingProfile.identifier].link
+            identifier:  '',  // API sets unique id
+            username:    authenticationService.getCurrentUsername(),   //✅
+            restriction: false, //TODO
+            link:        client.shareLinks[sharingProfile.identifier].href //TODO
         }); 
         
         console.log("newSession: " + JSON.stringify(newSession));
