@@ -51,6 +51,7 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
     const requestService          = $injector.get('requestService');
     const sharingProfileService   = $injector.get('sharingProfileService');
     const tunnelService           = $injector.get('tunnelService');
+    const watchSessionService     = $injector.get('watchSessionService');
     const guacAudio               = $injector.get('guacAudio');
     const guacHistory             = $injector.get('guacHistory');
     const guacImage               = $injector.get('guacImage');
@@ -250,6 +251,15 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
          * @type SharingProfile
          */
         this.watchProfile = template.watchProfile || null;
+
+        /**
+         * The watch session for this ManagedClient, created via
+         * ManagedClient.setWatchAccess(). Null if session watching
+         * is denied.
+         *
+         * @type WatchSession
+         */
+        this.watchSession = template.watchSession || null;
 
         /**
          * The number of simultaneous touch contacts supported by the remote
@@ -1014,15 +1024,30 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
      *     The sharing profile to use to watch the session.
      */
     ManagedClient.setWatchAccess = async function setWatchAccess(client, sharingProfile) {
-        client.watchProfile = sharingProfile; 
+        const dataSource = ClientIdentifier.fromString(client.id).dataSource;
+        
+        //Set watchProfile
+        client.watchProfile = sharingProfile;
+        
+        //Deny watching selected
+        if (!sharingProfile) {
+            if (!client.watchSession) {
+                return
+            } else {
+                await watchSessionService.deleteWatchSession(dataSource, client.watchSession);
+                client.watchSession = null
+                return;
+            }
+        }
 
         //Create share link if not existing
         if (!client.shareLinks[sharingProfile.identifier]) {
             await ManagedClient.createShareLink(client, sharingProfile);
         }
         
-        const clientIdentifier = ClientIdentifier.fromString(client.id);
+        //load data to update watch session
         var isReadOnly;
+        const link = client.shareLinks[sharingProfile.identifier].href;
         
         await sharingProfileService.getSharingProfileParameters(
             clientIdentifier.dataSource, sharingProfile.identifier
@@ -1030,18 +1055,39 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
             isReadOnly = (parameters["read-only"] || "").toLowerCase() === "true";
         });
         
-        //create watch session
-        var newSession = new WatchSession({
-            identifier:  '',  // API sets unique id
-            username:    authenticationService.getCurrentUsername(),   //✅
-            restriction: isReadOnly, //✅
-            link:        client.shareLinks[sharingProfile.identifier].href //✅
-        }); 
+        //update watch session if existing
+        if (client.watchSession) {
+            watchSessionService.saveWatchSession(
+                dataSource,
+                {
+                    identifier:  client.watchSession.identifier,
+                    username:    client.watchSession.username,
+                    restriction: !!isReadOnly,
+                    link:        link
+                }
+            ).then(function(promise) {
+                console.log('watchSessionUpdated -> promise: ' + JSON.stringify(promise));
+            });
+            
+            return;
+        }
         
-        console.log("newSession: " + JSON.stringify(newSession));
+        //load data to create watch session
+        const username = authenticationService.getCurrentUsername();
         
-        //delete existing watch session for this connection
-        //create/send new watch session via API
+        //create watch session if not existing
+        watchSessionService.createWatchSession(
+            dataSource,
+            {
+                identifier:  null,
+                username:    username,
+                restriction: !!isReadOnly,
+                link:        link
+            }
+        ).then(function watchSessionCreated(promise) {
+            console.log('watchSessionCreated -> promise: ' + JSON.stringify(promise));
+        });
+        
     }
 
     /**
