@@ -1026,11 +1026,11 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
         console.log("ShareLink: " + JSON.stringify(client.shareLinks[sharingProfile.identifier]));
         const clientIdentifier = ClientIdentifier.fromString(client.id);
         
-        var parameters = sharingProfileService.getSharingProfileParameters(
+        sharingProfileService.getSharingProfileParameters(
             clientIdentifier.dataSource, sharingProfile.identifier
-        );
-        
-        console.log("Parameters: " + JSON.stringify(parameters));
+        ).then(function(parameters) {
+            console.log("Parameters: " + JSON.stringify(parameters))
+        });
         
         //watchSession Objekt bauen
         var newSession = new WatchSession({
