@@ -49,6 +49,7 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
     const connectionService       = $injector.get('connectionService');
     const preferenceService       = $injector.get('preferenceService');
     const requestService          = $injector.get('requestService');
+    const sharingProfileService   = $injector.get('sharingProfileService');
     const tunnelService           = $injector.get('tunnelService');
     const guacAudio               = $injector.get('guacAudio');
     const guacHistory             = $injector.get('guacHistory');
@@ -1024,19 +1025,22 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
         console.log("SharingProfile: " + JSON.stringify(sharingProfile));
         console.log("ShareLink: " + JSON.stringify(client.shareLinks[sharingProfile.identifier]));
         const clientIdentifier = ClientIdentifier.fromString(client.id);
-        console.log("ClientIdentifier: " + clientIdentifier);
-        console.log("ClientIdentifier.dataSource: " + clientIdentifier.dataSource);
+        
+        var parameters = sharingProfileService.getSharingProfileParameters(
+            clientIdentifier.dataSource, sharingProfile.identifier
+        );
+        
+        console.log("Parameters: " + JSON.stringify(parameters));
         
         //watchSession Objekt bauen
         var newSession = new WatchSession({
             identifier:  '',  // API sets unique id
             username:    authenticationService.getCurrentUsername(),   //✅
             restriction: false, //TODO
-            link:        client.shareLinks[sharingProfile.identifier].href //TODO
+            link:        client.shareLinks[sharingProfile.identifier].href //✅
         }); 
         
         console.log("newSession: " + JSON.stringify(newSession));
-        console.log("client: " + JSON.stringify(client));
         
         //Bestehendes watchSession-Objekt per API für diese ActiveConnection entfernen
         //Neu erstelltes watchSession-Objekt per API registrieren
