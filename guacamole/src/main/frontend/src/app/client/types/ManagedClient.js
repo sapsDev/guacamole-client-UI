@@ -1016,33 +1016,32 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
     ManagedClient.setWatchAccess = async function setWatchAccess(client, sharingProfile) {
         client.watchProfile = sharingProfile; 
 
-        //ShareLink erstellen, falls dieser noch nicht existiert
+        //Create share link if not existing
         if (!client.shareLinks[sharingProfile.identifier]) {
             await ManagedClient.createShareLink(client, sharingProfile);
-            console.log("new shareLink created!")
         }
         
         const clientIdentifier = ClientIdentifier.fromString(client.id);
+        var isReadOnly;
         
         sharingProfileService.getSharingProfileParameters(
             clientIdentifier.dataSource, sharingProfile.identifier
         ).then(function(parameters) {
-            const isReadOnly = (parameters["read-only"] || "").toLowerCase() === "true";
-            console.log("isReadOnly: " + isReadOnly);
+            isReadOnly = (parameters["read-only"] || "").toLowerCase() === "true";
         });
         
-        //watchSession Objekt bauen
+        //create watch session
         var newSession = new WatchSession({
             identifier:  '',  // API sets unique id
             username:    authenticationService.getCurrentUsername(),   //✅
-            restriction: false, //TODO
+            restriction: isReadOnly, //✅
             link:        client.shareLinks[sharingProfile.identifier].href //✅
         }); 
         
         console.log("newSession: " + JSON.stringify(newSession));
         
-        //Bestehendes watchSession-Objekt per API für diese ActiveConnection entfernen
-        //Neu erstelltes watchSession-Objekt per API registrieren
+        //delete existing watch session for this connection
+        //create/send new watch session via API
     }
 
     /**
