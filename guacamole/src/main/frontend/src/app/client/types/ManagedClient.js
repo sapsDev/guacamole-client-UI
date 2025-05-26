@@ -1067,6 +1067,7 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
                 }
             ).then(function(promise) {
                 console.log('watchSessionUpdated -> promise: ' + JSON.stringify(promise));
+                //TODO: set client.watchSession
             });
             
             return;
@@ -1086,6 +1087,7 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
             }
         ).then(function watchSessionCreated(promise) {
             console.log('watchSessionCreated -> promise: ' + JSON.stringify(promise));
+            //TODO: set client.watchSession
         });
         
     }
