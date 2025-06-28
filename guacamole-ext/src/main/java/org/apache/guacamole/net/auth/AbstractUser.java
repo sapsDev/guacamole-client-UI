@@ -210,6 +210,18 @@ public abstract class AbstractUser extends AbstractIdentifiable
     public ObjectPermissionSet getSharingProfilePermissions() {
         return ObjectPermissionSet.EMPTY_SET;
     }
+    
+    /**
+     * {@inheritDoc}
+     *
+     * <p>This implementation simply an immutable, empty permission set.
+     * Implementations that wish to expose permissions should override this
+     * function.
+     */
+    @Override
+    public ObjectPermissionSet getWatchSessionPermissions() {
+        return ObjectPermissionSet.EMPTY_SET;
+    }
 
     /**
      * {@inheritDoc}
