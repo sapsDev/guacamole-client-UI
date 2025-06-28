@@ -93,7 +93,7 @@ public abstract class ModeledPermissions<ModelType extends EntityModel>
      */
     @Inject
     private UserGroupPermissionService userGroupPermissionService;
-^    
+ 
     /**
      * Service for retrieving watch session permissions.
      */
