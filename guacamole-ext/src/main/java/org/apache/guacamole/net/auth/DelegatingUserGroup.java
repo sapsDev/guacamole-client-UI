@@ -115,6 +115,12 @@ public class DelegatingUserGroup implements UserGroup {
             throws GuacamoleException {
         return userGroup.getActiveConnectionPermissions();
     }
+    
+    @Override
+    public ObjectPermissionSet getWatchSessionPermissions()
+            throws GuacamoleException {
+        return userGroup.getWatchSessionPermissions();
+    }
 
     @Override
     public ObjectPermissionSet getUserPermissions() throws GuacamoleException {
