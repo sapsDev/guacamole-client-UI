@@ -30,6 +30,7 @@ import org.apache.guacamole.auth.jdbc.permission.ConnectionPermissionService;
 import org.apache.guacamole.auth.jdbc.permission.SharingProfilePermissionService;
 import org.apache.guacamole.auth.jdbc.permission.UserGroupPermissionService;
 import org.apache.guacamole.auth.jdbc.permission.UserPermissionService;
+import org.apache.guacamole.auth.jdbc.permission.WatchSessionPermissionService;
 import org.apache.guacamole.auth.jdbc.user.ModeledAuthenticatedUser;
 import org.apache.guacamole.net.auth.Permissions;
 import org.apache.guacamole.net.auth.permission.ObjectPermissionSet;
