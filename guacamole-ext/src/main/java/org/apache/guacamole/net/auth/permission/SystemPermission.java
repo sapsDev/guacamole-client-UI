@@ -58,6 +58,11 @@ public class SystemPermission implements Permission<SystemPermission.Type> {
         CREATE_SHARING_PROFILE,
         
         /**
+         * Create watch sessions.
+         */
+        CREATE_WATCH_SESSION,
+        
+        /**
          * Audit the system in general, which involves the ability to view
          * active and historical connection records, user logon records, etc.,
          * but lacks permission to change any of these details (interact with
