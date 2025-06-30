@@ -153,7 +153,7 @@ public class JDBCAuthenticationProviderModule extends MyBatisModule {
         addMapperClass(SharingProfileMapper.class);
         addMapperClass(SharingProfileParameterMapper.class);
         addMapperClass(SharingProfilePermissionMapper.class);
-        addMapperClass(WatchSessionMapper);
+        addMapperClass(WatchSessionMapper.class);
         addMapperClass(WatchSessionPermissionMapper.class);
         addMapperClass(UserGroupMapper.class);
         addMapperClass(UserGroupMemberUserGroupMapper.class);
