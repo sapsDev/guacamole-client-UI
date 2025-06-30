@@ -37,6 +37,7 @@ import org.apache.guacamole.net.auth.SharingProfile;
 import org.apache.guacamole.net.auth.User;
 import org.apache.guacamole.net.auth.UserContext;
 import org.apache.guacamole.net.auth.UserGroup;
+import org.apache.guacamole.net.auth.WatchSession;
 import org.apache.guacamole.rest.activeconnection.APIActiveConnection;
 import org.apache.guacamole.rest.connection.APIConnection;
 import org.apache.guacamole.rest.connectiongroup.APIConnectionGroup;
@@ -47,6 +48,7 @@ import org.apache.guacamole.rest.schema.SchemaResource;
 import org.apache.guacamole.rest.sharingprofile.APISharingProfile;
 import org.apache.guacamole.rest.user.APIUser;
 import org.apache.guacamole.rest.usergroup.APIUserGroup;
+import org.apache.guacamole.rest.watchsession.APIWatchSession;
 
 /**
  * A REST resource which exposes the contents of a particular UserContext.
@@ -116,6 +118,13 @@ public class UserContextResource {
      */
     @Inject
     private DirectoryResourceFactory<UserGroup, APIUserGroup> userGroupDirectoryResourceFactory;
+    
+    /**
+     * Factory for creating DirectoryResources which expose a given
+     * WatchSession Directory.
+     */
+    @Inject
+    private DirectoryResourceFactory<WatchSession, APIWatchSession> watchSessionDirectoryResourceFactory;
 
     /**
      * Creates a new UserContextResource which exposes the data within the
@@ -261,6 +270,24 @@ public class UserContextResource {
             throws GuacamoleException {
         return userGroupDirectoryResourceFactory.create(authenticatedUser,
                 userContext, userContext.getUserGroupDirectory());
+    }
+    
+    /**
+     * Returns a new resource which represents the WatchSession Directory contained
+     * within the UserContext exposed by this UserContextResource.
+     *
+     * @return
+     *     A new resource which represents the WatchSession Directory contained
+     *     within the UserContext exposed by this UserContextResource.
+     *
+     * @throws GuacamoleException
+     *     If an error occurs while retrieving the WatchSession Directory.
+     */
+    @Path("watchSessions")
+    public DirectoryResource<WatchSession, APIWatchSession> getWatchSessionDirectoryResource()
+            throws GuacamoleException {
+        return watchSessionDirectoryResourceFactory.create(authenticatedUser,
+                userContext, userContext.getWatchSessionDirectory());
     }
 
     /**
