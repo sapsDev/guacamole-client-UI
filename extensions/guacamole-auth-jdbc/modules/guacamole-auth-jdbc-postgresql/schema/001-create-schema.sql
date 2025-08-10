@@ -313,6 +313,26 @@ CREATE INDEX guacamole_connection_parameter_connection_id
     ON guacamole_connection_parameter(connection_id);
 
 --
+-- Table of watch sessions. Each watch session has a restriction for the viewer,
+-- a username of the user sharing the session, the identifier of the shared connection and
+-- a link to join the session.
+--
+
+CREATE TABLE guacamole_watch_session (
+
+  watch_session_id serial       NOT NULL,
+  username         VARCHAR(128) NOT NULL,
+  connection_id    VARCHAR(128) NOT NULL,
+  restriction      boolean      NOT NULL,
+  link             VARCHAR(512) NOT NULL,
+    
+  PRIMARY KEY (watch_session_id),
+                                         
+  CONSTRAINT watch_session_user_connection
+      UNIQUE (username, connection_id)
+);
+
+--
 -- Table of sharing profile parameters. Each parameter is simply
 -- name/value pair associated with a sharing profile. These parameters dictate
 -- the restrictions/features which apply to the user joining the associated

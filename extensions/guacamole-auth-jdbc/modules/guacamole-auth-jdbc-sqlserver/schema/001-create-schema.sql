@@ -479,6 +479,26 @@ CREATE NONCLUSTERED INDEX [IX_guacamole_sharing_profile_attribute_sharing_profil
 GO
 
 --
+-- Table of watch sessions. Each watch session has a restriction for the viewer,
+-- a username of the user sharing the session, the identifier of the shared connection and
+-- a link to join the session.
+--
+
+CREATE TABLE [guacamole_watch_session] (
+    [watch_session_id] [int] IDENTITY(1,1) NOT NULL,
+    [username]         [nvarchar](128)     NOT NULL,
+    [connection_id]    [nvarchar](128)     NOT NULL,
+    [restriction]      [bit]               NOT NULL,
+    [link]             [nvarchar](512)     NOT NULL,
+
+    CONSTRAINT [PK_guacamole_watch_session]
+        PRIMARY KEY CLUSTERED ([watch_session_id]),
+
+    CONSTRAINT [AK_guacamole_watch_session_user_connection]
+        UNIQUE ([username], [connection_id])
+);
+
+--
 -- Table of connection parameters. Each parameter is simply a name/value pair
 -- associated with a connection.
 --

@@ -238,6 +238,25 @@ CREATE TABLE `guacamole_connection_parameter` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+-- Table of watch sessions. Each watch session has a restriction for the viewer,
+-- a username of the user sharing the session, the identifier of the shared connection and
+-- a link to join the session. 
+--
+
+CREATE TABLE guacamole_watch_session (
+    
+  `watch_session_id` int(11)      NOT NULL AUTO_INCREMENT,
+  `username`         varchar(128) NOT NULL,
+  `connection_id`    varchar(128) NOT NULL,
+  `restriction`      boolean      NOT NULL,
+  `link`             varchar(512) NOT NULL,
+
+  PRIMARY KEY (`watch_session_id`),
+  UNIQUE KEY `watch_session_user_connection` (username, connection_id)
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
 -- Table of sharing profile parameters. Each parameter is simply
 -- name/value pair associated with a sharing profile. These parameters dictate
 -- the restrictions/features which apply to the user joining the associated
