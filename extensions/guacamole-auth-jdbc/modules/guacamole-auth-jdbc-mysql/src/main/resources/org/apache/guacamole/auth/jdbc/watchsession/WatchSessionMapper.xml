@@ -23,44 +23,74 @@
 
 <mapper namespace="org.apache.guacamole.auth.jdbc.watchsession.WatchSessionMapper">
 
+    <!-- Result mapper for watch session objects -->
     <resultMap id="WatchSessionResultMap" type="org.apache.guacamole.auth.jdbc.watchsession.WatchSessionModel">
-        <id     column="watch_session_id" property="objectID"   jdbcType="INTEGER"/>
-        <result column="username"         property="username"   jdbcType="VARCHAR"/>
+
+        <!-- Watch session properties -->
+        <id     column="watch_session_id" property="objectID"    jdbcType="INTEGER"/>
+        <result column="username"         property="username"    jdbcType="VARCHAR"/>
+        <result column="connection"       property="connection"  jdbcType="VARCHAR"/>
         <result column="restriction"      property="restriction" jdbcType="BOOLEAN"/>
-        <result column="link"             property="link"       jdbcType="VARCHAR"/>
+        <result column="link"             property="link"        jdbcType="VARCHAR"/>
+
     </resultMap>
 
+    <!-- Select all watch session identifiers -->
     <select id="selectIdentifiers" resultType="string">
-        SELECT watch_session_id FROM guacamole_watch_session
+        SELECT watch_session_id 
+        FROM guacamole_watch_session
     </select>
 
+    <!-- Select multiple watch sessions by identifier -->
     <select id="select" resultMap="WatchSessionResultMap">
-        SELECT watch_session_id, username, restriction, link
+
+        SELECT 
+            watch_session_id, 
+            username, 
+            connection, 
+            restriction, 
+            link
         FROM guacamole_watch_session
         WHERE watch_session_id IN
-        <foreach collection="identifiers" item="identifier" open="(" separator="," close=")">
-            #{identifier,jdbcType=VARCHAR}
-        </foreach>
+            <foreach collection="identifiers" item="identifier" 
+                     open="(" separator="," close=")">
+                #{identifier,jdbcType=VARCHAR}
+            </foreach>;
+
     </select>
 
+    <!-- Delete single watch session by identifier -->
     <delete id="delete">
         DELETE FROM guacamole_watch_session
-        WHERE watch_session_id = #{identifier,jdbcType=INTEGER}
+        WHERE watch_session_id = #{identifier,jdbcType=VARCHAR}
     </delete>
 
+    <!-- Insert single watch session -->
     <insert id="insert" useGeneratedKeys="true" keyProperty="object.objectID"
             parameterType="org.apache.guacamole.auth.jdbc.watchsession.WatchSessionModel">
-        INSERT INTO guacamole_watch_session (username, restriction, link)
-        VALUES (#{object.username,jdbcType=VARCHAR},
-        #{object.restriction,jdbcType=BOOLEAN},
-        #{object.link,jdbcType=VARCHAR})
+
+        INSERT INTO guacamole_watch_session (
+            username,
+            connection,
+            restriction,
+            link
+        )
+        VALUES (
+            #{object.username,jdbcType=VARCHAR},
+            #{object.connection,jdbcType=VARCHAR},
+            #{object.restriction,jdbcType=BOOLEAN},
+            #{object.link,jdbcType=VARCHAR}
+        )
+
     </insert>
 
+    <!-- Update single watch session -->
     <update id="update" parameterType="org.apache.guacamole.auth.jdbc.watchsession.WatchSessionModel">
         UPDATE guacamole_watch_session
         SET username = #{object.username,jdbcType=VARCHAR},
-        restriction = #{object.restriction,jdbcType=BOOLEAN},
-        link = #{object.link,jdbcType=VARCHAR}
+            connection = #{object.connection,jdbcType=VARCHAR},
+            restriction = #{object.restriction,jdbcType=BOOLEAN},
+            link = #{object.link,jdbcType=VARCHAR}
         WHERE watch_session_id = #{object.objectID,jdbcType=INTEGER}
     </update>
 
