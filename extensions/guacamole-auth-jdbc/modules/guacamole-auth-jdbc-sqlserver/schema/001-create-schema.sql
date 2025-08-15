@@ -487,7 +487,7 @@ GO
 CREATE TABLE [guacamole_watch_session] (
     [watch_session_id] [int] IDENTITY(1,1) NOT NULL,
     [username]         [nvarchar](128)     NOT NULL,
-    [connection_id]    [nvarchar](128)     NOT NULL,
+    [connection]       [nvarchar](128)     NOT NULL,
     [restriction]      [bit]               NOT NULL,
     [link]             [nvarchar](512)     NOT NULL,
 
@@ -495,7 +495,7 @@ CREATE TABLE [guacamole_watch_session] (
         PRIMARY KEY CLUSTERED ([watch_session_id]),
 
     CONSTRAINT [AK_guacamole_watch_session_user_connection]
-        UNIQUE ([username], [connection_id])
+        UNIQUE ([username], [connection])
 );
 
 --

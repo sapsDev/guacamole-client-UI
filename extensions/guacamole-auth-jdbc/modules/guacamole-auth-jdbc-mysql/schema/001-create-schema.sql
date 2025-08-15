@@ -247,12 +247,12 @@ CREATE TABLE guacamole_watch_session (
     
   `watch_session_id` int(11)      NOT NULL AUTO_INCREMENT,
   `username`         varchar(128) NOT NULL,
-  `connection_id`    varchar(128) NOT NULL,
+  `connection`       varchar(128) NOT NULL,
   `restriction`      boolean      NOT NULL,
   `link`             varchar(512) NOT NULL,
 
   PRIMARY KEY (`watch_session_id`),
-  UNIQUE KEY `watch_session_user_connection` (username, connection_id)
+  UNIQUE KEY `watch_session_user_connection` (username, connection)
 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

@@ -321,15 +321,15 @@ CREATE INDEX guacamole_connection_parameter_connection_id
 CREATE TABLE guacamole_watch_session (
 
   watch_session_id serial       NOT NULL,
-  username         VARCHAR(128) NOT NULL,
-  connection_id    VARCHAR(128) NOT NULL,
+  username         varchar(128) NOT NULL,
+  connection       varchar(128) NOT NULL,
   restriction      boolean      NOT NULL,
-  link             VARCHAR(512) NOT NULL,
+  link             varchar(512) NOT NULL,
     
   PRIMARY KEY (watch_session_id),
                                          
   CONSTRAINT watch_session_user_connection
-      UNIQUE (username, connection_id)
+      UNIQUE (username, connection)
 );
 
 --
