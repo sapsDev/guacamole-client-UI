@@ -650,6 +650,39 @@ CREATE NONCLUSTERED INDEX [IX_guacamole_sharing_profile_permission_entity_id]
 GO
 
 --
+-- Table of watch session permissions. Each watch session permission grants
+-- a user or user group specific access to a watch session.
+--
+
+CREATE TABLE [guacamole_watch_session_permission] (
+
+    [entity_id]        [int]                         NOT NULL,
+    [watch_session_id] [int]                         NOT NULL,
+    [permission]       [guacamole_object_permission] NOT NULL,
+
+     CONSTRAINT [PK_guacamole_watch_session_permission]
+        PRIMARY KEY CLUSTERED ([entity_id], [watch_session_id], [permission]),
+
+    CONSTRAINT [FK_guacamole_watch_session_permission_watch_session_id]
+        FOREIGN KEY ([watch_session_id])
+        REFERENCES [guacamole_watch_session] ([watch_session_id])
+        ON DELETE CASCADE,
+
+    CONSTRAINT [FK_guacamole_watch_session_permission_entity_id]
+        FOREIGN KEY ([entity_id])
+        REFERENCES [guacamole_entity] ([entity_id])
+        ON DELETE CASCADE
+
+);
+
+CREATE NONCLUSTERED INDEX [IX_guacamole_watch_session_permission_watch_session_id]
+    ON [guacamole_watch_session_permission] ([watch_session_id]);
+
+CREATE NONCLUSTERED INDEX [IX_guacamole_watch_session_permission_entity_id]
+    ON [guacamole_watch_session_permission] ([entity_id]);
+GO
+
+--
 -- Table of system permissions. Each system permission grants a user or user
 -- group a system-level privilege of some kind.
 --

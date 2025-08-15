@@ -466,6 +466,32 @@ CREATE TABLE guacamole_sharing_profile_permission (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+-- Table of watch session permissions. Each watch session permission grants
+-- a user or user group specific access to a sharing profile.
+--
+
+CREATE TABLE guacamole_watch_session_permission (
+
+  `entity_id`        integer NOT NULL,
+  `watch_session_id` integer NOT NULL,
+  `permission`       enum('READ',
+                          'UPDATE',
+                          'DELETE',
+                          'ADMINISTER') NOT NULL,
+
+  PRIMARY KEY (`entity_id`, `watch_session_id`, `permission`),
+  
+  CONSTRAINT `guacamole_watch_session_permission_ibfk_1`
+    FOREIGN KEY (`watch_session_id`)
+    REFERENCES `guacamole_watch_session` (`watch_session_id`) ON DELETE CASCADE,
+
+  CONSTRAINT `guacamole_watch_session_permission_entity`
+    FOREIGN KEY (`entity_id`)
+    REFERENCES `guacamole_entity` (`entity_id`) ON DELETE CASCADE
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
 -- Table of system permissions. Each system permission grants a user or user
 -- group a system-level privilege of some kind.
 --
