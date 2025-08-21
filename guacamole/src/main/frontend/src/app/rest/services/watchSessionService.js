@@ -38,12 +38,14 @@ angular.module('rest').factory('watchSessionService', ['$injector',
                 "session1": new WatchSession({
                     identifier: "abc123",
                     username: "testuser1",
+                    connection: "connection1",
                     restriction: true,
                     link: "https://google.com"
                 }),
                 "session2": new WatchSession({
                     identifier: "abc456",
                     username: "testuser2",
+                    connection: "connection2",
                     restriction: false,
                     link: "https://youtube.com"
                 })
@@ -53,12 +55,14 @@ angular.module('rest').factory('watchSessionService', ['$injector',
                 "session3": new WatchSession({
                     identifier: "xyz123",
                     username: "testuser3",
+                    connection: "connection3",
                     restriction: true,
                     link: "https://instagram.com"
                 }),
                 "session4": new WatchSession({
                     identifier: "xyz456",
                     username: "testuser4",
+                    connection: "connection4",
                     restriction: false,
                     link: "https://github.com"
                 })

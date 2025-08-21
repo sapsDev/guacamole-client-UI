@@ -61,6 +61,16 @@ public class ModeledWatchSession
     public void setUsername(String username) {
         getModel().setUsername(username);
     }
+    
+    @Override
+    public String getConnection() {
+        return getModel().getConnection();
+    }
+
+    @Override
+    public void setConnection(String connection) {
+        getModel().setConnection(connection);
+    }
 
     @Override
     public boolean getRestriction() {

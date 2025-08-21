@@ -64,6 +64,16 @@ public class APIWatchSessionWrapper implements WatchSession {
     public void setUsername(String name) {
         apiWatchSession.setUsername(name);
     }
+    
+    @Override
+    public String getConnection() {
+        return apiWatchSession.getConnection();
+    }
+
+    @Override
+    public void setConnection(String connection) {
+        apiWatchSession.setConnection(connection);
+    }    
 
     @Override
     public boolean getRestriction() {

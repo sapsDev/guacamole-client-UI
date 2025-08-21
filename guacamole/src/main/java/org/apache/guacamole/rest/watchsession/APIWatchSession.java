@@ -42,6 +42,11 @@ public class APIWatchSession {
      * known.
      */
     private String username;
+    
+    /**
+     * The connection name of this watchable session.
+     */
+    private String connection;
 
     /**
      * Whether this session can be joined with or without restrictions.
@@ -73,6 +78,7 @@ public class APIWatchSession {
         // Set main information
         this.identifier = watchSession.getIdentifier();
         this.username = watchSession.getUsername();
+        this.connection = watchSession.getConnection();
         this.restriction = watchSession.getRestriction();
         this.link = watchSession.getLink();
 
@@ -121,6 +127,26 @@ public class APIWatchSession {
     public void setUsername(String username) {
         this.username = username;
     }
+
+    /**
+     * Returns the connection name of this watchable session.
+     *
+     * @return
+     *     The connection name of this watchable session.
+     */
+    public String getConnection() {
+        return connection;
+    }
+
+    /**
+     * Sets the connection name of this watchable session.
+     *
+     * @param connection
+     *     The connection name of this watchable session.
+     */
+    public void setConnection(String connection) {
+        this.connection = connection;
+    }    
     
     /**
      * Returns whether this session can be joined with or without restrictions.

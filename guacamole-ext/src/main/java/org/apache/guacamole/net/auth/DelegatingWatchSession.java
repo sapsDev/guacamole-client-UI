@@ -71,6 +71,16 @@ public class DelegatingWatchSession implements WatchSession {
     public void setUsername(String username) {
         watchSession.setUsername(username);
     }
+    
+    @Override
+    public String getConnection() {
+        return watchSession.getConnection();
+    }
+
+    @Override
+    public void setConnection(String connection) {
+        watchSession.setConnection(connection);
+    }
 
     @Override
     public boolean getRestriction() {

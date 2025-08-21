@@ -47,6 +47,13 @@ angular.module('watch').factory('WatchSessionWrapper', [
              * @type String
              */
             this.username = template.username;
+
+            /**
+             * The connection name of this watchable session.
+             *
+             * @type String
+             */
+            this.connection = template.connection;
             
             /**
              * A flag that indicates whether the session can be joined

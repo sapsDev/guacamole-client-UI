@@ -30,11 +30,15 @@ public abstract class AbstractWatchSession implements WatchSession {
      */
     private String identifier;
 
-
     /**
      * The username of the user associated with this watch session.
      */
     private String username;
+    
+    /**
+     * The connection name of this watchable session.
+     */
+    private String connection;
 
     /**
      * Whether this session can be joined with or without restrictions.
@@ -64,6 +68,16 @@ public abstract class AbstractWatchSession implements WatchSession {
     @Override
     public void setUsername(String username) {
         this.username = username;
+    }
+    
+    @Override
+    public String getConnection() {
+        return connection;
+    }
+
+    @Override
+    public void setConnection(String connection) {
+        this.connection = connection;
     }
 
     @Override

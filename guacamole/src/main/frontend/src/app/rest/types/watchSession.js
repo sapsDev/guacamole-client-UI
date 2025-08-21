@@ -53,6 +53,13 @@ angular.module('rest').factory('WatchSession', [function defineWatchSession() {
         this.username = template.username;
 
         /**
+         * The connection name of this watchable session.
+         * 
+         * @type String
+         */
+        this.connection = template.connection;
+
+        /**
          * Whether this session can be joined with or without
          * restrictions.
          *

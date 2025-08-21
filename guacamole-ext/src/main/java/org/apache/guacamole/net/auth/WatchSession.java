@@ -39,6 +39,22 @@ public interface WatchSession extends Identifiable {
      *     The name of the user associated with this watchable session.
      */
     public void setUsername(String username);
+    
+    /**
+     * Returns the connection name of this watchable session.
+     *
+     * @return
+     *     The connection name of this watchable session.
+     */
+    public String getConnection();
+
+    /**
+     * Sets the connection name of this watchable session.
+     *
+     * @param connection
+     *     The connection name of this watchable session.
+     */
+    public void setConnection(String connection);
 
     /**
      * Returns whether this session can be joined with or without restrictions.

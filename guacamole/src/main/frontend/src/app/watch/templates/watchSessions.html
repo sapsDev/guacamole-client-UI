@@ -15,6 +15,9 @@
             <th guac-sort-order="wrapperOrder" guac-sort-property="'username'">
                 {{'WATCH.TABLE_HEADER_SESSION_USERNAME' | translate}}
             </th>
+            <th guac-sort-order="wrapperOrder" guac-sort-property="'connection'">
+                {{'WATCH.TABLE_HEADER_SESSION_CONNECTION' | translate}}
+            </th>
             <th guac-sort-order="wrapperOrder" guac-sort-property="'restriction'">
                 {{'WATCH.TABLE_HEADER_SESSION_RESTRICTION' | translate}}
             </th>
@@ -26,6 +29,7 @@
         <tbody>
         <tr ng-repeat="wrapper in wrapperPage" class="session">
             <td><guac-user-item username="wrapper.username"></guac-user-item></td>
+            <td>{{wrapper.connection}}</td>
             <td>{{wrapper.restriction ? "read-only" : "none"}}</td>
             <td><a ng-href="{{wrapper.link}}">{{wrapper.link}}</a></td>
         </tr>
