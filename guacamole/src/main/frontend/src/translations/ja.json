@@ -58,7 +58,6 @@
         "ACTION_SHARE"                     : "@:APP.ACTION_SHARE",
         "ACTION_SHOW_CLIPBOARD"            : "クリックをしてコピー/カットされたテキストが表示されます。",
         "ACTION_UPLOAD_FILES"              : "ファイルアップロード",
-        "ACTION_ALLOW_WATCHING"            : "視聴を許可する",
 
         "DIALOG_HEADER_CONNECTING"       : "接続",
         "DIALOG_HEADER_CONNECTION_ERROR" : "接続エラー",
@@ -678,6 +677,7 @@
         
         "SECTION_HEADER_WATCH" : "視聴する",
 
+        "TABLE_HEADER_SESSION_CONNECTION"  : "接続名",
         "TABLE_HEADER_SESSION_LINK"        : "リンク",
         "TABLE_HEADER_SESSION_RESTRICTION" : "制限",
         "TABLE_HEADER_SESSION_USERNAME"    : "ユーザー名"

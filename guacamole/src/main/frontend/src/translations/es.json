@@ -62,7 +62,6 @@
         "ACTION_SAVE_FILE"                 : "@:APP.ACTION_SAVE",
         "ACTION_SHARE"                     : "@:APP.ACTION_SHARE",
         "ACTION_UPLOAD_FILES"              : "Subir ficheros",
-        "ACTION_ALLOW_WATCHING"            : "Permitir ver",
 
         "DIALOG_HEADER_CONNECTING"       : "Conectando",
         "DIALOG_HEADER_CONNECTION_ERROR" : "Error de conexión",
@@ -849,6 +848,7 @@
         
         "SECTION_HEADER_WATCH" : "Ver",
 
+        "TABLE_HEADER_SESSION_CONNECTION"  : "Nombre de conexión",
         "TABLE_HEADER_SESSION_LINK"        : "Enlace",
         "TABLE_HEADER_SESSION_RESTRICTION" : "Restricción",
         "TABLE_HEADER_SESSION_USERNAME"    : "Nombre de usuario"

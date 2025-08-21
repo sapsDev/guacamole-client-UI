@@ -61,7 +61,6 @@
         "ACTION_RECONNECT"                 : "Torneu a connectar",
         "ACTION_SHOW_CLIPBOARD"            : "Feu clic per veure les dades del porta-retalls.",
         "ACTION_UPLOAD_FILES"              : "Carregueu fitxers",
-        "ACTION_ALLOW_WATCHING"            : "Permetre veure",
 
         "DIALOG_HEADER_CONNECTING"       : "Connectant",
         "DIALOG_HEADER_CONNECTION_ERROR" : "Error de connexió",
@@ -872,6 +871,7 @@
         
         "SECTION_HEADER_WATCH" : "Veure",
 
+        "TABLE_HEADER_SESSION_CONNECTION"  : "Nom de la connexió",
         "TABLE_HEADER_SESSION_LINK"        : "Enllaç",
         "TABLE_HEADER_SESSION_RESTRICTION" : "Restricció",
         "TABLE_HEADER_SESSION_USERNAME"    : "Nom d'usuari"

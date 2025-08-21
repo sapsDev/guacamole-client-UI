@@ -56,7 +56,6 @@
         "ACTION_RECONNECT"                 : "Koble til på nytt",
         "ACTION_SAVE_FILE"                 : "@:APP.ACTION_SAVE",
         "ACTION_UPLOAD_FILES"              : "Last Opp Filer",
-        "ACTION_ALLOW_WATCHING"            : "Tillat visning",
 
         "DIALOG_HEADER_CONNECTING"       : "Kobler til",
         "DIALOG_HEADER_CONNECTION_ERROR" : "Feil ved tilkobling",
@@ -540,6 +539,7 @@
         
         "SECTION_HEADER_WATCH" : "Se",
 
+        "TABLE_HEADER_SESSION_CONNECTION"  : "Navn på tilkobling",
         "TABLE_HEADER_SESSION_LINK"        : "Lenke",
         "TABLE_HEADER_SESSION_RESTRICTION" : "Begrensning",
         "TABLE_HEADER_SESSION_USERNAME"    : "Brukernavn"

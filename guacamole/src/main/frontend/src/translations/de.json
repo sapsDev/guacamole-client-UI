@@ -74,7 +74,6 @@
         "ACTION_SHARE"                     : "@:APP.ACTION_SHARE",
         "ACTION_SHOW_CLIPBOARD"            : "Klicken um Zwischenablage anzuzeigen.",
         "ACTION_UPLOAD_FILES"              : "Dateien hochladen",
-        "ACTION_ALLOW_WATCHING"            : "Zusehen erlauben",
 
         "DIALOG_HEADER_CONNECTING"       : "Verbinden",
         "DIALOG_HEADER_CONNECTION_ERROR" : "Verbindungsfehler",
@@ -956,6 +955,7 @@
         
         "SECTION_HEADER_WATCH" : "Zusehen",
 
+        "TABLE_HEADER_SESSION_CONNECTION"  : "Verbindungsname",
         "TABLE_HEADER_SESSION_LINK"        : "Link",
         "TABLE_HEADER_SESSION_RESTRICTION" : "Einschränkung",
         "TABLE_HEADER_SESSION_USERNAME"    : "Benutzername"
