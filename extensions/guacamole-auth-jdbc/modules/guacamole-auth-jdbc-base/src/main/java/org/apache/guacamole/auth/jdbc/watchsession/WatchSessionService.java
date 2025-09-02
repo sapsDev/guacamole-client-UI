@@ -87,6 +87,7 @@ public class WatchSessionService
         // Set model contents through ModeledWatchSession, copying the
         // provided watch session
         watchSession.setUsername(object.getUsername());
+        watchSession.setConnection(object.getConnection();
         watchSession.setRestriction(object.getRestriction());
         watchSession.setLink(object.getLink());
 
