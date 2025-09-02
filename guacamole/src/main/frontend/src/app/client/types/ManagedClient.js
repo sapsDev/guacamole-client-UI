@@ -1082,6 +1082,11 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
         //TODO: remove GET test
         watchSessionService.getWatchSessions(dataSource);
         //END test
+        console.log(' try watchSessionCreate(identifier: ' + null
+            + ',username: ' + username 
+            + ',connection: ' + client.name
+            + ',restriction: ' + !!isReadOnly 
+            + ',link: ' + link + ')');
         watchSessionService.createWatchSession(
             dataSource,
             {
