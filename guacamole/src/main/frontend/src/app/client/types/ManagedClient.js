@@ -1062,6 +1062,7 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
                 {
                     identifier:  client.watchSession.identifier,
                     username:    client.watchSession.username,
+                    connection:  client.watchSession.connection,
                     restriction: !!isReadOnly,
                     link:        link
                 }
@@ -1086,6 +1087,7 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
             {
                 identifier:  null,
                 username:    username,
+                connection:  client.name,
                 restriction: !!isReadOnly,
                 link:        link
             }
