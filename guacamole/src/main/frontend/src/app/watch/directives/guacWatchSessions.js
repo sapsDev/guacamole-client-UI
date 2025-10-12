@@ -125,11 +125,10 @@ angular.module('watch').directive('guacWatchSessions', [function guacWatchSessio
                 });
 
             };
-
-            // TODO: Remove Test
+            
             // Retrieve all watchable sessions
             dataSourceService.apply(
-                watchSessionService.getWatchSessionsTest,
+                watchSessionService.getWatchSessions,
                 dataSources
             )
             .then(function sessionsRetrieved(retrievedWatchSessions) {
