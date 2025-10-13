@@ -1066,9 +1066,9 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
                     restriction: !!isReadOnly,
                     link:        link
                 }
-            ).then(function(promise) {
-                console.log('watchSessionUpdated -> promise: ' + JSON.stringify(promise));
-                //TODO: set client.watchSession
+            ).then(function watchSessionSaved(watchSession) {
+                console.log('watchSessionUpdated -> promise: ' + JSON.stringify(watchSession));
+                client.watchSession = watchSession;
             });
             
             return;
@@ -1092,9 +1092,9 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
                 restriction: !!isReadOnly,
                 link:        link
             }
-        ).then(function watchSessionCreated(promise) {
-            console.log('watchSessionCreated -> promise: ' + JSON.stringify(promise));
-            //TODO: set client.watchSession
+        ).then(function watchSessionCreated(watchSession) {
+            console.log('watchSessionCreated -> promise: ' + JSON.stringify(watchSession));
+            client.watchSession = watchSession;
         });
         
     }
