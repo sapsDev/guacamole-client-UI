@@ -1035,7 +1035,10 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
                 return
             } else {
                 await watchSessionService.deleteWatchSession(dataSource, client.watchSession);
-                client.watchSession = null
+                client.watchSession = null;
+                //TODO remove
+                console.log('client.watchSession: ' + JSON.stringify(client.watchSession));
+                //END remove
                 return;
             }
         }
@@ -1069,6 +1072,9 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
             ).then(function watchSessionSaved(watchSession) {
                 console.log('watchSessionUpdated -> promise: ' + JSON.stringify(watchSession));
                 client.watchSession = watchSession;
+                //TODO remove
+                console.log('client.watchSession: ' + JSON.stringify(client.watchSession));
+                //END remove
             });
             
             return;
@@ -1095,6 +1101,9 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
         ).then(function watchSessionCreated(watchSession) {
             console.log('watchSessionCreated -> promise: ' + JSON.stringify(watchSession));
             client.watchSession = watchSession;
+            //TODO remove
+            console.log('client.watchSession: ' + JSON.stringify(client.watchSession));
+            //END remove
         });
         
     }
