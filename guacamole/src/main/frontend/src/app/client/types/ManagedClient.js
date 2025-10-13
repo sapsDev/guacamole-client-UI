@@ -1078,10 +1078,6 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
         const username = authenticationService.getCurrentUsername();
         
         //create watch session if not existing
-        
-        //TODO: remove GET test
-        watchSessionService.getWatchSessions(dataSource);
-        //END test
         console.log(' try watchSessionCreate(identifier: ' + null
             + ',username: ' + username 
             + ',connection: ' + client.name
