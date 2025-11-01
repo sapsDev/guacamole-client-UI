@@ -47,6 +47,11 @@ public class APIWatchSession {
      * The connection name of this watchable session.
      */
     private String connection;
+    
+    /**
+     * The uuid of the tunnel being used by the underlying Guacamole client.
+     */
+    private String uuid;
 
     /**
      * Whether this session can be joined with or without restrictions.
@@ -79,6 +84,7 @@ public class APIWatchSession {
         this.identifier = watchSession.getIdentifier();
         this.username = watchSession.getUsername();
         this.connection = watchSession.getConnection();
+        this.uuid = watchSession.getUUID();
         this.restriction = watchSession.getRestriction();
         this.link = watchSession.getLink();
 
@@ -147,6 +153,26 @@ public class APIWatchSession {
     public void setConnection(String connection) {
         this.connection = connection;
     }    
+    
+    /**
+     * Returns the tunnel uuid of this watchable session.
+     *
+     * @return
+     *     The tunnel uuid of this watchable session.
+     */
+    public String getUUID() {
+        return uuid;
+    }
+        
+    /**
+     * Sets the tunnel uuid of this watchable session.
+     *
+     * @param uuid
+     *     The tunnel uuid of this watchable session.
+     */
+    public void setUUID(String uuid) {
+        this.uuid = uuid;
+    }
     
     /**
      * Returns whether this session can be joined with or without restrictions.

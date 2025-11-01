@@ -30,6 +30,7 @@
         <id     column="watch_session_id" property="objectID"    jdbcType="INTEGER"/>
         <result column="username"         property="username"    jdbcType="VARCHAR"/>
         <result column="connection"       property="connection"  jdbcType="VARCHAR"/>
+        <result column="uuid"             property="uuid"        jdbcType="VARCHAR"/>
         <result column="restriction"      property="restriction" jdbcType="BIT"/>
         <result column="link"             property="link"        jdbcType="VARCHAR"/>
         
@@ -48,6 +49,7 @@
             watch_session_id,
             username,
             connection,
+            uuid,
             restriction,
             link
         FROM [guacamole_watch_session]
@@ -72,12 +74,14 @@
         INSERT INTO [guacamole_watch_session] (
             username,
             connection,
+            uuid,
             restriction,
             link
         )
         VALUES (
             #{object.username,jdbcType=VARCHAR},
             #{object.connection,jdbcType=VARCHAR},
+            #{object.uuid,jdbcType=VARCHAR},
             #{object.restriction,jdbcType=BIT},
             #{object.link,jdbcType=VARCHAR}
         )
@@ -88,6 +92,7 @@
         UPDATE [guacamole_watch_session]
         SET username = #{object.username,jdbcType=VARCHAR},
             connection = #{object.connection,jdbcType=VARCHAR},
+            uuid = #{object.uuid,jdbcType=VARCHAR},
             restriction = #{object.restriction,jdbcType=BIT},
             link = #{object.link,jdbcType=VARCHAR}
         WHERE watch_session_id = #{object.objectID,jdbcType=INTEGER}

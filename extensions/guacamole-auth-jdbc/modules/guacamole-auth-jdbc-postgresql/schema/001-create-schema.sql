@@ -323,6 +323,7 @@ CREATE TABLE guacamole_watch_session (
   watch_session_id serial       NOT NULL,
   username         varchar(128) NOT NULL,
   connection       varchar(128) NOT NULL,
+  uuid             varchar(128) NOT NULL,
   restriction      boolean      NOT NULL,
   link             varchar(512) NOT NULL,
     

@@ -1066,6 +1066,7 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
                     identifier:  client.watchSession.identifier,
                     username:    client.watchSession.username,
                     connection:  client.watchSession.connection,
+                    uuid:        client.watchSession.uuid,
                     restriction: !!isReadOnly,
                     link:        link
                 }
@@ -1087,6 +1088,7 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
         console.log(' try watchSessionCreate(identifier: ' + null
             + ',username: ' + username 
             + ',connection: ' + client.name
+            + ',uuid: ' + lient.tunnel.uuid    
             + ',restriction: ' + !!isReadOnly 
             + ',link: ' + link + ')');
         watchSessionService.createWatchSession(
@@ -1095,6 +1097,7 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
                 identifier:  null,
                 username:    username,
                 connection:  client.name,
+                uuid:        client.tunnel.uuid,
                 restriction: !!isReadOnly,
                 link:        link
             }

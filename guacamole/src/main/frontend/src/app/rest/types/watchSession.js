@@ -60,6 +60,13 @@ angular.module('rest').factory('WatchSession', [function defineWatchSession() {
         this.connection = template.connection;
 
         /**
+         * The uuid of the tunnel being used by the underlying Guacamole client.
+         *
+         * @type String
+         */
+        this.uuid = template.uuid;
+
+        /**
          * Whether this session can be joined with or without
          * restrictions.
          *

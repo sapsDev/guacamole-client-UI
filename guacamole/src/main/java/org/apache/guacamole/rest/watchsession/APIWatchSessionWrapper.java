@@ -74,6 +74,16 @@ public class APIWatchSessionWrapper implements WatchSession {
     public void setConnection(String connection) {
         apiWatchSession.setConnection(connection);
     }    
+    
+    @Override
+    public String getUUID() {
+        return apiWatchSession.getUUID();
+    }
+    
+    @Override
+    public void setUUID(String uuid) {
+        apiWatchSession.setUUID(uuid);
+    } 
 
     @Override
     public boolean getRestriction() {

@@ -488,6 +488,7 @@ CREATE TABLE [guacamole_watch_session] (
     [watch_session_id] [int] IDENTITY(1,1) NOT NULL,
     [username]         [nvarchar](128)     NOT NULL,
     [connection]       [nvarchar](128)     NOT NULL,
+    [uuid]             [nvarchar](128)     NOT NULL,
     [restriction]      [bit]               NOT NULL,
     [link]             [nvarchar](512)     NOT NULL,
 

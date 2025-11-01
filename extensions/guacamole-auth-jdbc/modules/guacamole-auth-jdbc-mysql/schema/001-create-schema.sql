@@ -248,6 +248,7 @@ CREATE TABLE guacamole_watch_session (
   `watch_session_id` int(11)      NOT NULL AUTO_INCREMENT,
   `username`         varchar(128) NOT NULL,
   `connection`       varchar(128) NOT NULL,
+  `uuid`             varchar(128) NOT NULL,
   `restriction`      boolean      NOT NULL,
   `link`             varchar(512) NOT NULL,
 
