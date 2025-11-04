@@ -88,7 +88,7 @@ public class WatchSessionService
         // provided watch session
         watchSession.setUsername(object.getUsername());
         watchSession.setConnection(object.getConnection());
-        watchSession.setUUID(object.setUUID());
+        watchSession.setUUID(object.getUUID());
         watchSession.setRestriction(object.getRestriction());
         watchSession.setLink(object.getLink());
 
