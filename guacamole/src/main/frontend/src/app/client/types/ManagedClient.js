@@ -1088,7 +1088,7 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
         console.log(' try watchSessionCreate(identifier: ' + null
             + ',username: ' + username 
             + ',connection: ' + client.name
-            + ',uuid: ' + lient.tunnel.uuid    
+            + ',uuid: ' + client.tunnel.uuid    
             + ',restriction: ' + !!isReadOnly 
             + ',link: ' + link + ')');
         watchSessionService.createWatchSession(
