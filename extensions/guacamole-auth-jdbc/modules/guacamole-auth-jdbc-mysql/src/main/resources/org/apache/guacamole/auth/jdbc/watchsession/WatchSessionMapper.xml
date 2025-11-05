@@ -99,4 +99,16 @@
         WHERE watch_session_id = #{object.objectID,jdbcType=INTEGER}
     </update>
 
+    <!-- Delete attributes (required by ModeledDirectoryObjectMapper) -->
+    <delete id="deleteAttributes">
+        <!-- No attributes to delete, so this is effectively a no-op -->
+        SELECT 0
+    </delete>
+
+    <!-- Insert attributes (required by ModeledDirectoryObjectMapper) -->
+    <insert id="insertAttributes" parameterType="org.apache.guacamole.auth.jdbc.base.ArbitraryAttributeModel">
+        <!-- No attributes to insert, so this is effectively a no-op -->
+        SELECT 0
+    </insert>
+
 </mapper>
