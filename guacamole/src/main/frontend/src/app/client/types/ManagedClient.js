@@ -1091,7 +1091,7 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
             + ',uuid: ' + client.tunnel.uuid    
             + ',restriction: ' + !!isReadOnly 
             + ',link: ' + link + ')');
-        watchSessionService.createWatchSession(
+        watchSessionService.saveWatchSession(
             dataSource,
             {
                 identifier:  null,
@@ -1102,7 +1102,6 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
                 link:        link
             }
         ).then(function watchSessionCreated(watchSession) {
-            console.log('watchSessionCreated -> promise: ' + JSON.stringify(watchSession));
             client.watchSession = watchSession;
             //TODO remove
             console.log('client.watchSession: ' + JSON.stringify(client.watchSession));

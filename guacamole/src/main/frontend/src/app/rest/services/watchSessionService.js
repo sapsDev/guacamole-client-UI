@@ -112,33 +112,6 @@ angular.module('rest').factory('watchSessionService', ['$injector',
         };
 
         /**
-         * Makes a request to the REST API to create a watch session, returning
-         * a promise that can be used for processing the results of the call.
-         *
-         * @param {String} dataSource
-         *     The unique identifier of the data source in which the watch session
-         *     should be created. This identifier corresponds to an 
-         *     AuthenticationProvider within the Guacamole web application.
-         *
-         * @param {WatchSession} watchSession
-         *     The watch session to create.
-         *
-         * @returns {Promise}
-         *     A promise for the HTTP call which will succeed if and only if the
-         *     create operation is successful.
-         */
-        service.createWatchSession = function createWatchSession(dataSource, watchSession) {
-
-            // Create watch session
-            return authenticationService.request({
-                method  : 'POST',
-                url     : 'api/session/data/' + encodeURIComponent(dataSource) + '/watchSessions',
-                data    : watchSession
-            })
-            
-        };
-
-        /**
          * Makes a request to the REST API to save a watch session, returning a promise
          * that can be used for processing the results of the call.
          *
@@ -156,12 +129,29 @@ angular.module('rest').factory('watchSessionService', ['$injector',
          */
         service.saveWatchSession = function saveWatchSession(dataSource, watchSession) {
 
-            // Update watch session
-            return authenticationService.request({
-                method  : 'PUT',
-                url     : 'api/session/data/' + encodeURIComponent(dataSource) + '/watchSessions/' + encodeURIComponent(watchSession.identifier),
-                data    : watchSession
-            })
+            // If watch session is new, add it and set the identifier automatically
+            if (!watchSession.identifier) {
+                return authenticationService.request({
+                    method  : 'POST',
+                    url     : 'api/session/data/' + encodeURIComponent(dataSource) + '/watchSessions',
+                    data    : watchSession
+                })
+
+                // Set the identifier on the new watch session
+                .then(function watchSessionCreated(newWatchSession) {
+                    watchSession.identifier = newWatchSession.identifier;
+                });
+            }
+            
+            // Otherwise, update the existing watch session
+            else {
+                return authenticationService.request({
+                    method  : 'PUT',
+                    url     : 'api/session/data/' + encodeURIComponent(dataSource) + '/watchSessions/' + encodeURIComponent(watchSession.identifier),
+                    data    : watchSession
+                });
+            }
+            
 
         };
 
