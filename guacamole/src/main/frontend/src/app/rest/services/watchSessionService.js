@@ -33,6 +33,27 @@ angular.module('rest').factory('watchSessionService', ['$injector',
         var service = {};
 
         /**
+         * Makes a request to the REST API to get a single watch session,
+         * returning a promise that provides the corresponding @link{WatchSession}
+         * if successful.
+         *
+         * @param {String} id The ID of the watch session.
+         *
+         * @returns {Promise.<WatchSession>}
+         *     A promise which will resolve with a @link{WatchSession} upon
+         *     success.
+         */
+        service.getWatchSession = function getWatchSession(dataSource, id) {
+
+            // Retrieve watch session
+            return authenticationService.request({
+                method  : 'GET',
+                url     : 'api/session/data/' + encodeURIComponent(dataSource) + '/watchSessions/' + encodeURIComponent(id)
+            });
+
+        };
+
+        /**
          * Makes a request to the REST API to get the list of watch sessions
          * returning a promise that provides a map of @link{WatchSessions}
          * objects if successful.
