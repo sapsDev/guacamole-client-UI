@@ -1071,12 +1071,8 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
                     link:        link
                 }
             ).then(function watchSessionSaved() {
-                watchSessionService.getWatchSession(
-                    dataSource, 
-                    client.watchSession.identifier
-                ).then(function watchSessionReceived(watchSession) {
-                    client.watchSession = watchSession;
-                });
+                client.watchSession.restriction = !!isReadOnly;
+                client.watchSession.link        = link;
                 //TODO remove
                 console.log('client.watchSession: ' + JSON.stringify(client.watchSession));
                 //END remove
