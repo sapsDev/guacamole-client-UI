@@ -1071,10 +1071,12 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
                     link:        link
                 }
             ).then(function watchSessionSaved() {
-                client.watchSession = watchSessionService.getWatchSession(
+                watchSessionService.getWatchSession(
                     dataSource, 
                     client.watchSession.identifier
-                );
+                ).then(function watchSessionReceived(watchSession) {
+                    client.watchSession = watchSession;
+                });
                 //TODO remove
                 console.log('client.watchSession: ' + JSON.stringify(client.watchSession));
                 //END remove
