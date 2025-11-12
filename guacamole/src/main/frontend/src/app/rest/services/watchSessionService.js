@@ -135,11 +135,6 @@ angular.module('rest').factory('watchSessionService', ['$injector',
                     method  : 'POST',
                     url     : 'api/session/data/' + encodeURIComponent(dataSource) + '/watchSessions',
                     data    : watchSession
-                })
-
-                // Set the identifier on the new watch session
-                .then(function watchSessionCreated(newWatchSession) {
-                    watchSession.identifier = newWatchSession.identifier;
                 });
             }
             
@@ -151,7 +146,6 @@ angular.module('rest').factory('watchSessionService', ['$injector',
                     data    : watchSession
                 });
             }
-            
 
         };
 
