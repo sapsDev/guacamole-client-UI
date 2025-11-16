@@ -65,7 +65,7 @@ import org.apache.guacamole.auth.jdbc.sharingprofile.ModeledSharingProfile;
 import org.apache.guacamole.auth.jdbc.sharingprofile.SharingProfileParameterMapper;
 import org.apache.guacamole.auth.jdbc.sharingprofile.SharingProfileParameterModel;
 import org.apache.guacamole.auth.jdbc.user.RemoteAuthenticatedUser;
-import org.apache.guacamole.auth.jdbc.watchSession.WatchSessionMapper;
+import org.apache.guacamole.auth.jdbc.watchsession.WatchSessionMapper;
 import org.apache.guacamole.net.auth.GuacamoleProxyConfiguration;
 import org.apache.guacamole.protocol.FailoverGuacamoleSocket;
 import org.apache.guacamole.properties.CaseSensitivity;
