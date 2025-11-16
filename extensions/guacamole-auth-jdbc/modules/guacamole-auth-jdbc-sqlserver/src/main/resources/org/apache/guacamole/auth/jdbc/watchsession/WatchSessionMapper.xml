@@ -67,6 +67,12 @@
         WHERE watch_session_id = #{identifier,jdbcType=INTEGER}
     </delete>
 
+    <!-- Delete single watch session by tunnel uuid -->
+    <delete id="deleteOneByUuid">
+        DELETE FROM [guacamole_watch_session]
+        WHERE uuid = #{uuid,jdbcType=VARCHAR}
+    </delete>
+
     <!-- Insert single watch session -->
     <insert id="insert" useGeneratedKeys="true" keyProperty="object.objectID"
             parameterType="org.apache.guacamole.auth.jdbc.watchsession.WatchSessionModel">
