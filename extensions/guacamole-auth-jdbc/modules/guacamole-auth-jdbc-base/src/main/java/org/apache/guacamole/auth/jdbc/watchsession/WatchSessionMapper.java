@@ -20,6 +20,7 @@
 package org.apache.guacamole.auth.jdbc.watchsession;
 
 import org.apache.guacamole.auth.jdbc.base.ModeledDirectoryObjectMapper;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * Mapper for watch session objects.
