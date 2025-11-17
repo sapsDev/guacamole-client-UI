@@ -183,7 +183,7 @@ public class SystemPermissionService
             return getPermissionMapper().selectOne(targetEntity.getModel(), type, effectiveGroups, getCaseSensitivity()) != null;
 
         // User cannot read this entity's permissions
-        throw new GuacamoleSecurityException("Permission denied.(SystemPermissionService)");
+        throw new GuacamoleSecurityException("Permission denied.");
         
     }
 
