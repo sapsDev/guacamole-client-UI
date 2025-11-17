@@ -42,6 +42,21 @@
         FROM [guacamole_watch_session]
     </select>
 
+    <!--  
+      * SQL fragment which lists the IDs of all watch sessions readable by
+      * the entity having the given entity ID.
+      *
+      * @param entityID
+      *     The ID of the specific entity to test against.
+      *
+      -->
+    <sql id="getReadableIDs">
+        SELECT DISTINCT watch_session_id
+        FROM [guacamole_watch_session_permission]
+        WHERE entity_id = #{entityID}
+            AND permission = 'READ'
+    </sql>
+
     <!-- Select multiple watch sessions by identifier -->
     <select id="select" resultMap="WatchSessionResultMap">
         
@@ -59,6 +74,30 @@
                 #{identifier,jdbcType=INTEGER}
             </foreach>;
         
+    </select>
+
+    <!-- Select multiple watch sessions by identifier only if readable -->
+    <select id="selectReadable" resultMap="WatchSessionResultMap">
+
+        SELECT
+        guacamole_watch_session.watch_session_id,
+        guacamole_watch_session.username,
+        guacamole_watch_session.connection,
+        guacamole_watch_session.uuid,
+        guacamole_watch_session.restriction,
+        guacamole_watch_session.link
+        FROM [guacamole_watch_session]
+        WHERE guacamole_watch_session.watch_session_id IN
+            <foreach collection="identifiers" item="identifier"
+                     open="(" separator="," close=")">
+                #{identifier,jdbcType=INTEGER}
+            </foreach>
+            AND guacamole_watch_session.watch_session_id IN (
+                <include refid="org.apache.guacamole.auth.jdbc.watchsession.WatchSessionMapper.getReadableIDs">
+                    <property name="entityID" value="#{user.entityID,jdbcType=INTEGER}"/>
+                </include>
+        )
+
     </select>
 
     <!-- Delete single watch session by identifier -->
