@@ -279,7 +279,8 @@ public abstract class ModeledDirectoryObjectService<InternalType extends Modeled
 
         // Verify permission to create objects
         if (!user.isPrivileged() && !hasCreatePermission(user))
-            throw new GuacamoleSecurityException("Permission denied.");
+            //TODO: remove logging
+            throw new GuacamoleSecurityException("Permission denied(beforeCreate).");
 
     }
 
