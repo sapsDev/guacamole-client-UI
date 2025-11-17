@@ -100,8 +100,9 @@ public class WatchSessionService
     protected boolean hasCreatePermission(ModeledAuthenticatedUser user)
             throws GuacamoleException {
 
-        // All users should be able to create watch sessions
-        return true;
+        // Return whether user has explicit watch session creation permission
+        SystemPermissionSet permissionSet = user.getUser().getEffectivePermissions().getSystemPermissions();
+        return permissionSet.hasPermission(SystemPermission.Type.CREATE_WATCH_SESSION);
 
     }
 
