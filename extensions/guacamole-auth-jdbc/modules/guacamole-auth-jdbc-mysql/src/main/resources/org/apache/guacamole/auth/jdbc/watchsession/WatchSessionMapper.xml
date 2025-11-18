@@ -53,7 +53,7 @@
     <sql id="getReadableIDs">
         SELECT DISTINCT watch_session_id
         FROM guacamole_watch_session_permission
-        WHERE entity_id = #{entityID}
+        WHERE entity_id = ${entityID}
             AND permission = 'READ' 
     </sql>
 
@@ -94,7 +94,7 @@
             </foreach>
             AND guacamole_watch_session.watch_session_id IN (
                 <include refid="org.apache.guacamole.auth.jdbc.watchsession.WatchSessionMapper.getReadableIDs">
-                    <property name="entityID"        value="#{user.entityID,jdbcType=INTEGER}"/>
+                    <property name="entityID" value="${user.entityID,jdbcType=INTEGER}"/>
                 </include>
             )
         
