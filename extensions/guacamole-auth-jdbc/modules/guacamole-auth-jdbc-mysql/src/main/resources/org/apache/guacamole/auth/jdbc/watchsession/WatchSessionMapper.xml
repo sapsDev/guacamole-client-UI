@@ -94,7 +94,7 @@
             </foreach>
             AND guacamole_watch_session.watch_session_id IN (
                 <include refid="org.apache.guacamole.auth.jdbc.watchsession.WatchSessionMapper.getReadableIDs">
-                    <property name="entityID" value="${user.entityID,jdbcType=INTEGER}"/>
+                    <property name="entityID" value="${user.entityID}"/>
                 </include>
             )
         
