@@ -1055,6 +1055,7 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
         await sharingProfileService.getSharingProfileParameters(
             dataSource, sharingProfile.identifier
         ).then(function(parameters) {
+            console.log('sharingProfileParameters', JSON.stringify(parameters));
             isReadOnly = (parameters["read-only"] || "").toLowerCase() === "true";
         });
         
