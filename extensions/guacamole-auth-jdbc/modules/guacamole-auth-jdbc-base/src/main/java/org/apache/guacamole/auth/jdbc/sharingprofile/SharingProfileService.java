@@ -37,6 +37,8 @@ import org.apache.guacamole.net.auth.permission.ObjectPermission;
 import org.apache.guacamole.net.auth.permission.ObjectPermissionSet;
 import org.apache.guacamole.net.auth.permission.SystemPermission;
 import org.apache.guacamole.net.auth.permission.SystemPermissionSet;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Service which provides convenience methods for creating, retrieving, and
@@ -46,6 +48,11 @@ public class SharingProfileService
         extends ModeledChildDirectoryObjectService<ModeledSharingProfile,
             SharingProfile, SharingProfileModel> {
 
+    /**
+     * Logger for this class.
+     */
+    private static final Logger logger = LoggerFactory.getLogger(SharingProfileService.class);
+    
     /**
      * Mapper for accessing sharing profiles.
      */
