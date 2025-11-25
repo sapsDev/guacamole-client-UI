@@ -112,7 +112,7 @@ public class SharingProfileResource
         SystemPermissionSet systemPermissions = effective.getSystemPermissions();
         ObjectPermissionSet sharingProfilePermissions = effective.getSharingProfilePermissions();
         logger.info("systemPermissions: " + JSON.stringify(systemPermissions));
-        logger.info("sharingProfilePermissions: " + JSON.stringify(sharingProfilePermissions);
+        logger.info("sharingProfilePermissions: " + JSON.stringify(sharingProfilePermissions));
 
         // Deny access if adminstrative or update permission is missing
         String identifier = sharingProfile.getIdentifier();
