@@ -104,6 +104,8 @@ public class SharingProfileResource
 
         SharingProfile sharingProfile = getInternalObject();
         
+        logger.info("SharingProfile type: " + sharingProfile.getClass().getName());
+        
         // Pull effective permissions
         Permissions effective = getUserContext().self().getEffectivePermissions();
 
