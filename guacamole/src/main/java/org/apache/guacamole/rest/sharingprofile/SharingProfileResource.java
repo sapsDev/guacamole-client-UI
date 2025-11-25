@@ -106,19 +106,26 @@ public class SharingProfileResource
         
         // Pull effective permissions
         Permissions effective = getUserContext().self().getEffectivePermissions();
-        logger.info("permissions: " + effective);
 
         // Retrieve permission sets
         SystemPermissionSet systemPermissions = effective.getSystemPermissions();
         ObjectPermissionSet sharingProfilePermissions = effective.getSharingProfilePermissions();
-        logger.info("systemPermissions: " + systemPermissions);
-        logger.info("sharingProfilePermissions: " + sharingProfilePermissions);
 
         // Deny access if adminstrative or update permission is missing
         String identifier = sharingProfile.getIdentifier();
         if (!systemPermissions.hasPermission(SystemPermission.Type.ADMINISTER)
          && !sharingProfilePermissions.hasPermission(ObjectPermission.Type.READ, identifier))
             throw new GuacamoleSecurityException("Permission to read sharing profile parameters denied.");
+         
+        logger.info("System permissions:");
+        for (SystemPermission.Type type : SystemPermission.Type.values()) {
+            logger.info("  " + type + ": " + systemPermissions.hasPermission(type));
+        }
+        
+        logger.info("Sharing profile permissions for: " + identifier);
+        for (ObjectPermission.Type type : ObjectPermission.Type.values()) {
+            logger.info("  " + type + ": " + sharingProfilePermissions.hasPermission(type, identifier));
+        } 
 
         // Return parameter map
         return sharingProfile.getParameters();
