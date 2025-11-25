@@ -106,13 +106,13 @@ public class SharingProfileResource
         
         // Pull effective permissions
         Permissions effective = getUserContext().self().getEffectivePermissions();
-        logger.info("permissions: " + JSON.stringify(effective));
+        logger.info("permissions: " + effective);
 
         // Retrieve permission sets
         SystemPermissionSet systemPermissions = effective.getSystemPermissions();
         ObjectPermissionSet sharingProfilePermissions = effective.getSharingProfilePermissions();
-        logger.info("systemPermissions: " + JSON.stringify(systemPermissions));
-        logger.info("sharingProfilePermissions: " + JSON.stringify(sharingProfilePermissions));
+        logger.info("systemPermissions: " + systemPermissions);
+        logger.info("sharingProfilePermissions: " + sharingProfilePermissions);
 
         // Deny access if adminstrative or update permission is missing
         String identifier = sharingProfile.getIdentifier();
