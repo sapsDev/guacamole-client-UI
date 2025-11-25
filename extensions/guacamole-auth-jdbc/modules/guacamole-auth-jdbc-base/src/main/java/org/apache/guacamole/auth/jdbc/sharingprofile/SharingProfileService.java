@@ -283,6 +283,8 @@ public class SharingProfileService
 
         // Provide empty (but mutable) map if unable to check permissions
         catch (GuacamoleException e) {
+        logger.error("Error checking permission for user '" + user.getIdentifier() +
+                    "' on sharing profile '" + identifier + "'", e);
             return parameterMap;
         }
 
