@@ -40,6 +40,8 @@ import org.apache.guacamole.net.auth.permission.SystemPermission;
 import org.apache.guacamole.net.auth.permission.SystemPermissionSet;
 import org.apache.guacamole.rest.directory.DirectoryObjectResource;
 import org.apache.guacamole.rest.directory.DirectoryObjectTranslator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * A REST resource which abstracts the operations available on an existing
@@ -49,6 +51,11 @@ import org.apache.guacamole.rest.directory.DirectoryObjectTranslator;
 @Consumes(MediaType.APPLICATION_JSON)
 public class SharingProfileResource
         extends DirectoryObjectResource<SharingProfile, APISharingProfile> {
+        
+    /**
+     * Logger for this class.
+     */
+    private static final Logger logger = LoggerFactory.getLogger(SharingProfileResource.class);
 
     /**
      * Creates a new SharingProfileResource which exposes the operations and
@@ -99,10 +106,13 @@ public class SharingProfileResource
         
         // Pull effective permissions
         Permissions effective = getUserContext().self().getEffectivePermissions();
+        logger.info("permissions: " + JSON.stringify(effective);
 
         // Retrieve permission sets
         SystemPermissionSet systemPermissions = effective.getSystemPermissions();
         ObjectPermissionSet sharingProfilePermissions = effective.getSharingProfilePermissions();
+        logger.info("systemPermissions: " + JSON.stringify(systemPermissions);
+        logger.info("sharingProfilePermissions: " + JSON.stringify(sharingProfilePermissions);
 
         // Deny access if adminstrative or update permission is missing
         String identifier = sharingProfile.getIdentifier();
