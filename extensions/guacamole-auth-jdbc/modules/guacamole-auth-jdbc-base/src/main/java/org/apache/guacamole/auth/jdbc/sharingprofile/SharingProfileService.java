@@ -287,10 +287,12 @@ public class SharingProfileService
             canRetrieveParameters = hasObjectPermission(user, identifier,
                     ObjectPermission.Type.READ);
         }
+        
+        logger.info("canRetrieveParameters: " + canRetrieveParameters);
 
         // Provide empty (but mutable) map if unable to check permissions
         catch (GuacamoleException e) {
-        logger.error("Error checking permission for user '" + user.getIdentifier() +
+        logger.warn("Error checking permission for user '" + user.getIdentifier() +
                     "' on sharing profile '" + identifier + "'", e);
             return parameterMap;
         }
