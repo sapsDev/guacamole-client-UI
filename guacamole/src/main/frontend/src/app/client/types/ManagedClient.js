@@ -1014,7 +1014,8 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
     };
 
     /**
-     * TODO: add description
+     * Enables or disables the access to this client via the watch-session page. 
+     * The rights for the joining person are determined by the given sharing profile.
      *
      * @param {ManagedClient} client
      *     The ManagedClient which will be watchable via the sharing
@@ -1036,9 +1037,6 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
             } else {
                 await watchSessionService.deleteWatchSession(dataSource, client.watchSession);
                 client.watchSession = null;
-                //TODO remove
-                console.log('client.watchSession: ' + JSON.stringify(client.watchSession));
-                //END remove
                 return;
             }
         }
@@ -1055,7 +1053,6 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
         await sharingProfileService.getSharingProfileParameters(
             dataSource, sharingProfile.identifier
         ).then(function(parameters) {
-            console.log('sharingProfileParameters', JSON.stringify(parameters));
             isReadOnly = (parameters["read-only"] || "").toLowerCase() === "true";
         });
         
@@ -1074,9 +1071,6 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
             ).then(function watchSessionSaved() {
                 client.watchSession.restriction = !!isReadOnly;
                 client.watchSession.link        = link;
-                //TODO remove
-                console.log('client.watchSession: ' + JSON.stringify(client.watchSession));
-                //END remove
             });
             
             return;
@@ -1086,12 +1080,6 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
         const username = authenticationService.getCurrentUsername();
         
         //create watch session if not existing
-        console.log(' try watchSessionCreate(identifier: ' + null
-            + ',username: ' + username 
-            + ',connection: ' + client.name
-            + ',uuid: ' + client.tunnel.uuid    
-            + ',restriction: ' + !!isReadOnly 
-            + ',link: ' + link + ')');
         watchSessionService.saveWatchSession(
             dataSource,
             {
@@ -1104,9 +1092,6 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
             }
         ).then(function watchSessionCreated(watchSession) {
             client.watchSession = watchSession;
-            //TODO remove
-            console.log('client.watchSession: ' + JSON.stringify(client.watchSession));
-            //END remove
         });
         
     }
@@ -1148,10 +1133,8 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
 
         // The connection is watchable if it has a defined watch profile
         if (client.watchProfile) {
-            console.log("client.watchProfile: true");
             return true;
         }
-        console.log("client.watchProfile: false");
 
         // No watch profile currently defined
         return false;
