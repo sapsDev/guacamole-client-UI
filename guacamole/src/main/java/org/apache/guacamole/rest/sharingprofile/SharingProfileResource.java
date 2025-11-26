@@ -108,7 +108,7 @@ public class SharingProfileResource
         String identifier = sharingProfile.getIdentifier();
         if (!systemPermissions.hasPermission(SystemPermission.Type.ADMINISTER)
          && !sharingProfilePermissions.hasPermission(ObjectPermission.Type.READ, identifier))
-            throw new GuacamoleSecurityException("Permission to read sharing profile parameters denied."); 
+            throw new GuacamoleSecurityException("Permission to read sharing profile parameters denied.");
 
         // Return parameter map
         return sharingProfile.getParameters();

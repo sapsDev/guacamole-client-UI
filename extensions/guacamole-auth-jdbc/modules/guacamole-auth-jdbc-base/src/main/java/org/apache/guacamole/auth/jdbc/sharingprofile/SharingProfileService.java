@@ -45,7 +45,7 @@ import org.apache.guacamole.net.auth.permission.SystemPermissionSet;
 public class SharingProfileService
         extends ModeledChildDirectoryObjectService<ModeledSharingProfile,
             SharingProfile, SharingProfileModel> {
-    
+
     /**
      * Mapper for accessing sharing profiles.
      */
