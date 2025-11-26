@@ -49,6 +49,7 @@ public class WatchSessionObjectTranslator
         // Update the watch session
         existingObject.setUsername(object.getUsername());
         existingObject.setConnection(object.getConnection());
+        existingObject.setUUID(object.getUUID());
         existingObject.setRestriction(object.getRestriction());
         existingObject.setLink(object.getLink());
 

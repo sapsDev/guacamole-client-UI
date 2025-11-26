@@ -20,9 +20,24 @@
 package org.apache.guacamole.auth.jdbc.watchsession;
 
 import org.apache.guacamole.auth.jdbc.base.ModeledDirectoryObjectMapper;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * Mapper for watch session objects.
  */
 public interface WatchSessionMapper
-        extends ModeledDirectoryObjectMapper<WatchSessionModel> {}
+        extends ModeledDirectoryObjectMapper<WatchSessionModel> {
+        
+    /**
+     * Deletes the watch session associated with the given tunnel uuid
+     * If no such watch session exists, this operation has no effect.
+     *
+     * @param uuid
+     *     The tunnel uuid of the watch session to delete.
+     *
+     * @return
+     *     The number of rows deleted.
+     */
+    int deleteOneByUuid(@Param("uuid") String uuid);
+    
+    }

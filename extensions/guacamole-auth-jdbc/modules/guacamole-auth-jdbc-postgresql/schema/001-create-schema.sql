@@ -56,6 +56,7 @@ CREATE TYPE guacamole_system_permission_type AS ENUM(
     'CREATE_SHARING_PROFILE',
     'CREATE_USER',
     'CREATE_USER_GROUP',
+    'CREATE_WATCH_SESSION',
     'AUDIT',
     'ADMINISTER'
 );
@@ -323,6 +324,7 @@ CREATE TABLE guacamole_watch_session (
   watch_session_id serial       NOT NULL,
   username         varchar(128) NOT NULL,
   connection       varchar(128) NOT NULL,
+  uuid             varchar(128) NOT NULL,
   restriction      boolean      NOT NULL,
   link             varchar(512) NOT NULL,
     

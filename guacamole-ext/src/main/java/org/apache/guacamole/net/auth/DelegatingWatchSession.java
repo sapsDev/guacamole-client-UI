@@ -81,6 +81,16 @@ public class DelegatingWatchSession implements WatchSession {
     public void setConnection(String connection) {
         watchSession.setConnection(connection);
     }
+    
+    @Override
+    public String getUUID() {
+        return watchSession.getUUID();
+    }
+    
+    @Override
+    public void setUUID(String uuid) {
+        watchSession.setUUID(uuid);
+    }
 
     @Override
     public boolean getRestriction() {

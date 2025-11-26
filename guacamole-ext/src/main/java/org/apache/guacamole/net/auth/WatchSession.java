@@ -55,6 +55,22 @@ public interface WatchSession extends Identifiable {
      *     The connection name of this watchable session.
      */
     public void setConnection(String connection);
+    
+    /**
+     * Returns the tunnel uuid of this watchable session.
+     *
+     * @return
+     *     The tunnel uuid of this watchable session.
+     */
+     public String getUUID();
+     
+     /**
+      * Sets the tunnel uuid of this watchable session.
+      *
+      * @param uuid
+      *     The tunnel uuid of this watchable session.
+      */
+     public void setUUID(String uuid);
 
     /**
      * Returns whether this session can be joined with or without restrictions.

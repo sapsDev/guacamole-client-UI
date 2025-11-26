@@ -30,6 +30,7 @@
         <id     column="watch_session_id" property="objectID"    jdbcType="INTEGER"/>
         <result column="username"         property="username"    jdbcType="VARCHAR"/>
         <result column="connection"       property="connection"  jdbcType="VARCHAR"/>
+        <result column="uuid"             property="uuid"        jdbcType="VARCHAR"/>
         <result column="restriction"      property="restriction" jdbcType="BOOLEAN"/>
         <result column="link"             property="link"        jdbcType="VARCHAR"/>
         
@@ -41,12 +42,28 @@
         FROM guacamole_watch_session
     </select>
 
+    <!--  
+      * SQL fragment which lists the IDs of all watch sessions readable by
+      * the entity having the given entity ID.
+      *
+      * @param entityID
+      *     The ID of the specific entity to test against.
+      *
+      -->
+    <sql id="getReadableIDs">
+        SELECT DISTINCT watch_session_id
+        FROM guacamole_watch_session_permission
+        WHERE entity_id = ${entityID}
+            AND permission = 'READ'
+    </sql>
+
     <!-- Select multiple watch sessions by identifier -->
     <select id="select" resultMap="WatchSessionResultMap">
         
         SELECT 
             watch_session_id, 
             username, 
+            uuid,
             connection,    
             restriction, 
             link
@@ -59,10 +76,40 @@
         
     </select>
 
+    <!-- Select multiple watch sessions by identifier only if readable -->
+    <select id="selectReadable" resultMap="WatchSessionResultMap">
+
+        SELECT
+        guacamole_watch_session.watch_session_id,
+        guacamole_watch_session.username,
+        guacamole_watch_session.connection,
+        guacamole_watch_session.uuid,
+        guacamole_watch_session.restriction,
+        guacamole_watch_session.link
+        FROM guacamole_watch_session
+        WHERE guacamole_watch_session.watch_session_id IN
+            <foreach collection="identifiers" item="identifier"
+                     open="(" separator="," close=")">
+                #{identifier,jdbcType=INTEGER}::integer
+            </foreach>
+            AND guacamole_watch_session.watch_session_id IN (
+                <include refid="org.apache.guacamole.auth.jdbc.watchsession.WatchSessionMapper.getReadableIDs">
+                    <property name="entityID" value="${user.entityID}"/>
+                </include>
+        )
+
+    </select>
+
     <!-- Delete single watch session by identifier -->
     <delete id="delete">
         DELETE FROM guacamole_watch_session
         WHERE watch_session_id = #{identifier,jdbcType=INTEGER}::integer
+    </delete>
+
+    <!-- Delete single watch session by tunnel uuid -->
+    <delete id="deleteOneByUuid">
+        DELETE FROM guacamole_watch_session
+        WHERE uuid = #{uuid,jdbcType=VARCHAR}
     </delete>
 
     <!-- Insert single watch session -->
@@ -71,13 +118,15 @@
         
         INSERT INTO guacamole_watch_session (
             username,
-            connection,    
+            connection,  
+            uuid,
             restriction, 
             link
         )
         VALUES (
             #{object.username,jdbcType=VARCHAR},
             #{object.connection,jdbcType=VARCHAR},
+            #{object.uuid,jdbcType=VARCHAR},
             #{object.restriction,jdbcType=BOOLEAN},
             #{object.link,jdbcType=VARCHAR}
         )
@@ -89,9 +138,22 @@
         UPDATE guacamole_watch_session
         SET username = #{object.username,jdbcType=VARCHAR},
             connection = #{object.connection,jdbcType=VARCHAR},
+            uuid = #{object.uuid,jdbcType=VARCHAR},
             restriction = #{object.restriction,jdbcType=BOOLEAN},
             link = #{object.link,jdbcType=VARCHAR}
         WHERE watch_session_id = #{object.objectID,jdbcType=INTEGER}::integer
     </update>
+
+    <!-- Delete attributes (required by ModeledDirectoryObjectMapper) -->
+    <delete id="deleteAttributes">
+        <!-- No attributes to delete, so this is effectively a no-op -->
+        SELECT 0
+    </delete>
+
+    <!-- Insert attributes (required by ModeledDirectoryObjectMapper) -->
+    <insert id="insertAttributes" parameterType="org.apache.guacamole.auth.jdbc.base.ArbitraryAttributeModel">
+        <!-- No attributes to insert, so this is effectively a no-op -->
+        SELECT 0
+    </insert>
 
 </mapper>

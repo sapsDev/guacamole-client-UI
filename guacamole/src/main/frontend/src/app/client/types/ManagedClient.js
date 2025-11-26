@@ -1055,6 +1055,7 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
         await sharingProfileService.getSharingProfileParameters(
             dataSource, sharingProfile.identifier
         ).then(function(parameters) {
+            console.log('sharingProfileParameters', JSON.stringify(parameters));
             isReadOnly = (parameters["read-only"] || "").toLowerCase() === "true";
         });
         
@@ -1066,12 +1067,13 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
                     identifier:  client.watchSession.identifier,
                     username:    client.watchSession.username,
                     connection:  client.watchSession.connection,
+                    uuid:        client.watchSession.uuid,
                     restriction: !!isReadOnly,
                     link:        link
                 }
-            ).then(function watchSessionSaved(watchSession) {
-                console.log('watchSessionUpdated -> promise: ' + JSON.stringify(watchSession));
-                client.watchSession = watchSession;
+            ).then(function watchSessionSaved() {
+                client.watchSession.restriction = !!isReadOnly;
+                client.watchSession.link        = link;
                 //TODO remove
                 console.log('client.watchSession: ' + JSON.stringify(client.watchSession));
                 //END remove
@@ -1087,19 +1089,20 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
         console.log(' try watchSessionCreate(identifier: ' + null
             + ',username: ' + username 
             + ',connection: ' + client.name
+            + ',uuid: ' + client.tunnel.uuid    
             + ',restriction: ' + !!isReadOnly 
             + ',link: ' + link + ')');
-        watchSessionService.createWatchSession(
+        watchSessionService.saveWatchSession(
             dataSource,
             {
                 identifier:  null,
                 username:    username,
                 connection:  client.name,
+                uuid:        client.tunnel.uuid,
                 restriction: !!isReadOnly,
                 link:        link
             }
         ).then(function watchSessionCreated(watchSession) {
-            console.log('watchSessionCreated -> promise: ' + JSON.stringify(watchSession));
             client.watchSession = watchSession;
             //TODO remove
             console.log('client.watchSession: ' + JSON.stringify(client.watchSession));

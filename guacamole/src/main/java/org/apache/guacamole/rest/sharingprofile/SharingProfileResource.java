@@ -107,7 +107,7 @@ public class SharingProfileResource
         // Deny access if adminstrative or update permission is missing
         String identifier = sharingProfile.getIdentifier();
         if (!systemPermissions.hasPermission(SystemPermission.Type.ADMINISTER)
-         && !sharingProfilePermissions.hasPermission(ObjectPermission.Type.UPDATE, identifier))
+         && !sharingProfilePermissions.hasPermission(ObjectPermission.Type.READ, identifier))
             throw new GuacamoleSecurityException("Permission to read sharing profile parameters denied.");
 
         // Return parameter map

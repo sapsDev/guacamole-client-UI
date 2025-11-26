@@ -71,6 +71,16 @@ public class ModeledWatchSession
     public void setConnection(String connection) {
         getModel().setConnection(connection);
     }
+    
+    @Override
+    public String getUUID() {
+        return getModel().getUUID();
+    }
+    
+    @Override
+    public void setUUID(String uuid) {
+        getModel().setUUID(uuid);
+    }
 
     @Override
     public boolean getRestriction() {

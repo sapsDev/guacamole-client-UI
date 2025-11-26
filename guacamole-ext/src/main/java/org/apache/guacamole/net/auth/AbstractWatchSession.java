@@ -39,6 +39,11 @@ public abstract class AbstractWatchSession implements WatchSession {
      * The connection name of this watchable session.
      */
     private String connection;
+    
+    /**
+     * The uuid of the tunnel being used by the underlying Guacamole client.
+     */
+    private String uuid;
 
     /**
      * Whether this session can be joined with or without restrictions.
@@ -78,6 +83,16 @@ public abstract class AbstractWatchSession implements WatchSession {
     @Override
     public void setConnection(String connection) {
         this.connection = connection;
+    }
+    
+    @Override
+    public String getUUID() {
+        return uuid;
+    }
+    
+    @Override
+    public void setUUID(String uuid) {
+        this.uuid = uuid;
     }
 
     @Override
