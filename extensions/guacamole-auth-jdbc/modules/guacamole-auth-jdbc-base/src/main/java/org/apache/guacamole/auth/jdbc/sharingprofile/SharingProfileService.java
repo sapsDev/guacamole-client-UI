@@ -37,8 +37,6 @@ import org.apache.guacamole.net.auth.permission.ObjectPermission;
 import org.apache.guacamole.net.auth.permission.ObjectPermissionSet;
 import org.apache.guacamole.net.auth.permission.SystemPermission;
 import org.apache.guacamole.net.auth.permission.SystemPermissionSet;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * Service which provides convenience methods for creating, retrieving, and
@@ -47,11 +45,6 @@ import org.slf4j.LoggerFactory;
 public class SharingProfileService
         extends ModeledChildDirectoryObjectService<ModeledSharingProfile,
             SharingProfile, SharingProfileModel> {
-
-    /**
-     * Logger for this class.
-     */
-    private static final Logger logger = LoggerFactory.getLogger(SharingProfileService.class);
     
     /**
      * Mapper for accessing sharing profiles.
@@ -290,12 +283,8 @@ public class SharingProfileService
 
         // Provide empty (but mutable) map if unable to check permissions
         catch (GuacamoleException e) {
-        logger.warn("Error checking permission for user '" + user.getIdentifier() +
-                    "' on sharing profile '" + identifier + "'", e);
             return parameterMap;
         }
-        
-        logger.info("canRetrieveParameters: " + canRetrieveParameters);
 
         // Populate parameter map if we have permission to do so
         if (canRetrieveParameters) {

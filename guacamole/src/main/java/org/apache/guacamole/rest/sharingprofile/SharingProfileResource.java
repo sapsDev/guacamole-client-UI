@@ -40,8 +40,6 @@ import org.apache.guacamole.net.auth.permission.SystemPermission;
 import org.apache.guacamole.net.auth.permission.SystemPermissionSet;
 import org.apache.guacamole.rest.directory.DirectoryObjectResource;
 import org.apache.guacamole.rest.directory.DirectoryObjectTranslator;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * A REST resource which abstracts the operations available on an existing
@@ -51,11 +49,6 @@ import org.slf4j.LoggerFactory;
 @Consumes(MediaType.APPLICATION_JSON)
 public class SharingProfileResource
         extends DirectoryObjectResource<SharingProfile, APISharingProfile> {
-        
-    /**
-     * Logger for this class.
-     */
-    private static final Logger logger = LoggerFactory.getLogger(SharingProfileResource.class);
 
     /**
      * Creates a new SharingProfileResource which exposes the operations and
@@ -104,8 +97,6 @@ public class SharingProfileResource
 
         SharingProfile sharingProfile = getInternalObject();
         
-        logger.info("SharingProfile type: " + sharingProfile.getClass().getName());
-        
         // Pull effective permissions
         Permissions effective = getUserContext().self().getEffectivePermissions();
 
@@ -117,17 +108,7 @@ public class SharingProfileResource
         String identifier = sharingProfile.getIdentifier();
         if (!systemPermissions.hasPermission(SystemPermission.Type.ADMINISTER)
          && !sharingProfilePermissions.hasPermission(ObjectPermission.Type.READ, identifier))
-            throw new GuacamoleSecurityException("Permission to read sharing profile parameters denied.");
-         
-        logger.info("System permissions:");
-        for (SystemPermission.Type type : SystemPermission.Type.values()) {
-            logger.info("  " + type + ": " + systemPermissions.hasPermission(type));
-        }
-        
-        logger.info("Sharing profile permissions for: " + identifier);
-        for (ObjectPermission.Type type : ObjectPermission.Type.values()) {
-            logger.info("  " + type + ": " + sharingProfilePermissions.hasPermission(type, identifier));
-        } 
+            throw new GuacamoleSecurityException("Permission to read sharing profile parameters denied."); 
 
         // Return parameter map
         return sharingProfile.getParameters();
