@@ -31,43 +31,120 @@ angular.module('rest').factory('watchSessionService', ['$injector',
         var WatchSession = $injector.get('WatchSession');
 
         var service = {};
-        
-        service.getWatchSessionsTest = function getWatchSessionsTest(dataSource) {
 
-            let testInputSql = Promise.resolve({
-                "session1": new WatchSession({
-                    identifier: "abc123",
-                    username: "testuser1",
-                    restriction: true,
-                    link: "https://google.com"
-                }),
-                "session2": new WatchSession({
-                    identifier: "abc456",
-                    username: "testuser2",
-                    restriction: false,
-                    link: "https://youtube.com"
-                })
+        /**
+         * Makes a request to the REST API to get a single watch session,
+         * returning a promise that provides the corresponding @link{WatchSession}
+         * if successful.
+         *
+         * @param {String} id The ID of the watch session.
+         *
+         * @returns {Promise.<WatchSession>}
+         *     A promise which will resolve with a @link{WatchSession} upon
+         *     success.
+         */
+        service.getWatchSession = function getWatchSession(dataSource, id) {
+
+            // Retrieve watch session
+            return authenticationService.request({
+                method  : 'GET',
+                url     : 'api/session/data/' + encodeURIComponent(dataSource) + '/watchSessions/' + encodeURIComponent(id)
             });
 
-            let testInputSqlShared = Promise.resolve({
-                "session3": new WatchSession({
-                    identifier: "xyz123",
-                    username: "testuser3",
-                    restriction: true,
-                    link: "https://instagram.com"
-                }),
-                "session4": new WatchSession({
-                    identifier: "xyz456",
-                    username: "testuser4",
-                    restriction: false,
-                    link: "https://github.com"
-                })
+        };
+
+        /**
+         * Makes a request to the REST API to get the list of watch sessions
+         * returning a promise that provides a map of @link{WatchSessions}
+         * objects if successful.
+         *
+         * @param {String[]} [permissionTypes]
+         *     The set of permissions to filter with. A user must have one or more
+         *     of these permissions for a watch session to appear in the result
+         *     If null, no filtering will be performed. Valid values are listed
+         *     within PermissionSet.ObjectType.
+         *
+         * @returns {Promise.<Object.<String, WatchSession>>}
+         *     A promise which will resolve with a map of @link{WatchSession}
+         *     objects, where each key is the identifier of the corresponding
+         *     watch session.
+         */
+        service.getWatchSessions = function getWatchSessions(dataSource, permissionTypes) {
+
+            // Add permission filter if specified
+            var httpParameters = {};
+            if (permissionTypes)
+                httpParameters.permission = permissionTypes;
+
+            // Retrieve watch sessions
+            return authenticationService.request({
+                method  : 'GET',
+                url     : 'api/session/data/' + encodeURIComponent(dataSource) + '/watchSessions',
+                params  : httpParameters
             });
+
+        };
+
+        /**
+         * Makes a request to the REST API to delete a watch session, returning a promise
+         * that can be used for processing the results of the call.
+         *
+         * @param {String} dataSource
+         *     The unique identifier of the data source containing the watch session 
+         *     to be deleted. This identifier corresponds to an AuthenticationProvider
+         *     within the Guacamole web application.
+         *
+         * @param {WatchSession} watchSession
+         *     The watch session to delete.
+         *
+         * @returns {Promise}
+         *     A promise for the HTTP call which will succeed if and only if the
+         *     delete operation is successful.
+         */
+        service.deleteWatchSession = function deleteWatchSession(dataSource, watchSession) {
+
+            // Delete watch session
+            return authenticationService.request({
+                method  : 'DELETE',
+                url     : 'api/session/data/' + encodeURIComponent(dataSource) + '/watchSessions/' + encodeURIComponent(watchSession.identifier)
+            })
             
-            if (dataSource === "mysql") {
-                return testInputSql;
-            } else {
-                return testInputSqlShared;
+        };
+
+        /**
+         * Makes a request to the REST API to save a watch session, returning a promise
+         * that can be used for processing the results of the call.
+         *
+         * @param {String} dataSource
+         *     The unique identifier of the data source containing the watch session to
+         *     be updated. This identifier corresponds to an AuthenticationProvider
+         *     within the Guacamole web application.
+         *
+         * @param {WatchSession} watchSession
+         *     The watch session to update.
+         *
+         * @returns {Promise}
+         *     A promise for the HTTP call which will succeed if and only if the
+         *     save operation is successful.
+         */
+        service.saveWatchSession = function saveWatchSession(dataSource, watchSession) {
+
+            // If watch session is new, add it and set the identifier automatically
+            if (!watchSession.identifier) {
+                return authenticationService.request({
+                    method  : 'POST',
+                    url     : 'api/session/data/' + encodeURIComponent(dataSource) + '/watchSessions',
+                    data    : watchSession
+                });
+            }
+            
+            // Otherwise, update the existing watch session
+            else {
+                return authenticationService.request({
+                    method  : 'PUT',
+                    url     : 'api/session/data/' + encodeURIComponent(dataSource) + '/watchSessions/' + encodeURIComponent(watchSession.identifier),
+                    data    : watchSession
+                });
             }
 
         };

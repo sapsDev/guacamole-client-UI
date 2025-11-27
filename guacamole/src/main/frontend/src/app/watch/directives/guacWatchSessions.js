@@ -68,6 +68,7 @@ angular.module('watch').directive('guacWatchSessions', [function guacWatchSessio
              */
             $scope.wrapperOrder = new SortOrder([
                 'username',
+                'connection',
                 'restriction',
                 'link'
             ]);
@@ -79,6 +80,7 @@ angular.module('watch').directive('guacWatchSessions', [function guacWatchSessio
              */
             $scope.filteredWrapperProperties = [
                 'username',
+                'connection',
                 'restriction',
                 'link'
             ];
@@ -113,6 +115,7 @@ angular.module('watch').directive('guacWatchSessions', [function guacWatchSessio
                             $scope.wrappers.push(new WatchSessionWrapper({
                                 dataSource       : dataSource,
                                 username         : watchSession.username,
+                                connection       : watchSession.connection,
                                 restriction      : watchSession.restriction,
                                 link             : watchSession.link
                             }));
@@ -122,11 +125,10 @@ angular.module('watch').directive('guacWatchSessions', [function guacWatchSessio
                 });
 
             };
-
-            // TODO: Remove Test
+            
             // Retrieve all watchable sessions
             dataSourceService.apply(
-                watchSessionService.getWatchSessionsTest,
+                watchSessionService.getWatchSessions,
                 dataSources
             )
             .then(function sessionsRetrieved(retrievedWatchSessions) {

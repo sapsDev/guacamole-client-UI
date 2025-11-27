@@ -238,6 +238,26 @@ CREATE TABLE `guacamole_connection_parameter` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+-- Table of watch sessions. Each watch session has a restriction for the viewer,
+-- a username of the user sharing the session, the identifier of the shared connection and
+-- a link to join the session. 
+--
+
+CREATE TABLE guacamole_watch_session (
+    
+  `watch_session_id` int(11)      NOT NULL AUTO_INCREMENT,
+  `username`         varchar(128) NOT NULL,
+  `connection`       varchar(128) NOT NULL,
+  `uuid`             varchar(128) NOT NULL,
+  `restriction`      boolean      NOT NULL,
+  `link`             varchar(512) NOT NULL,
+
+  PRIMARY KEY (`watch_session_id`),
+  UNIQUE KEY `watch_session_user_connection` (username, connection)
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
 -- Table of sharing profile parameters. Each parameter is simply
 -- name/value pair associated with a sharing profile. These parameters dictate
 -- the restrictions/features which apply to the user joining the associated
@@ -447,6 +467,32 @@ CREATE TABLE guacamole_sharing_profile_permission (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+-- Table of watch session permissions. Each watch session permission grants
+-- a user or user group specific access to a sharing profile.
+--
+
+CREATE TABLE guacamole_watch_session_permission (
+
+  `entity_id`        integer NOT NULL,
+  `watch_session_id` integer NOT NULL,
+  `permission`       enum('READ',
+                          'UPDATE',
+                          'DELETE',
+                          'ADMINISTER') NOT NULL,
+
+  PRIMARY KEY (`entity_id`, `watch_session_id`, `permission`),
+  
+  CONSTRAINT `guacamole_watch_session_permission_ibfk_1`
+    FOREIGN KEY (`watch_session_id`)
+    REFERENCES `guacamole_watch_session` (`watch_session_id`) ON DELETE CASCADE,
+
+  CONSTRAINT `guacamole_watch_session_permission_entity`
+    FOREIGN KEY (`entity_id`)
+    REFERENCES `guacamole_entity` (`entity_id`) ON DELETE CASCADE
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
 -- Table of system permissions. Each system permission grants a user or user
 -- group a system-level privilege of some kind.
 --
@@ -459,6 +505,7 @@ CREATE TABLE `guacamole_system_permission` (
                     'CREATE_SHARING_PROFILE',
                     'CREATE_USER',
                     'CREATE_USER_GROUP',
+                    'CREATE_WATCH_SESSION'
                     'AUDIT',
                     'ADMINISTER') NOT NULL,
 

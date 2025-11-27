@@ -63,6 +63,12 @@ public interface Directory<ObjectType extends Identifiable> {
          * objects.
          */
         SHARING_PROFILE(SharingProfile.class),
+        
+        /**
+         * The type of a Directory that contains {@link WatchSession}
+         * objects.
+         */
+        WATCH_SESSION(WatchSession.class),
 
         /**
          * The type of a Directory that contains {@link User} objects.

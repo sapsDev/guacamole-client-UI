@@ -65,6 +65,7 @@ import org.apache.guacamole.auth.jdbc.sharingprofile.ModeledSharingProfile;
 import org.apache.guacamole.auth.jdbc.sharingprofile.SharingProfileParameterMapper;
 import org.apache.guacamole.auth.jdbc.sharingprofile.SharingProfileParameterModel;
 import org.apache.guacamole.auth.jdbc.user.RemoteAuthenticatedUser;
+import org.apache.guacamole.auth.jdbc.watchsession.WatchSessionMapper;
 import org.apache.guacamole.net.auth.GuacamoleProxyConfiguration;
 import org.apache.guacamole.protocol.FailoverGuacamoleSocket;
 import org.apache.guacamole.properties.CaseSensitivity;
@@ -163,6 +164,12 @@ public abstract class AbstractGuacamoleTunnelService implements GuacamoleTunnelS
      */
     @Inject
     private ConnectionRecordMapper connectionRecordMapper;
+        
+    /**
+     * Mapper for accessing watch sessions.
+     */
+    @Inject
+    private WatchSessionMapper watchSessionMapper;
 
     /**
      * Map of all currently-shared connections.
@@ -407,6 +414,9 @@ public abstract class AbstractGuacamoleTunnelService implements GuacamoleTunnelS
             UUID uuid = activeConnection.getUUID(); // May be null if record not successfully inserted
             if (uuid != null)
                 activeTunnels.remove(uuid.toString());
+            
+            // Remove associated watch session if existing
+                watchSessionMapper.deleteOneByUuid(uuid.toString());
 
             // Get original user
             RemoteAuthenticatedUser user = activeConnection.getUser();

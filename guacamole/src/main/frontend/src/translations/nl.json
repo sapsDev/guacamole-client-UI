@@ -101,8 +101,11 @@
         "HELP_MOUSE_MODE"          : "Bepaalt hoe de muis met aanraak-klikken omgaat.",
         "HELP_MOUSE_MODE_ABSOLUTE" : "Tik om te klikken. De klik vindt plaats op de locatie van de tik.",
         "HELP_MOUSE_MODE_RELATIVE" : "Sleep om de aanwijzer te bewegen en tik om te klikken. De klik vindt plaats op de locatie van de aanwijzer.",
+        "HELP_CONNECTION_WATCHING" : "De huidige verbinding kan automatisch met een docent worden gedeeld. Er moet een profiel worden geselecteerd.",
+        "HELP_WATCHABLE"           : "Een docent kan deelnemen aan deze sessie",
 
-        "INFO_NO_FILE_TRANSFERS" : "Geen bestandsoverdrachten.",
+        "INFO_NO_FILE_TRANSFERS"    : "Geen bestandsoverdrachten.",
+        "INFO_CONNECTION_WATCHABLE" : "Momenteel kan een docent automatisch deelnemen aan deze sessie met de machtigingen van het volgende profiel:",
 
         "NAME_INPUT_METHOD_NONE"   : "Geen",
         "NAME_INPUT_METHOD_OSK"    : "Scherm toetsenbord",
@@ -120,6 +123,7 @@
         "SECTION_HEADER_FILE_TRANSFERS" : "Bestandsoverdrachten",
         "SECTION_HEADER_INPUT_METHOD"   : "Invoer methode",
         "SECTION_HEADER_MOUSE_MODE"     : "Muis emulatie modus",
+        "SECTION_HEADER_WATCHING"       : "Sessie delen voor docenten",
 
         "TEXT_ZOOM_AUTO_FIT"              : "Automatisch aan browser venster aanpassen",
         "TEXT_CLIENT_STATUS_IDLE"         : "Inactief.",
@@ -554,6 +558,7 @@
         
         "SECTION_HEADER_WATCH" : "Bekijken",
 
+        "TABLE_HEADER_SESSION_CONNECTION"  : "Verbindingsnaam",
         "TABLE_HEADER_SESSION_LINK"        : "Link",
         "TABLE_HEADER_SESSION_RESTRICTION" : "Beperking",
         "TABLE_HEADER_SESSION_USERNAME"    : "Gebruikersnaam"

@@ -56,6 +56,7 @@ CREATE TYPE guacamole_system_permission_type AS ENUM(
     'CREATE_SHARING_PROFILE',
     'CREATE_USER',
     'CREATE_USER_GROUP',
+    'CREATE_WATCH_SESSION',
     'AUDIT',
     'ADMINISTER'
 );
@@ -313,6 +314,27 @@ CREATE INDEX guacamole_connection_parameter_connection_id
     ON guacamole_connection_parameter(connection_id);
 
 --
+-- Table of watch sessions. Each watch session has a restriction for the viewer,
+-- a username of the user sharing the session, the identifier of the shared connection and
+-- a link to join the session.
+--
+
+CREATE TABLE guacamole_watch_session (
+
+  watch_session_id serial       NOT NULL,
+  username         varchar(128) NOT NULL,
+  connection       varchar(128) NOT NULL,
+  uuid             varchar(128) NOT NULL,
+  restriction      boolean      NOT NULL,
+  link             varchar(512) NOT NULL,
+    
+  PRIMARY KEY (watch_session_id),
+                                         
+  CONSTRAINT watch_session_user_connection
+      UNIQUE (username, connection)
+);
+
+--
 -- Table of sharing profile parameters. Each parameter is simply
 -- name/value pair associated with a sharing profile. These parameters dictate
 -- the restrictions/features which apply to the user joining the associated
@@ -542,6 +564,35 @@ CREATE INDEX guacamole_sharing_profile_permission_sharing_profile_id
 
 CREATE INDEX guacamole_sharing_profile_permission_entity_id
     ON guacamole_sharing_profile_permission(entity_id);
+
+--
+-- Table of watch session permissions. Each watch session permission grants
+-- a user or user group specific access to a watch session.
+--
+
+CREATE TABLE guacamole_watch_session_permission (
+
+  entity_id        integer NOT NULL,
+  watch_session_id integer NOT NULL,
+  permission       guacamole_object_permission_type NOT NULL,
+
+  PRIMARY KEY (entity_id, watch_session_id, permission),
+
+  CONSTRAINT guacamole_watch_session_permission_ibfk_1
+    FOREIGN KEY (watch_session_id)
+    REFERENCES guacamole_watch_session (watch_session_id) ON DELETE CASCADE,
+
+  CONSTRAINT guacamole_watch_session_permission_entity
+    FOREIGN KEY (entity_id)
+    REFERENCES guacamole_entity (entity_id) ON DELETE CASCADE
+
+);
+
+CREATE INDEX guacamole_watch_session_permission_watch_session_id
+    ON guacamole_watch_session_permission(watch_session_id);
+
+CREATE INDEX guacamole_watch_session_permission_entity_id
+    ON guacamole_watch_session_permission(entity_id);
 
 --
 -- Table of system permissions. Each system permission grants a user or user

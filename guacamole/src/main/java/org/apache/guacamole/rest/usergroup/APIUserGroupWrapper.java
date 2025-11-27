@@ -104,6 +104,11 @@ public class APIUserGroupWrapper implements UserGroup {
     public ObjectPermissionSet getSharingProfilePermissions() throws GuacamoleException {
         throw new GuacamoleUnsupportedException("APIUserGroupWrapper does not provide permission access.");
     }
+    
+    @Override
+    public ObjectPermissionSet getWatchSessionPermissions() throws GuacamoleException {
+        throw new GuacamoleUnsupportedException("APIUserGroupWrapper does not provide permission access.");
+    }
 
     @Override
     public ObjectPermissionSet getUserPermissions()

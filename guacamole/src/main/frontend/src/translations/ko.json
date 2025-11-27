@@ -118,8 +118,11 @@
         "HELP_MOUSE_MODE_ABSOLUTE" : "탭하여 클릭합니다. 클릭은 터치 위치에서 발생합니다.",
         "HELP_MOUSE_MODE_RELATIVE" : "드래그하여 마우스 포인터를 움직이고 탭하여 클릭합니다. 클릭은 마우스 포인터 위치에서 발생합니다.",
         "HELP_SHARE_LINK"          : "현재 연결이 공유되고 있으며, 다음 링크를 가진 사람이라면 누구나 접근할 수 있습니다:",
-        "INFO_CONNECTION_SHARED" : "이 연결은 이제 공유됩니다.",
-        "INFO_NO_FILE_TRANSFERS" : "파일 전송이 없습니다.",
+        "HELP_CONNECTION_WATCHING" : "현재 연결은 강사와 자동으로 공유될 수 있습니다. 프로필을 선택해야 합니다.",
+        "HELP_WATCHABLE"           : "강사가 이 세션에 참여할 수 있습니다",
+        "INFO_CONNECTION_SHARED"    : "이 연결은 이제 공유됩니다.",
+        "INFO_NO_FILE_TRANSFERS"    : "파일 전송이 없습니다.",
+        "INFO_CONNECTION_WATCHABLE" : "현재 강사는 다음 프로필의 권한으로 이 세션에 자동으로 참가할 수 있습니다.",
 
         "NAME_INPUT_METHOD_NONE"   : "없음",
         "NAME_INPUT_METHOD_OSK"    : "화상 키보드",
@@ -137,6 +140,7 @@
         "SECTION_HEADER_FILE_TRANSFERS" : "파일 전송",
         "SECTION_HEADER_INPUT_METHOD"   : "입력 방법",
         "SECTION_HEADER_MOUSE_MODE"     : "마우스 에뮬레이션 모드",
+        "SECTION_HEADER_WATCHING"       : "강사를 위한 세션 공유",
 
         "TEXT_ZOOM_AUTO_FIT"              : "브라우저 창에 자동으로 맞춤",
         "TEXT_CLIENT_STATUS_IDLE"         : "유휴 상태.",
@@ -819,6 +823,7 @@
         
         "SECTION_HEADER_WATCH" : "보기",
 
+        "TABLE_HEADER_SESSION_CONNECTION"  : "연결 이름",
         "TABLE_HEADER_SESSION_LINK": "링크",
         "TABLE_HEADER_SESSION_RESTRICTION": "제한",
         "TABLE_HEADER_SESSION_USERNAME": "사용자 이름"

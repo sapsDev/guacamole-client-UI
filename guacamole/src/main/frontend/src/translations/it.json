@@ -97,8 +97,11 @@
         "HELP_MOUSE_MODE"          : "Determina come si deve comportare il mouse remoto in base al touch.",
         "HELP_MOUSE_MODE_ABSOLUTE" : "Tap to click. Il click è sostituito dal tocco.",
         "HELP_MOUSE_MODE_RELATIVE" : "Trascina il dito per muovere il puntatore del mouse e fai tap al posto del click. Il click sarà effettuato dove si trova il puntatore.",
+        "HELP_CONNECTION_WATCHING" : "La connessione attuale può essere condivisa automaticamente con un docente. È necessario selezionare un profilo.",
+        "HELP_WATCHABLE"           : "Un docente può unirsi a questa sessione",
 
-        "INFO_NO_FILE_TRANSFERS" : "Nessun trasferimento di file.",
+        "INFO_NO_FILE_TRANSFERS"    : "Nessun trasferimento di file.",
+        "INFO_CONNECTION_WATCHABLE" : "Attualmente, un docente può unirsi automaticamente a questa sessione con i permessi del seguente profilo:",
 
         "NAME_INPUT_METHOD_NONE"   : "Nessuno",
         "NAME_INPUT_METHOD_OSK"    : "Tastiera su schermo",
@@ -116,6 +119,7 @@
         "SECTION_HEADER_FILE_TRANSFERS" : "Trasferimento file",
         "SECTION_HEADER_INPUT_METHOD"   : "Metodo di input",
         "SECTION_HEADER_MOUSE_MODE"     : "Modalità di emulazione del mouse",
+        "SECTION_HEADER_WATCHING"       : "Condividi sessione per docenti",
 
         "TEXT_ZOOM_AUTO_FIT"              : "Automatically fit to browser window",
         "TEXT_CLIENT_STATUS_IDLE"         : "Inattivo.",
@@ -474,6 +478,7 @@
         
         "SECTION_HEADER_WATCH" : "Guarda",
 
+        "TABLE_HEADER_SESSION_CONNECTION"  : "Nome della connessione",
         "TABLE_HEADER_SESSION_LINK"        : "Collegamento",
         "TABLE_HEADER_SESSION_RESTRICTION" : "Restrizione",
         "TABLE_HEADER_SESSION_USERNAME"    : "Nome utente"

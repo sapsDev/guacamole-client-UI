@@ -139,6 +139,11 @@ public class SharedUser implements User {
     public ObjectPermissionSet getSharingProfilePermissions() throws GuacamoleException {
         return ObjectPermissionSet.EMPTY_SET;
     }
+    
+    @Override
+    public ObjectPermissionSet getWatchSessionPermissions() throws GuacamoleException {
+        return ObjectPermissionSet.EMPTY_SET;
+    }
 
     @Override
     public ObjectPermissionSet getActiveConnectionPermissions() throws GuacamoleException {

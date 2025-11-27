@@ -117,9 +117,12 @@
         "HELP_MOUSE_MODE_ABSOLUTE" : "Toque para clicar. O clique ocorre no local do toque.",
         "HELP_MOUSE_MODE_RELATIVE" : "Arraste para mover o ponteiro do mouse e toque para clicar. O clique ocorre no local em que o mouse aponta.",
         "HELP_SHARE_LINK"          : "A conexão atual está sendo compartilhada e pode ser acessado com qualquer um que possuir o seguinte {LINKS, plural, one{link} other{links}}:",
+        "HELP_CONNECTION_WATCHING" : "A conexão atual pode ser compartilhada automaticamente com um instrutor. Um perfil deve ser selecionado.",
+        "HELP_WATCHABLE"           : "Um instrutor pode participar desta sessão",
 
-        "INFO_CONNECTION_SHARED" : "Está conexão agora está compartilhada.",
-        "INFO_NO_FILE_TRANSFERS" : "Nenhuma transferência de arquivo.",
+        "INFO_CONNECTION_SHARED"    : "Está conexão agora está compartilhada.",
+        "INFO_NO_FILE_TRANSFERS"    : "Nenhuma transferência de arquivo.",
+        "INFO_CONNECTION_WATCHABLE" : "Atualmente, um professor pode entrar automaticamente nesta sessão com as permissões do seguinte perfil:",
 
         "NAME_INPUT_METHOD_NONE"   : "Nenhum",
         "NAME_INPUT_METHOD_OSK"    : "Teclado virtual",
@@ -137,6 +140,7 @@
         "SECTION_HEADER_FILE_TRANSFERS" : "Transferências de Arquivos",
         "SECTION_HEADER_INPUT_METHOD"   : "Método de entrada",
         "SECTION_HEADER_MOUSE_MODE"     : "Modo de emulação do mouse",
+        "SECTION_HEADER_WATCHING"       : "Compartilhar sessão para instrutores",
 
         "TEXT_ZOOM_AUTO_FIT"              : "Ajustar automaticamente à janela do navegador",
         "TEXT_CLIENT_STATUS_IDLE"         : "Ocioso.",
@@ -840,6 +844,7 @@
         
         "SECTION_HEADER_WATCH" : "Assistir",
 
+        "TABLE_HEADER_SESSION_CONNECTION"  : "Nome da conexão",
         "TABLE_HEADER_SESSION_LINK"        : "Link",
         "TABLE_HEADER_SESSION_RESTRICTION" : "Restrição",
         "TABLE_HEADER_SESSION_USERNAME"    : "Nome de usuário"

@@ -113,11 +113,14 @@
         "HELP_MOUSE_MODE_ABSOLUTE" : "Toqueu per fer clic. El clic es produeix a la ubicació del toc.",
         "HELP_MOUSE_MODE_RELATIVE" : "Arrossegueu per moure el punter del ratolí i toqueu per fer clic. El clic es produeix a la ubicació del punter.",
         "HELP_SHARE_LINK"          : "La connexió actual s'està compartint i qualsevol usuari pot accedir amb els següents {LINKS, plural, one{enllaç} other{enllaços}}:",
+        "HELP_CONNECTION_WATCHING" : "La connexió actual es pot compartir automàticament amb un docent. Cal seleccionar un perfil.",
+        "HELP_WATCHABLE"           : "Un docent es pot unir a aquesta sessió",
 
         "INFO_ANONYMOUS_USER_COUNT" : "Anònim{COUNT, plural, one{} other{s (#)}}",
         "INFO_CONNECTION_SHARED"    : "Aquesta connexió es comparteix ara.",
         "INFO_NO_FILE_TRANSFERS"    : "No hi ha transferències de fitxers.",
         "INFO_USER_COUNT"           : "{USERNAME}{COUNT, plural, one{} other{ (#)}}",
+        "INFO_CONNECTION_WATCHABLE" : "Actualment, un professor pot unir-se automàticament a aquesta sessió amb els permisos del següent perfil:",
     
         "NAME_INPUT_METHOD_NONE"   : "Cap",
         "NAME_INPUT_METHOD_OSK"    : "Teclat a la pantalla",
@@ -136,6 +139,7 @@
         "SECTION_HEADER_FILE_TRANSFERS"  : "Transferències de fitxers",
         "SECTION_HEADER_INPUT_METHOD"    : "Mètode d'entrada",
         "SECTION_HEADER_MOUSE_MODE"      : "Mode d'emulació del ratolí",
+        "SECTION_HEADER_WATCHING"        : "Compartir sessió per a docents",
 
         "TEXT_ANONYMOUS_USER_JOINED"      : "Un usuari anònim s'ha afegit a la connexió.",
         "TEXT_ANONYMOUS_USER_LEFT"        : "Un usuari anònim ha sortit de la connexió.",
@@ -867,6 +871,7 @@
         
         "SECTION_HEADER_WATCH" : "Veure",
 
+        "TABLE_HEADER_SESSION_CONNECTION"  : "Nom de la connexió",
         "TABLE_HEADER_SESSION_LINK"        : "Enllaç",
         "TABLE_HEADER_SESSION_RESTRICTION" : "Restricció",
         "TABLE_HEADER_SESSION_USERNAME"    : "Nom d'usuari"

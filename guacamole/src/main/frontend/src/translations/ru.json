@@ -112,9 +112,12 @@
         "HELP_MOUSE_MODE_ABSOLUTE" : "Прикоснитесь, чтобы сделать клик. Клик происходит в точке прикосновения к экрану.",
         "HELP_MOUSE_MODE_RELATIVE" : "Потяните, чтобы перемещать курсор. Прикоснитесь, чтобы сделать клик. Клик происходит в точке нахождения курсора.",
         "HELP_SHARE_LINK"          : "Это соединение расшарено и доступно всем по следующ{LINKS, plural, one{ей ссылке} other{им ссылкам}}:",
+        "HELP_CONNECTION_WATCHING" : "Текущее подключение может быть автоматически передано преподавателю. Необходимо выбрать профиль.",
+        "HELP_WATCHABLE"           : "Преподаватель может присоединиться к этому сеансу",
 
-        "INFO_CONNECTION_SHARED" : "Это соединение теперь расшарено.",
-        "INFO_NO_FILE_TRANSFERS" : "Нет загрузок.",
+        "INFO_CONNECTION_SHARED"    : "Это соединение теперь расшарено.",
+        "INFO_NO_FILE_TRANSFERS"    : "Нет загрузок.",
+        "INFO_CONNECTION_WATCHABLE" : "В настоящее время преподаватель может автоматически присоединиться к этой сессии с разрешениями следующего профиля:",
 
         "NAME_INPUT_METHOD_NONE"   : "Нет",
         "NAME_INPUT_METHOD_OSK"    : "Экранная клавиатура",
@@ -128,6 +131,7 @@
         "SECTION_HEADER_FILE_TRANSFERS" : "Загрузки файлов",
         "SECTION_HEADER_INPUT_METHOD"   : "Метод ввода",
         "SECTION_HEADER_MOUSE_MODE"     : "Режим эмуляции мыши",
+        "SECTION_HEADER_WATCHING"       : "Поделиться сеансом для преподавателей",
 
         "TEXT_ZOOM_AUTO_FIT"              : "Автоматически умещать в браузере",
         "TEXT_CLIENT_STATUS_IDLE"         : "Бездействие.",
@@ -670,6 +674,7 @@
         
         "SECTION_HEADER_WATCH" : "Смотреть",
 
+        "TABLE_HEADER_SESSION_CONNECTION"  : "Название подключения",
         "TABLE_HEADER_SESSION_LINK"        : "Ссылка",
         "TABLE_HEADER_SESSION_RESTRICTION" : "Ограничение",
         "TABLE_HEADER_SESSION_USERNAME"    : "Имя пользователя"

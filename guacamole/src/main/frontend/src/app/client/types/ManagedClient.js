@@ -36,6 +36,7 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
     const ManagedFilesystem      = $injector.get('ManagedFilesystem');
     const ManagedFileUpload      = $injector.get('ManagedFileUpload');
     const ManagedShareLink       = $injector.get('ManagedShareLink');
+    const WatchSession           = $injector.get('WatchSession');
 
     // Required services
     const $document               = $injector.get('$document');
@@ -48,7 +49,9 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
     const connectionService       = $injector.get('connectionService');
     const preferenceService       = $injector.get('preferenceService');
     const requestService          = $injector.get('requestService');
+    const sharingProfileService   = $injector.get('sharingProfileService');
     const tunnelService           = $injector.get('tunnelService');
+    const watchSessionService     = $injector.get('watchSessionService');
     const guacAudio               = $injector.get('guacAudio');
     const guacHistory             = $injector.get('guacHistory');
     const guacImage               = $injector.get('guacImage');
@@ -240,6 +243,23 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
          * @type Object.<String, ManagedShareLink>
          */
         this.shareLinks = template.shareLinks || {};
+
+        /**
+         * The selected sharingProfile with which the lecturer can automatically 
+         * join this ManagedClient.
+         * 
+         * @type SharingProfile
+         */
+        this.watchProfile = template.watchProfile || null;
+
+        /**
+         * The watch session for this ManagedClient, created via
+         * ManagedClient.setWatchAccess(). Null if session watching
+         * is denied.
+         *
+         * @type WatchSession
+         */
+        this.watchSession = template.watchSession || null;
 
         /**
          * The number of simultaneous touch contacts supported by the remote
@@ -994,6 +1014,89 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
     };
 
     /**
+     * Enables or disables the access to this client via the watch-session page. 
+     * The rights for the joining person are determined by the given sharing profile.
+     *
+     * @param {ManagedClient} client
+     *     The ManagedClient which will be watchable via the sharing
+     *     profile.
+     *
+     * @param {SharingProfile} sharingProfile
+     *     The sharing profile to use to watch the session.
+     */
+    ManagedClient.setWatchAccess = async function setWatchAccess(client, sharingProfile) {
+        const dataSource = ClientIdentifier.fromString(client.id).dataSource;
+        
+        //Set watchProfile
+        client.watchProfile = sharingProfile;
+        
+        //Deny watching selected
+        if (!sharingProfile) {
+            if (!client.watchSession) {
+                return
+            } else {
+                await watchSessionService.deleteWatchSession(dataSource, client.watchSession);
+                client.watchSession = null;
+                return;
+            }
+        }
+
+        //Create share link if not existing
+        if (!client.shareLinks[sharingProfile.identifier]) {
+            await ManagedClient.createShareLink(client, sharingProfile);
+        }
+        
+        //load data to update watch session
+        var isReadOnly;
+        const link = client.shareLinks[sharingProfile.identifier].href;
+        
+        await sharingProfileService.getSharingProfileParameters(
+            dataSource, sharingProfile.identifier
+        ).then(function(parameters) {
+            isReadOnly = (parameters["read-only"] || "").toLowerCase() === "true";
+        });
+        
+        //update watch session if existing
+        if (client.watchSession) {
+            watchSessionService.saveWatchSession(
+                dataSource,
+                {
+                    identifier:  client.watchSession.identifier,
+                    username:    client.watchSession.username,
+                    connection:  client.watchSession.connection,
+                    uuid:        client.watchSession.uuid,
+                    restriction: !!isReadOnly,
+                    link:        link
+                }
+            ).then(function watchSessionSaved() {
+                client.watchSession.restriction = !!isReadOnly;
+                client.watchSession.link        = link;
+            });
+            
+            return;
+        }
+        
+        //load data to create watch session
+        const username = authenticationService.getCurrentUsername();
+        
+        //create watch session if not existing
+        watchSessionService.saveWatchSession(
+            dataSource,
+            {
+                identifier:  null,
+                username:    username,
+                connection:  client.name,
+                uuid:        client.tunnel.uuid,
+                restriction: !!isReadOnly,
+                link:        link
+            }
+        ).then(function watchSessionCreated(watchSession) {
+            client.watchSession = watchSession;
+        });
+        
+    }
+
+    /**
      * Returns whether the given ManagedClient is being shared. A ManagedClient
      * is shared if it has any associated share links.
      *
@@ -1011,6 +1114,29 @@ angular.module('client').factory('ManagedClient', ['$rootScope', '$injector',
             return true;
 
         // No share links currently exist
+        return false;
+
+    };
+
+    /**
+     * Returns whether the given ManagedClient is watchable by lecturers. 
+     * A ManagedClient is watchable if it has a defined watch profile
+     *
+     * @param {ManagedClient} client
+     *     The ManagedClient to check.
+     *
+     * @returns {Boolean}
+     *     true if the ManagedClient has a defined watch profile,
+     *     false otherwise.
+     */
+    ManagedClient.isWatchable = function isWatchable(client) {
+
+        // The connection is watchable if it has a defined watch profile
+        if (client.watchProfile) {
+            return true;
+        }
+
+        // No watch profile currently defined
         return false;
 
     };

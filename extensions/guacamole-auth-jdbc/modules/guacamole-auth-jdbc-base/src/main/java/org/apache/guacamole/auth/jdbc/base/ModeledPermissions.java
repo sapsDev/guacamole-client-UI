@@ -30,6 +30,7 @@ import org.apache.guacamole.auth.jdbc.permission.ConnectionPermissionService;
 import org.apache.guacamole.auth.jdbc.permission.SharingProfilePermissionService;
 import org.apache.guacamole.auth.jdbc.permission.UserGroupPermissionService;
 import org.apache.guacamole.auth.jdbc.permission.UserPermissionService;
+import org.apache.guacamole.auth.jdbc.permission.WatchSessionPermissionService;
 import org.apache.guacamole.auth.jdbc.user.ModeledAuthenticatedUser;
 import org.apache.guacamole.net.auth.Permissions;
 import org.apache.guacamole.net.auth.permission.ObjectPermissionSet;
@@ -93,6 +94,12 @@ public abstract class ModeledPermissions<ModelType extends EntityModel>
      */
     @Inject
     private UserGroupPermissionService userGroupPermissionService;
+ 
+    /**
+     * Service for retrieving watch session permissions.
+     */
+    @Inject
+    private WatchSessionPermissionService watchSessionPermissionService;
 
     /**
      * Returns whether the underlying entity is a user. Entities may be either
@@ -197,6 +204,12 @@ public abstract class ModeledPermissions<ModelType extends EntityModel>
         return userGroupPermissionService.getPermissionSet(getCurrentUser(),
                 this, Collections.<String>emptySet());
     }
+    
+    @Override
+    public ObjectPermissionSet getWatchSessionPermissions() throws GuacamoleException {
+        return watchSessionPermissionService.getPermissionSet(getCurrentUser(),
+                this, Collections.<String>emptySet());
+    }
 
     /**
      * Returns the identifiers of all user groups defined within the database
@@ -280,6 +293,12 @@ public abstract class ModeledPermissions<ModelType extends EntityModel>
             public ObjectPermissionSet getUserGroupPermissions()
                     throws GuacamoleException {
                 return userGroupPermissionService.getPermissionSet(getCurrentUser(), ModeledPermissions.this, effectiveGroups);
+            }
+            
+            @Override
+            public ObjectPermissionSet getWatchSessionPermissions()
+                    throws GuacamoleException {
+                return watchSessionPermissionService.getPermissionSet(getCurrentUser(), ModeledPermissions.this, effectiveGroups);
             }
 
         };

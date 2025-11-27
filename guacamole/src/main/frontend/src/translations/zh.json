@@ -129,11 +129,14 @@
         "HELP_MOUSE_MODE_ABSOLUTE" : "点击时立即触发按键。在点击的位置触发鼠标按键事件。",
         "HELP_MOUSE_MODE_RELATIVE" : "拖拽时移动鼠标，再点击时触发按键。在鼠标当前所在的位置触发按键事件。",
         "HELP_SHARE_LINK"          : "正在共享当前连接，并可被使用以下链接的任何人使用：",
+        "HELP_CONNECTION_WATCHING" : "当前连接可以自动与教师共享。必须选择一个配置文件。",
+        "HELP_WATCHABLE"           : "教师可以加入此会话",
 
         "INFO_ANONYMOUS_USER_COUNT" : "匿名用户{COUNT, plural, one{} other{ (#)}}",
         "INFO_CONNECTION_SHARED"    : "此连接已被共享。",
         "INFO_NO_FILE_TRANSFERS"    : "无文件传输任务。",
         "INFO_USER_COUNT"           : "{USERNAME}{COUNT, plural, one{} other{ (#)}}",
+        "INFO_CONNECTION_WATCHABLE" : "当前，讲师可以自动使用以下配置文件的权限加入此会话：",
 
         "NAME_INPUT_METHOD_NONE"   : "无",
         "NAME_INPUT_METHOD_OSK"    : "屏幕键盘",
@@ -151,6 +154,7 @@
         "SECTION_HEADER_DISPLAY"         : "显示",
         "SECTION_HEADER_FILE_TRANSFERS"  : "文件传输",
         "SECTION_HEADER_INPUT_METHOD"    : "输入方式",
+        "SECTION_HEADER_WATCHING"        : "为教师共享会话",
 
         "SECTION_HEADER_MOUSE_MODE"     : "模拟鼠标模式",
 
@@ -957,6 +961,7 @@
         
         "SECTION_HEADER_WATCH" : "观看",
 
+        "TABLE_HEADER_SESSION_CONNECTION"  : "连接名",
         "TABLE_HEADER_SESSION_LINK": "链接",
         "TABLE_HEADER_SESSION_RESTRICTION": "限制",
         "TABLE_HEADER_SESSION_USERNAME": "用户名"

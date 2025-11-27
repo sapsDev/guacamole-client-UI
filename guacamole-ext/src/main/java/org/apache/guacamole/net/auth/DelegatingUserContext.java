@@ -104,6 +104,12 @@ public class DelegatingUserContext implements UserContext {
             throws GuacamoleException {
         return userContext.getSharingProfileDirectory();
     }
+    
+    @Override
+    public Directory<WatchSession> getWatchSessionDirectory()
+            throws GuacamoleException {
+        return userContext.getWatchSessionDirectory();
+    }
 
     @Override
     public ActivityRecordSet<ConnectionRecord> getConnectionHistory()

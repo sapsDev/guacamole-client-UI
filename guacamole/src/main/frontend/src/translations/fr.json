@@ -130,11 +130,14 @@
         "HELP_MOUSE_MODE_ABSOLUTE" : "Appuyer pour cliquer. Le clic s'effectue à l'endroit de l'appui.",
         "HELP_MOUSE_MODE_RELATIVE" : "Glisser pour déplacer le pointeur de la souris et appuyer pour cliquer. Le clic s'effectue à l'endroit du pointeur.",
         "HELP_SHARE_LINK"          : "La connexion actuelle est en cours de partage et est accessible à toute personne possédant {LINKS, plural, one{le lien suivant} other{les liens suivants}}:",
+        "HELP_CONNECTION_WATCHING" : "La connexion actuelle peut être partagée automatiquement avec un enseignant. Un profil doit être sélectionné.",
+        "HELP_WATCHABLE"           : "Un enseignant peut rejoindre cette session",
 
         "INFO_ANONYMOUS_USER_COUNT" : "Anonyme{COUNT, plural, one{} other{s (#)}}",
         "INFO_CONNECTION_SHARED"    : "Cette connexion est partagée maintenant.",
         "INFO_NO_FILE_TRANSFERS"    : "Pas de transfert de fichier.",
         "INFO_USER_COUNT"           : "{USERNAME}{COUNT, plural, one{} other{ (#)}}",
+        "INFO_CONNECTION_WATCHABLE" : "Actuellement, un enseignant peut rejoindre automatiquement cette session avec les autorisations du profil suivant :",
 
         "NAME_INPUT_METHOD_NONE"   : "Aucune",
         "NAME_INPUT_METHOD_OSK"    : "Clavier virtuel",
@@ -152,6 +155,7 @@
         "SECTION_HEADER_DISPLAY"         : "Affichage",
         "SECTION_HEADER_FILE_TRANSFERS"  : "Transferts de fichiers",
         "SECTION_HEADER_INPUT_METHOD"    : "Méthode de saisie",
+        "SECTION_HEADER_WATCHING"        : "Partager la session pour les enseignants",
 
         "SECTION_HEADER_MOUSE_MODE"     : "Mode d'émulation de la souris",
 
@@ -994,6 +998,7 @@
         
         "SECTION_HEADER_WATCH" : "Regarder",
 
+        "TABLE_HEADER_SESSION_CONNECTION"  : "Nom de connexion",
         "TABLE_HEADER_SESSION_LINK"        : "Lien",
         "TABLE_HEADER_SESSION_RESTRICTION" : "Restriction",
         "TABLE_HEADER_SESSION_USERNAME"    : "Nom d'utilisateur"

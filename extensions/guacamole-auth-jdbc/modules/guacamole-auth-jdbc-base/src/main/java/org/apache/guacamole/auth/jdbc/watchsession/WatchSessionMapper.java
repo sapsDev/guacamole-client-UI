@@ -1,0 +1,43 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+package org.apache.guacamole.auth.jdbc.watchsession;
+
+import org.apache.guacamole.auth.jdbc.base.ModeledDirectoryObjectMapper;
+import org.apache.ibatis.annotations.Param;
+
+/**
+ * Mapper for watch session objects.
+ */
+public interface WatchSessionMapper
+        extends ModeledDirectoryObjectMapper<WatchSessionModel> {
+        
+    /**
+     * Deletes the watch session associated with the given tunnel uuid
+     * If no such watch session exists, this operation has no effect.
+     *
+     * @param uuid
+     *     The tunnel uuid of the watch session to delete.
+     *
+     * @return
+     *     The number of rows deleted.
+     */
+    int deleteOneByUuid(@Param("uuid") String uuid);
+    
+    }
