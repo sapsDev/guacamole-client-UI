@@ -256,6 +256,7 @@
         "FIELD_HEADER_CREATE_NEW_USERS"              : "Opprett ny bruker:",
         "FIELD_HEADER_CREATE_NEW_CONNECTIONS"        : "Opprett ny tilkobling:",
         "FIELD_HEADER_CREATE_NEW_CONNECTION_GROUPS"  : "Opprett ny tilkoblingsgruppe:",
+        "FIELD_HEADER_CREATE_NEW_WATCH_SESSIONS"     : "Opprette nye overvåkingsøkter:",
         "FIELD_HEADER_PASSWORD"                      : "@:APP.FIELD_HEADER_PASSWORD",
         "FIELD_HEADER_PASSWORD_AGAIN"                : "@:APP.FIELD_HEADER_PASSWORD_AGAIN",
         "FIELD_HEADER_USERNAME"                      : "Brukernavn:",

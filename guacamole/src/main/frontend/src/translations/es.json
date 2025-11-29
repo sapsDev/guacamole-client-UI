@@ -320,6 +320,7 @@
         "FIELD_HEADER_CREATE_NEW_CONNECTIONS"        : "Crear nuevas conexiones:",
         "FIELD_HEADER_CREATE_NEW_CONNECTION_GROUPS"  : "Crear nuevos grupos de conexión:",
         "FIELD_HEADER_CREATE_NEW_SHARING_PROFILES"   : "Crear nuevos perfiles de compartir:",
+        "FIELD_HEADER_CREATE_NEW_WATCH_SESSIONS"     : "Crear nuevas sesiones de vigilancia:",
         "FIELD_HEADER_PASSWORD"                      : "@:APP.FIELD_HEADER_PASSWORD",
         "FIELD_HEADER_PASSWORD_AGAIN"                : "@:APP.FIELD_HEADER_PASSWORD_AGAIN",
         "FIELD_HEADER_USER_DISABLED"                 : "Inicio de sesión deshabilitado:",
@@ -361,6 +362,7 @@
         "FIELD_HEADER_CREATE_NEW_CONNECTIONS"        : "@:MANAGE_USER.FIELD_HEADER_CREATE_NEW_CONNECTIONS",
         "FIELD_HEADER_CREATE_NEW_CONNECTION_GROUPS"  : "@:MANAGE_USER.FIELD_HEADER_CREATE_NEW_CONNECTION_GROUPS",
         "FIELD_HEADER_CREATE_NEW_SHARING_PROFILES"   : "@:MANAGE_USER.FIELD_HEADER_CREATE_NEW_SHARING_PROFILES",
+        "FIELD_HEADER_CREATE_NEW_WATCH_SESSIONS"     : "@:MANAGE_USER.FIELD_HEADER_CREATE_NEW_WATCH_SESSIONS",
         "FIELD_HEADER_USER_GROUP_DISABLED"           : "Deshabilitado:",
         "FIELD_HEADER_USER_GROUP_NAME"               : "Nombre del grupo:",
 

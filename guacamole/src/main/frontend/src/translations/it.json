@@ -260,6 +260,7 @@
         "FIELD_HEADER_CREATE_NEW_USERS"              : "Crea un utente:",
         "FIELD_HEADER_CREATE_NEW_CONNECTIONS"        : "Crea una connessione:",
         "FIELD_HEADER_CREATE_NEW_CONNECTION_GROUPS"  : "Crea un ruppo di connessioni:",
+        "FIELD_HEADER_CREATE_NEW_WATCH_SESSIONS"     : "Creare nuove sessioni di monitoraggio:",
         "FIELD_HEADER_PASSWORD"                      : "@:APP.FIELD_HEADER_PASSWORD",
         "FIELD_HEADER_PASSWORD_AGAIN"                : "@:APP.FIELD_HEADER_PASSWORD_AGAIN",
         "FIELD_HEADER_USERNAME"                      : "Nome utente:",

@@ -272,6 +272,7 @@
         "FIELD_HEADER_CREATE_NEW_USERS"              : "Nieuwe gebruikers aanmaken:",
         "FIELD_HEADER_CREATE_NEW_CONNECTIONS"        : "Nieuwe verbindingen aanmaken:",
         "FIELD_HEADER_CREATE_NEW_CONNECTION_GROUPS"  : "Nieuwe verbindingsgroepen aanmaken:",
+        "FIELD_HEADER_CREATE_NEW_WATCH_SESSIONS"     : "Nieuwe bewakingssessies maken:",
         "FIELD_HEADER_PASSWORD"                      : "@:APP.FIELD_HEADER_PASSWORD",
         "FIELD_HEADER_PASSWORD_AGAIN"                : "@:APP.FIELD_HEADER_PASSWORD_AGAIN",
         "FIELD_HEADER_USERNAME"                      : "Gebruikersnaam:",
