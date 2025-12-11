@@ -905,16 +905,12 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
 
         // If there is at least one sharing profile and the right, to create watch sessions, 
         // the connection can be shared automatically with lecturers
-        dataSourceService.apply(
-            permissionService.getEffectivePermissions,
+        permissionService.getPermissions(
             authenticationService.getDataSource(),
-            authenticationService.getCurrentUsername()
+            authenticationService.getCurrentUsername(),
         ).then(function permissionsReceived(permissions) {
-            //return permissions.systemPermissions.contains("CREATE_WATCH_SESSION") && $scope.canShareConnection();
             console.log('Permissions:' + permissions);
-        })
-        //console.log('datasource: ' + authenticationService.getDataSource());
-        //console.log('username' + authenticationService.getCurrentUsername());
+        });
 
     };
 
