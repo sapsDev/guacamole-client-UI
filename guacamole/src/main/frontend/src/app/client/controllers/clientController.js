@@ -41,6 +41,7 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
     const guacClientManager      = $injector.get('guacClientManager');
     const guacFullscreen         = $injector.get('guacFullscreen');
     const iconService            = $injector.get('iconService');
+    const permissionService      = $injector.get('permissionService');
     const preferenceService      = $injector.get('preferenceService');
     const requestService         = $injector.get('requestService');
     const tunnelService          = $injector.get('tunnelService');
@@ -888,6 +889,29 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
 
         // Otherwise, sharing is not possible
         return false;
+
+    };
+
+    /**
+     * Returns whether the current user can share the current connection automatically 
+     * with lecturers. A connection can be shared automatically with lecturers if and 
+     * only if the user can share the connection and has the right to create watch sessions.
+     *
+     * @returns {Boolean}
+     *     true if the current user can share the current connection automatically
+     *     with lecturers, false otherwise.
+     */
+    $scope.canShareWithLecturer = function canShareWithLecturer() {
+
+        // If there is at least one sharing profile and the right, to create watch sessions, 
+        // the connection can be shared automatically with lecturers
+        dataSourceService.apply(
+            permissionService.getEffectivePermissions,
+            authenticationService.getDataSource(),
+            authenticationService.getCurrentUsername()
+        ).then(function permissionsReceived(permissions) {
+            return permissions.systemPermissions.contains("CREATE_WATCH_SESSION") && $scope.canShareConnection();
+        })
 
     };
 
