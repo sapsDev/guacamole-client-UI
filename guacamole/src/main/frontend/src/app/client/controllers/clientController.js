@@ -909,7 +909,7 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
             authenticationService.getDataSource(),
             authenticationService.getCurrentUsername(),
         ).then(function permissionsReceived(permissions) {
-            console.log('Permissions:' + permissions);
+            console.log('Permissions:' + JSON.stringify(permissions));
         });
 
     };
