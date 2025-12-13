@@ -910,6 +910,7 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
             authenticationService.getCurrentUsername(),
         ).then(function permissionsReceived(permissions) {
             console.log('Permissions:' + JSON.stringify(permissions));
+            console.log("Boolean: " + permissions.systemPermissions.includes("CREATE_WATCH_SESSION"));
             return true;
         });
 
