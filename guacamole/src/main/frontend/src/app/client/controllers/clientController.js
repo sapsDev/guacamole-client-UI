@@ -338,6 +338,14 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
     $scope.rootConnectionGroups = null;
 
     /**
+     * True if the current user can share the current connection automatically
+     * with lecturers, false otherwise.
+     * 
+     * @type {boolean}
+     */
+    $scope.canShareWithLecturer = false;
+
+    /**
      * Array of all connection properties that are filterable.
      *
      * @type String[]
@@ -368,6 +376,21 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
         var clientPages = userPageService.getClientPages(rootConnectionGroups);
         if (clientPages.length > 1)
             $scope.rootConnectionGroups = rootConnectionGroups;
+
+    }, requestService.WARN);
+
+    // Set whether the current user can share the current connection automatically
+    // with lecturers
+    permissionService.getPermissions(
+        authenticationService.getDataSource(),
+        authenticationService.getCurrentUsername(),
+    )
+    .then(function permissionsReceived(permissions) {
+
+        // If there is at least one sharing profile and the right, to create watch sessions, 
+        // the connection can be shared automatically with lecturers
+        $scope.canShareWithLecturer = $scope.canShareConnection() &&
+            permissions.systemPermissions.includes("CREATE_WATCH_SESSION");
 
     }, requestService.WARN);
 
@@ -889,29 +912,6 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
 
         // Otherwise, sharing is not possible
         return false;
-
-    };
-
-    /**
-     * Returns whether the current user can share the current connection automatically 
-     * with lecturers. A connection can be shared automatically with lecturers if and 
-     * only if the user can share the connection and has the right to create watch sessions.
-     *
-     * @returns {Boolean}
-     *     true if the current user can share the current connection automatically
-     *     with lecturers, false otherwise.
-     */
-    $scope.canShareWithLecturer = function canShareWithLecturer() {
-
-        // If there is at least one sharing profile and the right, to create watch sessions, 
-        // the connection can be shared automatically with lecturers
-        permissionService.getPermissions(
-            authenticationService.getDataSource(),
-            authenticationService.getCurrentUsername(),
-        ).then(function permissionsReceived(permissions) {
-            return $scope.canShareConnection() && 
-                permissions.systemPermissions.includes("CREATE_WATCH_SESSION");
-        });
 
     };
 
