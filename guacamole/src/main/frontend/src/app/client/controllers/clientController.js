@@ -391,7 +391,7 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
         // the connection can be shared automatically with lecturers
         $scope.canShareWithLecturer = $scope.canShareConnection() &&
             permissions.systemPermissions.includes("CREATE_WATCH_SESSION");
-
+        console.log("$scope.canShareWithLecturer: " + $scope.canShareWithLecturer);
     }, requestService.WARN);
 
     /**
