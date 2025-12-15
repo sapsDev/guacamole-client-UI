@@ -379,21 +379,6 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
 
     }, requestService.WARN);
 
-    // Set whether the current user can share the current connection automatically
-    // with lecturers
-    permissionService.getPermissions(
-        authenticationService.getDataSource(),
-        authenticationService.getCurrentUsername(),
-    )
-    .then(function permissionsReceived(permissions) {
-
-        // If there is at least one sharing profile and the right, to create watch sessions, 
-        // the connection can be shared automatically with lecturers
-        $scope.canShareWithLecturer = $scope.canShareConnection() &&
-            permissions.systemPermissions.includes("CREATE_WATCH_SESSION");
-        console.log("$scope.canShareWithLecturer: " + $scope.canShareWithLecturer);
-    }, requestService.WARN);
-
     /**
      * Map of all available sharing profiles for the current connection by
      * their identifiers. If this information is not yet available, or no such
@@ -555,6 +540,23 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
         }, requestService.WARN);
 
     });
+
+
+    // Set whether the current user can share the current connection automatically
+    // with lecturers
+    permissionService.getPermissions(
+        authenticationService.getDataSource(),
+        authenticationService.getCurrentUsername(),
+    )
+    .then(function permissionsReceived(permissions) {
+
+        // If there is at least one sharing profile and the right, to create watch sessions, 
+        // the connection can be shared automatically with lecturers
+        $scope.canShareWithLecturer = $scope.canShareConnection() &&
+            permissions.systemPermissions.includes("CREATE_WATCH_SESSION");
+        console.log("$scope.canShareWithLecturer: " + $scope.canShareWithLecturer);
+
+    }, requestService.WARN);
 
     /**
      * Produces a sharing link for the current connection using the given
