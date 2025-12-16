@@ -386,7 +386,6 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
     .then(function permissionsReceived(permissions) {
 
         $scope.canCreateWatchSession = permissions.systemPermissions.includes("CREATE_WATCH_SESSION");
-        console.log("$scope.canCreateWatchSession: " + $scope.canCreateWatchSession);
                     
     }, requestService.WARN);
 
