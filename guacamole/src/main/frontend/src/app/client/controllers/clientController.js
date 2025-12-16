@@ -922,9 +922,9 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
      */
     $scope.canShareWithLecturer = function canShareWithLecturer() {
 
-        // If there is at least one sharing profile, the connection can be shared
-        console.log('canShareWithLecturer: ' + $scope.canShareConnection() && 
-            $scope.canCreateWatchSession );
+        // The connection can be automatically shared with lecturers if the 
+        // connection can be shared and the user has permission to create watch
+        // sessions
         return $scope.canShareConnection() && $scope.canCreateWatchSession;
 
     };
