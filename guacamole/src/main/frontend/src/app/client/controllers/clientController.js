@@ -41,6 +41,7 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
     const guacClientManager      = $injector.get('guacClientManager');
     const guacFullscreen         = $injector.get('guacFullscreen');
     const iconService            = $injector.get('iconService');
+    const permissionService      = $injector.get('permissionService');
     const preferenceService      = $injector.get('preferenceService');
     const requestService         = $injector.get('requestService');
     const tunnelService          = $injector.get('tunnelService');
@@ -337,6 +338,13 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
     $scope.rootConnectionGroups = null;
 
     /**
+     * True if the current user has the permission to create watch sessions.
+     * 
+     * @type {boolean}
+     */
+    $scope.canCreateWatchSession = false;
+
+    /**
      * Array of all connection properties that are filterable.
      *
      * @type String[]
@@ -368,6 +376,17 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
         if (clientPages.length > 1)
             $scope.rootConnectionGroups = rootConnectionGroups;
 
+    }, requestService.WARN);
+
+    // Sets whether the current user has permission to create watch sessions
+    permissionService.getPermissions(
+        authenticationService.getDataSource(),
+        authenticationService.getCurrentUsername(),
+    )
+    .then(function permissionsReceived(permissions) {
+
+        $scope.canCreateWatchSession = permissions.systemPermissions.includes("CREATE_WATCH_SESSION");
+                    
     }, requestService.WARN);
 
     /**
@@ -888,6 +907,25 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
 
         // Otherwise, sharing is not possible
         return false;
+
+    };
+
+    /**
+     * Returns whether the current user can share the current connection 
+     * automatically with lecturers. A connection can be automatically shared 
+     * with lecturers if the connection can be shared and the user has 
+     * permission to create watch sessions.
+     *
+     * @returns {Boolean}
+     *     true if the current user can share the current connection automatically
+     *     with lecturers, false otherwise.
+     */
+    $scope.canShareWithLecturer = function canShareWithLecturer() {
+
+        // The connection can be automatically shared with lecturers if the 
+        // connection can be shared and the user has permission to create watch
+        // sessions
+        return $scope.canShareConnection() && $scope.canCreateWatchSession;
 
     };
 

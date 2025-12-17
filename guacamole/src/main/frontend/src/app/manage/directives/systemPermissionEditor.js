@@ -144,6 +144,10 @@ angular.module('manage').directive('systemPermissionEditor', ['$injector',
             {
                 label: "MANAGE_USER.FIELD_HEADER_CREATE_NEW_SHARING_PROFILES",
                 value: PermissionSet.SystemPermissionType.CREATE_SHARING_PROFILE
+            },
+            {
+                label: "MANAGE_USER.FIELD_HEADER_CREATE_NEW_WATCH_SESSIONS",
+                value: PermissionSet.SystemPermissionType.CREATE_WATCH_SESSION
             }
         ];
 
