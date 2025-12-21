@@ -165,7 +165,12 @@ angular.module('rest').factory('PermissionSet', [function definePermissionSet() 
         /**
          * Permission to create new sharing profiles.
          */
-        CREATE_SHARING_PROFILE : "CREATE_SHARING_PROFILE"
+        CREATE_SHARING_PROFILE : "CREATE_SHARING_PROFILE",
+
+        /**
+         * Permission to create new watch sessions.
+         */
+        CREATE_WATCH_SESSION : "CREATE_WATCH_SESSION"
 
     };
 

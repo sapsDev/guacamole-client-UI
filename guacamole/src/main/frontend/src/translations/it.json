@@ -21,6 +21,7 @@
         "ACTION_NAVIGATE_HOME"      : "Home",
         "ACTION_SAVE"               : "Salva",
         "ACTION_UPDATE_PASSWORD"    : "Aggiorna Password",
+        "ACTION_WATCH"              : "Guarda",
 
         "DIALOG_HEADER_ERROR" : "Errore",
 
@@ -96,8 +97,11 @@
         "HELP_MOUSE_MODE"          : "Determina come si deve comportare il mouse remoto in base al touch.",
         "HELP_MOUSE_MODE_ABSOLUTE" : "Tap to click. Il click è sostituito dal tocco.",
         "HELP_MOUSE_MODE_RELATIVE" : "Trascina il dito per muovere il puntatore del mouse e fai tap al posto del click. Il click sarà effettuato dove si trova il puntatore.",
+        "HELP_CONNECTION_WATCHING" : "La connessione attuale può essere condivisa automaticamente con un docente. È necessario selezionare un profilo.",
+        "HELP_WATCHABLE"           : "Un docente può unirsi a questa sessione",
 
-        "INFO_NO_FILE_TRANSFERS" : "Nessun trasferimento di file.",
+        "INFO_NO_FILE_TRANSFERS"    : "Nessun trasferimento di file.",
+        "INFO_CONNECTION_WATCHABLE" : "Attualmente, un docente può unirsi automaticamente a questa sessione con i permessi del seguente profilo:",
 
         "NAME_INPUT_METHOD_NONE"   : "Nessuno",
         "NAME_INPUT_METHOD_OSK"    : "Tastiera su schermo",
@@ -115,6 +119,7 @@
         "SECTION_HEADER_FILE_TRANSFERS" : "Trasferimento file",
         "SECTION_HEADER_INPUT_METHOD"   : "Metodo di input",
         "SECTION_HEADER_MOUSE_MODE"     : "Modalità di emulazione del mouse",
+        "SECTION_HEADER_WATCHING"       : "Condividi sessione per docenti",
 
         "TEXT_ZOOM_AUTO_FIT"              : "Automatically fit to browser window",
         "TEXT_CLIENT_STATUS_IDLE"         : "Inattivo.",
@@ -255,6 +260,7 @@
         "FIELD_HEADER_CREATE_NEW_USERS"              : "Crea un utente:",
         "FIELD_HEADER_CREATE_NEW_CONNECTIONS"        : "Crea una connessione:",
         "FIELD_HEADER_CREATE_NEW_CONNECTION_GROUPS"  : "Crea un ruppo di connessioni:",
+        "FIELD_HEADER_CREATE_NEW_WATCH_SESSIONS"     : "Creare nuove sessioni di monitoraggio:",
         "FIELD_HEADER_PASSWORD"                      : "@:APP.FIELD_HEADER_PASSWORD",
         "FIELD_HEADER_PASSWORD_AGAIN"                : "@:APP.FIELD_HEADER_PASSWORD_AGAIN",
         "FIELD_HEADER_USERNAME"                      : "Nome utente:",
@@ -463,6 +469,23 @@
 
     },
 
+    "WATCH" : {
+
+        "FIELD_PLACEHOLDER_FILTER" : "@:APP.FIELD_PLACEHOLDER_FILTER",
+        
+        "HELP_SESSIONS" : "Questa pagina verrà popolata con connessioni attive a cui è possibile unirsi.",
+        
+        "INFO_NO_SESSIONS" : "Nessuna sessione da guardare",
+        
+        "SECTION_HEADER_WATCH" : "Guarda",
+
+        "TABLE_HEADER_SESSION_CONNECTION"  : "Nome della connessione",
+        "TABLE_HEADER_SESSION_LINK"        : "Collegamento",
+        "TABLE_HEADER_SESSION_RESTRICTION" : "Restrizione",
+        "TABLE_HEADER_SESSION_USERNAME"    : "Nome utente"
+
+    },
+
     "SETTINGS" : {
 
         "SECTION_HEADER_SETTINGS" : "Impostazioni"
@@ -597,7 +620,8 @@
         "ACTION_MANAGE_SESSIONS"    : "@:APP.ACTION_MANAGE_SESSIONS",
         "ACTION_MANAGE_SETTINGS"    : "@:APP.ACTION_MANAGE_SETTINGS",
         "ACTION_MANAGE_USERS"       : "@:APP.ACTION_MANAGE_USERS",
-        "ACTION_NAVIGATE_HOME"      : "@:APP.ACTION_NAVIGATE_HOME"
+        "ACTION_NAVIGATE_HOME"      : "@:APP.ACTION_NAVIGATE_HOME",
+        "ACTION_WATCH"              : "@:APP.ACTION_WATCH"
 
     }
 

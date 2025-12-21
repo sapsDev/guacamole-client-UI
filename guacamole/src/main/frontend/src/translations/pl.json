@@ -33,6 +33,7 @@
         "ACTION_UPDATE_PASSWORD"    : "Zmień Hasło",
         "ACTION_VIEW_HISTORY"       : "Historia",
         "ACTION_VIEW_RECORDING"     : "Obejrzyj",
+        "ACTION_WATCH"              : "Oglądaj",
 
         "DIALOG_HEADER_ERROR" : "Błąd",
 
@@ -124,9 +125,12 @@
         "HELP_MOUSE_MODE_ABSOLUTE" : "Dotknij, aby kliknąć. Kliknięcie następuje w miejscu dotknięcia.",
         "HELP_MOUSE_MODE_RELATIVE" : "Przeciągnij, aby przesunąć wskaźnik myszy i dotknij, aby kliknąć. Kliknięcie następuje w miejscu, w którym znajduje się wskaźnik.",
         "HELP_SHARE_LINK"          : "Aktualne połączenie jest udostępniane, dostęp może uzyskać każdy posiadający {LINKS, plural, one{link} other{linki}}:",
+        "HELP_CONNECTION_WATCHING" : "Aktualne połączenie może zostać automatycznie udostępnione wykładowcy. Należy wybrać profil.",
+        "HELP_WATCHABLE"           : "Wykładowca może dołączyć do tej sesji",
 
-        "INFO_CONNECTION_SHARED" : "To połączenie jest teraz udostępniane.",
-        "INFO_NO_FILE_TRANSFERS" : "Brak transferów plików.",
+        "INFO_CONNECTION_SHARED"    : "To połączenie jest teraz udostępniane.",
+        "INFO_NO_FILE_TRANSFERS"    : "Brak transferów plików.",
+        "INFO_CONNECTION_WATCHABLE" : "Obecnie wykładowca może automatycznie dołączyć do tej sesji z uprawnieniami następującego profilu:",
 
         "NAME_INPUT_METHOD_NONE"   : "Brak",
         "NAME_INPUT_METHOD_OSK"    : "Klawiatura ekranowa",
@@ -144,6 +148,7 @@
         "SECTION_HEADER_FILE_TRANSFERS" : "Transfer Plików",
         "SECTION_HEADER_INPUT_METHOD"   : "Metoda wejścia",
         "SECTION_HEADER_MOUSE_MODE"     : "Tryb emulacji myszy",
+        "SECTION_HEADER_WATCHING"       : "Udostępnij sesję dla wykładowców",
 
         "TEXT_ZOOM_AUTO_FIT"              : "Automatycznie dopasuj do okna przeglądarki",
         "TEXT_CLIENT_STATUS_IDLE"         : "Bezczynne.",
@@ -324,6 +329,7 @@
         "FIELD_HEADER_CREATE_NEW_CONNECTIONS"        : "Tworzenie nowych połączeń:",
         "FIELD_HEADER_CREATE_NEW_CONNECTION_GROUPS"  : "Tworzenie nowych grup połączeń:",
         "FIELD_HEADER_CREATE_NEW_SHARING_PROFILES"   : "Tworzenie nowych profili udostępniania:",
+        "FIELD_HEADER_CREATE_NEW_WATCH_SESSIONS"     : "Tworzyć nowe sesje nadzoru:",
         "FIELD_HEADER_PASSWORD"                      : "@:APP.FIELD_HEADER_PASSWORD",
         "FIELD_HEADER_PASSWORD_AGAIN"                : "@:APP.FIELD_HEADER_PASSWORD_AGAIN",
         "FIELD_HEADER_USER_DISABLED"                 : "Logowanie zablokowane:",
@@ -365,6 +371,7 @@
         "FIELD_HEADER_CREATE_NEW_CONNECTIONS"        : "@:MANAGE_USER.FIELD_HEADER_CREATE_NEW_CONNECTIONS",
         "FIELD_HEADER_CREATE_NEW_CONNECTION_GROUPS"  : "@:MANAGE_USER.FIELD_HEADER_CREATE_NEW_CONNECTION_GROUPS",
         "FIELD_HEADER_CREATE_NEW_SHARING_PROFILES"   : "@:MANAGE_USER.FIELD_HEADER_CREATE_NEW_SHARING_PROFILES",
+        "FIELD_HEADER_CREATE_NEW_WATCH_SESSIONS"     : "@:MANAGE_USER.FIELD_HEADER_CREATE_NEW_WATCH_SESSIONS",
         "FIELD_HEADER_USER_DISABLED"                 : "Wyłączona:",
         "FIELD_HEADER_USER_GROUP_NAME"               : "Nazwa grupy:",
 
@@ -866,6 +873,23 @@
 
     },
 
+    "WATCH" : {
+
+        "FIELD_PLACEHOLDER_FILTER" : "@:APP.FIELD_PLACEHOLDER_FILTER",
+        
+        "HELP_SESSIONS" : "Ta strona zostanie wypełniona aktualnie aktywnymi połączeniami, do których można dołączyć.",
+        
+        "INFO_NO_SESSIONS" : "Brak dostępnych sesji do oglądania",
+        
+        "SECTION_HEADER_WATCH" : "Oglądać",
+
+        "TABLE_HEADER_SESSION_CONNECTION"  : "Nazwa połączenia",
+        "TABLE_HEADER_SESSION_LINK"        : "Link",
+        "TABLE_HEADER_SESSION_RESTRICTION" : "Ograniczenie",
+        "TABLE_HEADER_SESSION_USERNAME"    : "Nazwa użytkownika"
+
+    },
+
     "SETTINGS" : {
 
         "SECTION_HEADER_SETTINGS" : "Ustawienia"
@@ -1051,7 +1075,8 @@
         "ACTION_MANAGE_USERS"       : "@:APP.ACTION_MANAGE_USERS",
         "ACTION_MANAGE_USER_GROUPS" : "@:APP.ACTION_MANAGE_USER_GROUPS",
         "ACTION_NAVIGATE_HOME"      : "@:APP.ACTION_NAVIGATE_HOME",
-        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY"
+        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY",
+        "ACTION_WATCH"              : "@:APP.ACTION_WATCH"
 
     }
 

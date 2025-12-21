@@ -37,6 +37,7 @@ import org.apache.guacamole.auth.jdbc.connection.ModeledConnection;
 import org.apache.guacamole.auth.jdbc.connectiongroup.ModeledConnectionGroup;
 import org.apache.guacamole.auth.jdbc.sharingprofile.ModeledSharingProfile;
 import org.apache.guacamole.auth.jdbc.sharingprofile.SharingProfileDirectory;
+import org.apache.guacamole.auth.jdbc.watchsession.WatchSessionDirectory;
 import org.apache.guacamole.auth.jdbc.usergroup.ModeledUserGroup;
 import org.apache.guacamole.auth.jdbc.usergroup.UserGroupDirectory;
 import org.apache.guacamole.form.Form;
@@ -48,6 +49,7 @@ import org.apache.guacamole.net.auth.Connection;
 import org.apache.guacamole.net.auth.ConnectionGroup;
 import org.apache.guacamole.net.auth.Directory;
 import org.apache.guacamole.net.auth.SharingProfile;
+import org.apache.guacamole.net.auth.WatchSession;
 import org.apache.guacamole.net.auth.User;
 import org.apache.guacamole.net.auth.UserContext;
 import org.apache.guacamole.net.auth.UserGroup;
@@ -100,6 +102,13 @@ public class ModeledUserContext extends RestrictedObject
      */
     @Inject
     private SharingProfileDirectory sharingProfileDirectory;
+    
+    /**
+     * Watch session directory restricted by the permissions of the user
+     * associated with this context.
+     */
+    @Inject
+    private WatchSessionDirectory watchSessionDirectory;
 
     /**
      * ActiveConnection directory restricted by the permissions of the user
@@ -163,6 +172,7 @@ public class ModeledUserContext extends RestrictedObject
         connectionDirectory.init(currentUser);
         connectionGroupDirectory.init(currentUser);
         sharingProfileDirectory.init(currentUser);
+        watchSessionDirectory.init(currentUser);
         activeConnectionDirectory.init(currentUser);
 
     }
@@ -244,6 +254,12 @@ public class ModeledUserContext extends RestrictedObject
     public Directory<SharingProfile> getSharingProfileDirectory()
             throws GuacamoleException {
         return sharingProfileDirectory;
+    }
+    
+    @Override
+    public Directory<WatchSession> getWatchSessionDirectory()
+            throws GuacamoleException {
+        return watchSessionDirectory;
     }
 
     @Override

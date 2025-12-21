@@ -133,6 +133,19 @@ public abstract class AbstractUserContext implements UserContext {
             throws GuacamoleException {
         return new SimpleDirectory<SharingProfile>();
     }
+    
+    /**
+     * {@inheritDoc}
+     *
+     * <p>This implementation simply returns an empty {@link Directory}.
+     * Implementations that wish to expose the status of watchable sessions
+     * should override this function.
+     */
+    @Override
+    public Directory<WatchSession> getWatchSessionDirectory()
+            throws GuacamoleException {
+        return new SimpleDirectory<WatchSession>();
+    }
 
     /**
      * {@inheritDoc}

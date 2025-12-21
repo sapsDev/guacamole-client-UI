@@ -178,6 +178,18 @@ public interface UserContext {
      */
     Directory<SharingProfile> getSharingProfileDirectory()
             throws GuacamoleException;
+    
+    /**
+     * Retrieves a Directory which can be used to view and manipulate
+     * watch sessions, but only as allowed by the permissions given to the user.
+     *
+     * @return
+     *     A Directory whose operations are bound by the permissions of the user.
+     *
+     * @throws GuacamoleException
+     *     If an error occurs while creating the Directory.
+     */
+    Directory<WatchSession> getWatchSessionDirectory() throws GuacamoleException;
 
     /**
      * Retrieves all connection records visible to current user. Connection

@@ -23,6 +23,7 @@
         "ACTION_SEARCH"             : "Zoeken",
         "ACTION_UPDATE_PASSWORD"    : "Wijzig Wachtwoord",
         "ACTION_VIEW_HISTORY"       : "Gebruikgeschiedenis",
+        "ACTION_WATCH"              : "Kijk op",
 
         "DIALOG_HEADER_ERROR" : "Fout",
 
@@ -100,8 +101,11 @@
         "HELP_MOUSE_MODE"          : "Bepaalt hoe de muis met aanraak-klikken omgaat.",
         "HELP_MOUSE_MODE_ABSOLUTE" : "Tik om te klikken. De klik vindt plaats op de locatie van de tik.",
         "HELP_MOUSE_MODE_RELATIVE" : "Sleep om de aanwijzer te bewegen en tik om te klikken. De klik vindt plaats op de locatie van de aanwijzer.",
+        "HELP_CONNECTION_WATCHING" : "De huidige verbinding kan automatisch met een docent worden gedeeld. Er moet een profiel worden geselecteerd.",
+        "HELP_WATCHABLE"           : "Een docent kan deelnemen aan deze sessie",
 
-        "INFO_NO_FILE_TRANSFERS" : "Geen bestandsoverdrachten.",
+        "INFO_NO_FILE_TRANSFERS"    : "Geen bestandsoverdrachten.",
+        "INFO_CONNECTION_WATCHABLE" : "Momenteel kan een docent automatisch deelnemen aan deze sessie met de machtigingen van het volgende profiel:",
 
         "NAME_INPUT_METHOD_NONE"   : "Geen",
         "NAME_INPUT_METHOD_OSK"    : "Scherm toetsenbord",
@@ -119,6 +123,7 @@
         "SECTION_HEADER_FILE_TRANSFERS" : "Bestandsoverdrachten",
         "SECTION_HEADER_INPUT_METHOD"   : "Invoer methode",
         "SECTION_HEADER_MOUSE_MODE"     : "Muis emulatie modus",
+        "SECTION_HEADER_WATCHING"       : "Sessie delen voor docenten",
 
         "TEXT_ZOOM_AUTO_FIT"              : "Automatisch aan browser venster aanpassen",
         "TEXT_CLIENT_STATUS_IDLE"         : "Inactief.",
@@ -267,6 +272,7 @@
         "FIELD_HEADER_CREATE_NEW_USERS"              : "Nieuwe gebruikers aanmaken:",
         "FIELD_HEADER_CREATE_NEW_CONNECTIONS"        : "Nieuwe verbindingen aanmaken:",
         "FIELD_HEADER_CREATE_NEW_CONNECTION_GROUPS"  : "Nieuwe verbindingsgroepen aanmaken:",
+        "FIELD_HEADER_CREATE_NEW_WATCH_SESSIONS"     : "Nieuwe bewakingssessies maken:",
         "FIELD_HEADER_PASSWORD"                      : "@:APP.FIELD_HEADER_PASSWORD",
         "FIELD_HEADER_PASSWORD_AGAIN"                : "@:APP.FIELD_HEADER_PASSWORD_AGAIN",
         "FIELD_HEADER_USERNAME"                      : "Gebruikersnaam:",
@@ -543,6 +549,23 @@
 
     },
 
+    "WATCH" : {
+
+        "FIELD_PLACEHOLDER_FILTER" : "@:APP.FIELD_PLACEHOLDER_FILTER",
+        
+        "HELP_SESSIONS" : "Deze pagina wordt gevuld met actieve verbindingen die kunnen worden bekeken.",
+        
+        "INFO_NO_SESSIONS" : "Geen bekijkbare sessies",
+        
+        "SECTION_HEADER_WATCH" : "Bekijken",
+
+        "TABLE_HEADER_SESSION_CONNECTION"  : "Verbindingsnaam",
+        "TABLE_HEADER_SESSION_LINK"        : "Link",
+        "TABLE_HEADER_SESSION_RESTRICTION" : "Beperking",
+        "TABLE_HEADER_SESSION_USERNAME"    : "Gebruikersnaam"
+
+    },
+
     "SETTINGS" : {
 
         "SECTION_HEADER_SETTINGS" : "Instellingen"
@@ -685,7 +708,8 @@
         "ACTION_MANAGE_SETTINGS"    : "@:APP.ACTION_MANAGE_SETTINGS",
         "ACTION_MANAGE_USERS"       : "@:APP.ACTION_MANAGE_USERS",
         "ACTION_NAVIGATE_HOME"      : "@:APP.ACTION_NAVIGATE_HOME",
-        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY"
+        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY",
+        "ACTION_WATCH"              : "@:APP.ACTION_WATCH"
 
     }
 

@@ -32,6 +32,7 @@
         "ACTION_UPDATE_PASSWORD"    : "Mettre à jour mot de passe",
         "ACTION_VIEW_HISTORY"       : "Historique",
         "ACTION_VIEW_RECORDING"     : "Voir",
+        "ACTION_WATCH"              : "Regarder",
 
         "DIALOG_HEADER_ERROR" : "Erreur",
 
@@ -129,11 +130,14 @@
         "HELP_MOUSE_MODE_ABSOLUTE" : "Appuyer pour cliquer. Le clic s'effectue à l'endroit de l'appui.",
         "HELP_MOUSE_MODE_RELATIVE" : "Glisser pour déplacer le pointeur de la souris et appuyer pour cliquer. Le clic s'effectue à l'endroit du pointeur.",
         "HELP_SHARE_LINK"          : "La connexion actuelle est en cours de partage et est accessible à toute personne possédant {LINKS, plural, one{le lien suivant} other{les liens suivants}}:",
+        "HELP_CONNECTION_WATCHING" : "La connexion actuelle peut être partagée automatiquement avec un enseignant. Un profil doit être sélectionné.",
+        "HELP_WATCHABLE"           : "Un enseignant peut rejoindre cette session",
 
         "INFO_ANONYMOUS_USER_COUNT" : "Anonyme{COUNT, plural, one{} other{s (#)}}",
         "INFO_CONNECTION_SHARED"    : "Cette connexion est partagée maintenant.",
         "INFO_NO_FILE_TRANSFERS"    : "Pas de transfert de fichier.",
         "INFO_USER_COUNT"           : "{USERNAME}{COUNT, plural, one{} other{ (#)}}",
+        "INFO_CONNECTION_WATCHABLE" : "Actuellement, un enseignant peut rejoindre automatiquement cette session avec les autorisations du profil suivant :",
 
         "NAME_INPUT_METHOD_NONE"   : "Aucune",
         "NAME_INPUT_METHOD_OSK"    : "Clavier virtuel",
@@ -151,6 +155,7 @@
         "SECTION_HEADER_DISPLAY"         : "Affichage",
         "SECTION_HEADER_FILE_TRANSFERS"  : "Transferts de fichiers",
         "SECTION_HEADER_INPUT_METHOD"    : "Méthode de saisie",
+        "SECTION_HEADER_WATCHING"        : "Partager la session pour les enseignants",
 
         "SECTION_HEADER_MOUSE_MODE"     : "Mode d'émulation de la souris",
 
@@ -411,6 +416,7 @@
         "FIELD_HEADER_CREATE_NEW_CONNECTIONS"        : "Créer de nouvelles connexions:",
         "FIELD_HEADER_CREATE_NEW_CONNECTION_GROUPS"  : "Créer de nouveaux groupes de connexion:",
         "FIELD_HEADER_CREATE_NEW_SHARING_PROFILES"   : "Créer de nouveaux profils de partage:",
+        "FIELD_HEADER_CREATE_NEW_WATCH_SESSIONS"     : "Créer de nouvelles sessions de surveillance:",
         "FIELD_HEADER_PASSWORD"                      : "@:APP.FIELD_HEADER_PASSWORD",
         "FIELD_HEADER_PASSWORD_AGAIN"                : "@:APP.FIELD_HEADER_PASSWORD_AGAIN",
         "FIELD_HEADER_USER_DISABLED"                 : "Connexion désactivée:",
@@ -452,6 +458,7 @@
         "FIELD_HEADER_CREATE_NEW_CONNECTIONS"        : "@:MANAGE_USER.FIELD_HEADER_CREATE_NEW_CONNECTIONS",
         "FIELD_HEADER_CREATE_NEW_CONNECTION_GROUPS"  : "@:MANAGE_USER.FIELD_HEADER_CREATE_NEW_CONNECTION_GROUPS",
         "FIELD_HEADER_CREATE_NEW_SHARING_PROFILES"   : "@:MANAGE_USER.FIELD_HEADER_CREATE_NEW_SHARING_PROFILES",
+       "FIELD_HEADER_CREATE_NEW_WATCH_SESSIONS"      : "@:MANAGE_USER.FIELD_HEADER_CREATE_NEW_WATCH_SESSIONS",
         "FIELD_HEADER_USER_GROUP_DISABLED"           : "Désactivé:",
         "FIELD_HEADER_USER_GROUP_NAME"               : "Nom Groupe:",
 
@@ -985,6 +992,23 @@
 
     },
 
+    "WATCH" : {
+
+        "FIELD_PLACEHOLDER_FILTER" : "@:APP.FIELD_PLACEHOLDER_FILTER",
+        
+        "HELP_SESSIONS" : "Cette page sera remplie avec des connexions actives actuellement disponibles.",
+        
+        "INFO_NO_SESSIONS" : "Aucune session à regarder",
+        
+        "SECTION_HEADER_WATCH" : "Regarder",
+
+        "TABLE_HEADER_SESSION_CONNECTION"  : "Nom de connexion",
+        "TABLE_HEADER_SESSION_LINK"        : "Lien",
+        "TABLE_HEADER_SESSION_RESTRICTION" : "Restriction",
+        "TABLE_HEADER_SESSION_USERNAME"    : "Nom d'utilisateur"
+
+    },
+
     "SETTINGS" : {
 
         "SECTION_HEADER_SETTINGS" : "Paramètres"
@@ -1174,7 +1198,8 @@
         "ACTION_MANAGE_USERS"       : "@:APP.ACTION_MANAGE_USERS",
         "ACTION_MANAGE_USER_GROUPS" : "@:APP.ACTION_MANAGE_USER_GROUPS",
         "ACTION_NAVIGATE_HOME"      : "@:APP.ACTION_NAVIGATE_HOME",
-        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY"
+        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY",
+        "ACTION_WATCH"              : "@:APP.ACTION_WATCH"
 
     }
 

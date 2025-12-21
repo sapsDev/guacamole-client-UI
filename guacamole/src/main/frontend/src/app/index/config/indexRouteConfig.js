@@ -151,6 +151,15 @@ angular.module('index').config(['$routeProvider', '$locationProvider',
             controller    : 'settingsController',
             resolve       : { updateCurrentToken: updateCurrentToken }
         })
+        
+        // Watch screen
+        .when('/watch/:tab', {
+            title         : 'APP.NAME',
+            bodyClassName : 'watch',
+            templateUrl   : 'app/watch/templates/watch.html',
+            controller    : 'watchController',
+            resolve       : { updateCurrentToken: updateCurrentToken }
+        })
 
         // Connection editor
         .when('/manage/:dataSource/connections/:id*?', {

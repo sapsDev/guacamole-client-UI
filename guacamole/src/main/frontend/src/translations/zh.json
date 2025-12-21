@@ -34,6 +34,7 @@
         "ACTION_UPDATE_PASSWORD"    : "更新密码",
         "ACTION_VIEW_HISTORY"       : "历史",
         "ACTION_VIEW_RECORDING"     : "查看",
+        "ACTION_WATCH"              : "觀賞",
 
         "DIALOG_HEADER_ERROR" : "错误",
 
@@ -128,11 +129,14 @@
         "HELP_MOUSE_MODE_ABSOLUTE" : "点击时立即触发按键。在点击的位置触发鼠标按键事件。",
         "HELP_MOUSE_MODE_RELATIVE" : "拖拽时移动鼠标，再点击时触发按键。在鼠标当前所在的位置触发按键事件。",
         "HELP_SHARE_LINK"          : "正在共享当前连接，并可被使用以下链接的任何人使用：",
+        "HELP_CONNECTION_WATCHING" : "当前连接可以自动与教师共享。必须选择一个配置文件。",
+        "HELP_WATCHABLE"           : "教师可以加入此会话",
 
         "INFO_ANONYMOUS_USER_COUNT" : "匿名用户{COUNT, plural, one{} other{ (#)}}",
         "INFO_CONNECTION_SHARED"    : "此连接已被共享。",
         "INFO_NO_FILE_TRANSFERS"    : "无文件传输任务。",
         "INFO_USER_COUNT"           : "{USERNAME}{COUNT, plural, one{} other{ (#)}}",
+        "INFO_CONNECTION_WATCHABLE" : "当前，讲师可以自动使用以下配置文件的权限加入此会话：",
 
         "NAME_INPUT_METHOD_NONE"   : "无",
         "NAME_INPUT_METHOD_OSK"    : "屏幕键盘",
@@ -150,6 +154,7 @@
         "SECTION_HEADER_DISPLAY"         : "显示",
         "SECTION_HEADER_FILE_TRANSFERS"  : "文件传输",
         "SECTION_HEADER_INPUT_METHOD"    : "输入方式",
+        "SECTION_HEADER_WATCHING"        : "为教师共享会话",
 
         "SECTION_HEADER_MOUSE_MODE"     : "模拟鼠标模式",
 
@@ -404,6 +409,7 @@
         "FIELD_HEADER_CREATE_NEW_CONNECTIONS"        : "新建连接：",
         "FIELD_HEADER_CREATE_NEW_CONNECTION_GROUPS"  : "新建连接组：",
         "FIELD_HEADER_CREATE_NEW_SHARING_PROFILES"   : "新建共享设定：",
+        "FIELD_HEADER_CREATE_NEW_WATCH_SESSIONS"     : "创建新的监控会话：",
         "FIELD_HEADER_PASSWORD"                      : "@:APP.FIELD_HEADER_PASSWORD",
         "FIELD_HEADER_PASSWORD_AGAIN"                : "@:APP.FIELD_HEADER_PASSWORD_AGAIN",
         "FIELD_HEADER_USER_DISABLED"                 : "已禁用登录:",
@@ -445,6 +451,7 @@
         "FIELD_HEADER_CREATE_NEW_CONNECTIONS"        : "@:MANAGE_USER.FIELD_HEADER_CREATE_NEW_CONNECTIONS",
         "FIELD_HEADER_CREATE_NEW_CONNECTION_GROUPS"  : "@:MANAGE_USER.FIELD_HEADER_CREATE_NEW_CONNECTION_GROUPS",
         "FIELD_HEADER_CREATE_NEW_SHARING_PROFILES"   : "@:MANAGE_USER.FIELD_HEADER_CREATE_NEW_SHARING_PROFILES",
+        "FIELD_HEADER_CREATE_NEW_WATCH_SESSIONS"     : "@:MANAGE_USER.FIELD_HEADER_CREATE_NEW_WATCH_SESSIONS",
         "FIELD_HEADER_USER_GROUP_DISABLED"           : "禁用:",
         "FIELD_HEADER_USER_GROUP_NAME"               : "用户组名称:",
 
@@ -947,6 +954,23 @@
 
     },
 
+    "WATCH" : {
+
+        "FIELD_PLACEHOLDER_FILTER" : "@:APP.FIELD_PLACEHOLDER_FILTER",
+        
+        "HELP_SESSIONS" : "此页面将显示当前可加入的活动连接。",
+        
+        "INFO_NO_SESSIONS" : "没有可观看的会话",
+        
+        "SECTION_HEADER_WATCH" : "观看",
+
+        "TABLE_HEADER_SESSION_CONNECTION"  : "连接名",
+        "TABLE_HEADER_SESSION_LINK": "链接",
+        "TABLE_HEADER_SESSION_RESTRICTION": "限制",
+        "TABLE_HEADER_SESSION_USERNAME": "用户名"
+
+    },
+
     "SETTINGS" : {
 
         "SECTION_HEADER_SETTINGS" : "设置"
@@ -1132,7 +1156,8 @@
         "ACTION_MANAGE_USERS"       : "@:APP.ACTION_MANAGE_USERS",
         "ACTION_MANAGE_USER_GROUPS" : "@:APP.ACTION_MANAGE_USER_GROUPS",
         "ACTION_NAVIGATE_HOME"      : "@:APP.ACTION_NAVIGATE_HOME",
-        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY"
+        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY",
+        "ACTION_WATCH"              : "@:APP.ACTION_WATCH"
 
     }
 

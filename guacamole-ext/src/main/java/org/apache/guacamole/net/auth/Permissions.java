@@ -125,5 +125,18 @@ public interface Permissions {
      *     permissions is not allowed.
      */
     ObjectPermissionSet getUserGroupPermissions() throws GuacamoleException;
+    
+     /**
+      * Returns all watch session permissions given to this object.
+      *
+      * @return
+      *     An ObjectPermissionSet of all watch session permissions granted to this
+      *     object.
+      *
+      * @throws GuacamoleException
+      *     If an error occurs while retrieving permissions, or if reading all
+      *     permissions is not allowed.
+      */
+     ObjectPermissionSet getWatchSessionPermissions() throws GuacamoleException;
 
 }

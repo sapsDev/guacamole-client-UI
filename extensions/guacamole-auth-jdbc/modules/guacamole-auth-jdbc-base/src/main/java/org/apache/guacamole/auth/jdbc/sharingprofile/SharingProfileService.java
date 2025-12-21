@@ -278,7 +278,7 @@ public class SharingProfileService
         boolean canRetrieveParameters;
         try {
             canRetrieveParameters = hasObjectPermission(user, identifier,
-                    ObjectPermission.Type.UPDATE);
+                    ObjectPermission.Type.READ);
         }
 
         // Provide empty (but mutable) map if unable to check permissions

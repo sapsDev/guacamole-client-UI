@@ -35,6 +35,7 @@
         "ACTION_UPDATE_PASSWORD"    : "Update Password",
         "ACTION_VIEW_HISTORY"       : "History",
         "ACTION_VIEW_RECORDING"     : "View",
+        "ACTION_WATCH"              : "Watch",
 
         "DIALOG_HEADER_ERROR" : "Error",
 
@@ -132,11 +133,14 @@
         "HELP_MOUSE_MODE_ABSOLUTE" : "Tap to click. The click occurs at the location of the touch.",
         "HELP_MOUSE_MODE_RELATIVE" : "Drag to move the mouse pointer and tap to click. The click occurs at the location of the pointer.",
         "HELP_SHARE_LINK"          : "The current connection is being shared, and can be accessed by anyone with the following {LINKS, plural, one{link} other{links}}:",
+        "HELP_CONNECTION_WATCHING" : "The current connection can be automatically shared with an instructor. A profile must be selected.",
+        "HELP_WATCHABLE"           : "An instructor can join this session",
 
         "INFO_ANONYMOUS_USER_COUNT" : "Anonymous{COUNT, plural, one{} other{ (#)}}",
         "INFO_CONNECTION_SHARED"    : "This connection is now shared.",
         "INFO_NO_FILE_TRANSFERS"    : "No file transfers.",
         "INFO_USER_COUNT"           : "{USERNAME}{COUNT, plural, one{} other{ (#)}}",
+        "INFO_CONNECTION_WATCHABLE" : "Currently, a lecturer can automatically join this session with the permissions of the following profile:",
 
         "NAME_INPUT_METHOD_NONE"   : "None",
         "NAME_INPUT_METHOD_OSK"    : "On-screen keyboard",
@@ -154,6 +158,7 @@
         "SECTION_HEADER_DISPLAY"         : "Display",
         "SECTION_HEADER_FILE_TRANSFERS"  : "File Transfers",
         "SECTION_HEADER_INPUT_METHOD"    : "Input method",
+        "SECTION_HEADER_WATCHING"        : "Share session for instructors",
         
         "SECTION_HEADER_MOUSE_MODE"     : "Mouse emulation mode",
 
@@ -415,6 +420,7 @@
         "FIELD_HEADER_CREATE_NEW_CONNECTIONS"        : "Create new connections:",
         "FIELD_HEADER_CREATE_NEW_CONNECTION_GROUPS"  : "Create new connection groups:",
         "FIELD_HEADER_CREATE_NEW_SHARING_PROFILES"   : "Create new sharing profiles:",
+        "FIELD_HEADER_CREATE_NEW_WATCH_SESSIONS"     : "Create new watch sessions:",
         "FIELD_HEADER_PASSWORD"                      : "@:APP.FIELD_HEADER_PASSWORD",
         "FIELD_HEADER_PASSWORD_AGAIN"                : "@:APP.FIELD_HEADER_PASSWORD_AGAIN",
         "FIELD_HEADER_USER_DISABLED"                 : "Login disabled:",
@@ -457,6 +463,7 @@
         "FIELD_HEADER_CREATE_NEW_CONNECTIONS"        : "@:MANAGE_USER.FIELD_HEADER_CREATE_NEW_CONNECTIONS",
         "FIELD_HEADER_CREATE_NEW_CONNECTION_GROUPS"  : "@:MANAGE_USER.FIELD_HEADER_CREATE_NEW_CONNECTION_GROUPS",
         "FIELD_HEADER_CREATE_NEW_SHARING_PROFILES"   : "@:MANAGE_USER.FIELD_HEADER_CREATE_NEW_SHARING_PROFILES",
+        "FIELD_HEADER_CREATE_NEW_WATCH_SESSIONS"     : "@:MANAGE_USER.FIELD_HEADER_CREATE_NEW_WATCH_SESSIONS",
         "FIELD_HEADER_USER_GROUP_DISABLED"           : "Disabled:",
         "FIELD_HEADER_USER_GROUP_NAME"               : "Group name:",
 
@@ -1061,6 +1068,23 @@
 
     },
 
+    "WATCH" : {
+        
+        "FIELD_PLACEHOLDER_FILTER" : "@:APP.FIELD_PLACEHOLDER_FILTER",
+        
+        "HELP_SESSIONS" : "This page will be populated with currently-active connections that can be joined.",
+        
+        "INFO_NO_SESSIONS" : "No watchable sessions", 
+        
+        "SECTION_HEADER_WATCH" : "Watch",
+      
+        "TABLE_HEADER_SESSION_CONNECTION"  : "Connection name",
+        "TABLE_HEADER_SESSION_LINK"        : "Link",
+        "TABLE_HEADER_SESSION_RESTRICTION" : "Restriction",
+        "TABLE_HEADER_SESSION_USERNAME"    : "Username"
+        
+    },
+
     "SETTINGS" : {
 
         "SECTION_HEADER_SETTINGS" : "Settings"
@@ -1250,7 +1274,8 @@
         "ACTION_MANAGE_USERS"       : "@:APP.ACTION_MANAGE_USERS",
         "ACTION_MANAGE_USER_GROUPS" : "@:APP.ACTION_MANAGE_USER_GROUPS",
         "ACTION_NAVIGATE_HOME"      : "@:APP.ACTION_NAVIGATE_HOME",
-        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY"
+        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY",
+        "ACTION_WATCH"              : "@:APP.ACTION_WATCH"
 
     }
 

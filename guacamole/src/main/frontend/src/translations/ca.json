@@ -113,11 +113,14 @@
         "HELP_MOUSE_MODE_ABSOLUTE" : "Toqueu per fer clic. El clic es produeix a la ubicació del toc.",
         "HELP_MOUSE_MODE_RELATIVE" : "Arrossegueu per moure el punter del ratolí i toqueu per fer clic. El clic es produeix a la ubicació del punter.",
         "HELP_SHARE_LINK"          : "La connexió actual s'està compartint i qualsevol usuari pot accedir amb els següents {LINKS, plural, one{enllaç} other{enllaços}}:",
+        "HELP_CONNECTION_WATCHING" : "La connexió actual es pot compartir automàticament amb un docent. Cal seleccionar un perfil.",
+        "HELP_WATCHABLE"           : "Un docent es pot unir a aquesta sessió",
 
         "INFO_ANONYMOUS_USER_COUNT" : "Anònim{COUNT, plural, one{} other{s (#)}}",
         "INFO_CONNECTION_SHARED"    : "Aquesta connexió es comparteix ara.",
         "INFO_NO_FILE_TRANSFERS"    : "No hi ha transferències de fitxers.",
         "INFO_USER_COUNT"           : "{USERNAME}{COUNT, plural, one{} other{ (#)}}",
+        "INFO_CONNECTION_WATCHABLE" : "Actualment, un professor pot unir-se automàticament a aquesta sessió amb els permisos del següent perfil:",
     
         "NAME_INPUT_METHOD_NONE"   : "Cap",
         "NAME_INPUT_METHOD_OSK"    : "Teclat a la pantalla",
@@ -136,6 +139,7 @@
         "SECTION_HEADER_FILE_TRANSFERS"  : "Transferències de fitxers",
         "SECTION_HEADER_INPUT_METHOD"    : "Mètode d'entrada",
         "SECTION_HEADER_MOUSE_MODE"      : "Mode d'emulació del ratolí",
+        "SECTION_HEADER_WATCHING"        : "Compartir sessió per a docents",
 
         "TEXT_ANONYMOUS_USER_JOINED"      : "Un usuari anònim s'ha afegit a la connexió.",
         "TEXT_ANONYMOUS_USER_LEFT"        : "Un usuari anònim ha sortit de la connexió.",
@@ -343,6 +347,7 @@
         "FIELD_HEADER_CREATE_NEW_CONNECTIONS"        : "Crear noves connexions:",
         "FIELD_HEADER_CREATE_NEW_CONNECTION_GROUPS"  : "Crear grups de connexió nous:",
         "FIELD_HEADER_CREATE_NEW_SHARING_PROFILES"   : "Crear nous perfils per compartir:",
+        "FIELD_HEADER_CREATE_NEW_WATCH_SESSIONS"     : "Crear noves sessions de vigilància:",
         "FIELD_HEADER_USER_DISABLED"                 : "Inici de sessió desactivat:",
         "FIELD_HEADER_USERNAME"                      : "Nom d'usuari:",
 
@@ -374,6 +379,7 @@
         "FIELD_HEADER_CREATE_NEW_CONNECTIONS"        : "@:MANAGE_USER.FIELD_HEADER_CREATE_NEW_CONNECTIONS",
         "FIELD_HEADER_CREATE_NEW_CONNECTION_GROUPS"  : "@:MANAGE_USER.FIELD_HEADER_CREATE_NEW_CONNECTION_GROUPS",
         "FIELD_HEADER_CREATE_NEW_SHARING_PROFILES"   : "@:MANAGE_USER.FIELD_HEADER_CREATE_NEW_SHARING_PROFILES",
+        "FIELD_HEADER_CREATE_NEW_WATCH_SESSIONS"     : "@:MANAGE_USER.FIELD_HEADER_CREATE_NEW_WATCH_SESSIONS",
         "FIELD_HEADER_USER_GROUP_DISABLED"           : "Desactivat:",
         "FIELD_HEADER_USER_GROUP_NAME"               : "Nom del grup:",
 
@@ -855,6 +861,23 @@
         "SECTION_HEADER_REPEATER"       : "Repetidor VNC",
         "SECTION_HEADER_SFTP"           : "SFTP",
         "SECTION_HEADER_WOL"            : "Wake-on-LAN (WoL)"
+
+    },
+
+    "WATCH" : {
+
+        "FIELD_PLACEHOLDER_FILTER" : "@:APP.FIELD_PLACEHOLDER_FILTER",
+        
+        "HELP_SESSIONS" : "Aquesta pàgina s'omplirà amb connexions actives actuals a les quals es pot unir.",
+        
+        "INFO_NO_SESSIONS" : "No hi ha sessions visibles",
+        
+        "SECTION_HEADER_WATCH" : "Veure",
+
+        "TABLE_HEADER_SESSION_CONNECTION"  : "Nom de la connexió",
+        "TABLE_HEADER_SESSION_LINK"        : "Enllaç",
+        "TABLE_HEADER_SESSION_RESTRICTION" : "Restricció",
+        "TABLE_HEADER_SESSION_USERNAME"    : "Nom d'usuari"
 
     },
 

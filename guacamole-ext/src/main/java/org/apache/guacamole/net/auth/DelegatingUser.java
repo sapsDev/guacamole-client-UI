@@ -145,6 +145,12 @@ public class DelegatingUser implements User {
             throws GuacamoleException {
         return user.getActiveConnectionPermissions();
     }
+    
+    @Override
+    public ObjectPermissionSet getWatchSessionPermissions()
+            throws GuacamoleException {
+        return user.getWatchSessionPermissions();
+    }
 
     @Override
     public ObjectPermissionSet getUserPermissions() throws GuacamoleException {

@@ -25,6 +25,7 @@
         "ACTION_SHARE"              : "シェア",
         "ACTION_UPDATE_PASSWORD"    : "パスワードの更新",
         "ACTION_VIEW_HISTORY"       : "履歴",
+        "ACTION_WATCH"              : "観る",
 
         "DIALOG_HEADER_ERROR" : "エラー",
 
@@ -109,9 +110,12 @@
         "HELP_MOUSE_MODE_ABSOLUTE": "タッチによってクリックを行います。タッチの位置でクリックしたとみなされます。 ",
         "HELP_MOUSE_MODE_RELATIVE": "マウスポインタをドラッグしてからクリックします。マウスポインタの位置でクリックしたとみなされます。 ",
         "HELP_SHARE_LINK": "現在の接続は共有されており、次の{LINKS、multiple、one {link} other {links}}を持つ人なら誰でもアクセスできます:",
+        "HELP_CONNECTION_WATCHING": "現在の接続は教員と自動的に共有できます。プロファイルを選択する必要があります。",
+        "HELP_WATCHABLE": "このセッションには教員が参加できます",
 
-        "INFO_CONNECTION_SHARED": "この接続は現在共有されています。",
-        "INFO_NO_FILE_TRANSFERS": "ファイル転送はありません。",
+        "INFO_CONNECTION_SHARED"    : "この接続は現在共有されています。",
+        "INFO_NO_FILE_TRANSFERS"    : "ファイル転送はありません。",
+        "INFO_CONNECTION_WATCHABLE" : "現在、講師は次のプロファイルの権限で自動的にこのセッションに参加できます。",
 
 
         "NAME_INPUT_METHOD_NONE"   : "なし",
@@ -126,6 +130,7 @@
         "SECTION_HEADER_FILE_TRANSFERS" : "ファイル転送",
         "SECTION_HEADER_INPUT_METHOD"   : "インプットメソッド",
         "SECTION_HEADER_MOUSE_MODE"     : "マウスエミュレートモード",
+        "SECTION_HEADER_WATCHING"       : "教員向けにセッションを共有",
 
         "TEXT_ZOOM_AUTO_FIT"              : "自動的にブラウザのサイズに合わせる",
         "TEXT_CLIENT_STATUS_IDLE"         : "アイドル状態.",
@@ -280,6 +285,7 @@
         "FIELD_HEADER_CREATE_NEW_CONNECTIONS"        : "接続の作成:",
         "FIELD_HEADER_CREATE_NEW_CONNECTION_GROUPS"  : "接続グループの作成:",
         "FIELD_HEADER_CREATE_NEW_SHARING_PROFILES"   : "共有プロファイルの作成:",
+        "FIELD_HEADER_CREATE_NEW_WATCH_SESSIONS"     : "新しいウォッチセッションを作成:",
         "FIELD_HEADER_PASSWORD"                      : "@:APP.FIELD_HEADER_PASSWORD",
         "FIELD_HEADER_PASSWORD_AGAIN"                : "@:APP.FIELD_HEADER_PASSWORD_AGAIN",
         "FIELD_HEADER_USER_DISABLED"                 : "ログインの無効化:",
@@ -321,6 +327,7 @@
         "FIELD_HEADER_CREATE_NEW_CONNECTIONS"        : "@:MANAGE_USER.FIELD_HEADER_CREATE_NEW_CONNECTIONS",
         "FIELD_HEADER_CREATE_NEW_CONNECTION_GROUPS"  : "@:MANAGE_USER.FIELD_HEADER_CREATE_NEW_CONNECTION_GROUPS",
         "FIELD_HEADER_CREATE_NEW_SHARING_PROFILES"   : "@:MANAGE_USER.FIELD_HEADER_CREATE_NEW_SHARING_PROFILES",
+        "FIELD_HEADER_CREATE_NEW_WATCH_SESSIONS"     : "@:MANAGE_USER.FIELD_HEADER_CREATE_NEW_WATCH_SESSIONS",
         "FIELD_HEADER_USER_GROUP_DISABLED"           : "グループの無効化:",
         "FIELD_HEADER_USER_GROUP_NAME"               : "グループ名:",
 
@@ -662,6 +669,23 @@
 
     },
 
+    "WATCH" : {
+
+        "FIELD_PLACEHOLDER_FILTER" : "@:APP.FIELD_PLACEHOLDER_FILTER",
+        
+        "HELP_SESSIONS" : "このページには現在アクティブな接続が表示され、参加できます。",
+        
+        "INFO_NO_SESSIONS" : "視聴可能なセッションはありません",
+        
+        "SECTION_HEADER_WATCH" : "視聴する",
+
+        "TABLE_HEADER_SESSION_CONNECTION"  : "接続名",
+        "TABLE_HEADER_SESSION_LINK"        : "リンク",
+        "TABLE_HEADER_SESSION_RESTRICTION" : "制限",
+        "TABLE_HEADER_SESSION_USERNAME"    : "ユーザー名"
+
+    },
+
     "SETTINGS" : {
 
         "SECTION_HEADER_SETTINGS" : "設定"
@@ -839,7 +863,8 @@
         "ACTION_MANAGE_USERS"       : "@:APP.ACTION_MANAGE_USERS",
         "ACTION_MANAGE_USER_GROUPS" : "@:APP.ACTION_MANAGE_USER_GROUPS",
         "ACTION_NAVIGATE_HOME"      : "@:APP.ACTION_NAVIGATE_HOME",
-        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY"
+        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY",
+        "ACTION_WATCH"              : "@:APP.ACTION_WATCH"
 
     }
 

@@ -23,6 +23,7 @@
         "ACTION_SEARCH"             : "Søk",
         "ACTION_UPDATE_PASSWORD"    : "Oppdater Passord",
         "ACTION_VIEW_HISTORY"       : "Historie",
+        "ACTION_WATCH"              : "Se på",
 
         "DIALOG_HEADER_ERROR" : "Feil",
 
@@ -102,8 +103,11 @@
         "HELP_MOUSE_MODE"          : "Bestemmer hvordan den fjernstyrte musen reagerer på berøringer.",
         "HELP_MOUSE_MODE_ABSOLUTE" : "Trykk for å klikke. Klikket oppstår der man berører.",
         "HELP_MOUSE_MODE_RELATIVE" : "Dra for å flytte musemarkøren og trykk for å klikke. Klikket oppstår på plasseringen til musepekeren.",
+        "HELP_CONNECTION_WATCHING" : "Den nåværende tilkoblingen kan automatisk deles med en underviser. En profil må velges.",
+        "HELP_WATCHABLE"           : "En underviser kan bli med i denne økten",
 
-        "INFO_NO_FILE_TRANSFERS" : "Ingen filoverføringer.",
+        "INFO_NO_FILE_TRANSFERS"    : "Ingen filoverføringer.",
+        "INFO_CONNECTION_WATCHABLE" : "For øyeblikket kan en foreleser automatisk bli med i denne økten med tillatelsene til følgende profil:",
 
         "NAME_INPUT_METHOD_NONE"   : "Ingen",
         "NAME_INPUT_METHOD_OSK"    : "Skjermtastatur",
@@ -121,6 +125,7 @@
         "SECTION_HEADER_FILE_TRANSFERS" : "Filoverføringer",
         "SECTION_HEADER_INPUT_METHOD"   : "Standard Innenhet",
         "SECTION_HEADER_MOUSE_MODE"     : "Metode for musemulering",
+        "SECTION_HEADER_WATCHING"       : "Del økt for undervisere",
 
         "TEXT_ZOOM_AUTO_FIT"              : "Skaler automatisk til nettleservindu.",
         "TEXT_CLIENT_STATUS_IDLE"         : "Passiv.",
@@ -251,6 +256,7 @@
         "FIELD_HEADER_CREATE_NEW_USERS"              : "Opprett ny bruker:",
         "FIELD_HEADER_CREATE_NEW_CONNECTIONS"        : "Opprett ny tilkobling:",
         "FIELD_HEADER_CREATE_NEW_CONNECTION_GROUPS"  : "Opprett ny tilkoblingsgruppe:",
+        "FIELD_HEADER_CREATE_NEW_WATCH_SESSIONS"     : "Opprette nye overvåkingsøkter:",
         "FIELD_HEADER_PASSWORD"                      : "@:APP.FIELD_HEADER_PASSWORD",
         "FIELD_HEADER_PASSWORD_AGAIN"                : "@:APP.FIELD_HEADER_PASSWORD_AGAIN",
         "FIELD_HEADER_USERNAME"                      : "Brukernavn:",
@@ -524,6 +530,23 @@
 
     },
 
+    "WATCH" : {
+
+        "FIELD_PLACEHOLDER_FILTER" : "@:APP.FIELD_PLACEHOLDER_FILTER",
+        
+        "HELP_SESSIONS" : "Denne siden vil bli fylt med aktive tilkoblinger som kan bli med på.",
+        
+        "INFO_NO_SESSIONS" : "Ingen tilgjengelige økter å se",
+        
+        "SECTION_HEADER_WATCH" : "Se",
+
+        "TABLE_HEADER_SESSION_CONNECTION"  : "Navn på tilkobling",
+        "TABLE_HEADER_SESSION_LINK"        : "Lenke",
+        "TABLE_HEADER_SESSION_RESTRICTION" : "Begrensning",
+        "TABLE_HEADER_SESSION_USERNAME"    : "Brukernavn"
+
+    },
+
     "SETTINGS" : {
 
         "SECTION_HEADER_SETTINGS" : "Innstillinger"
@@ -666,7 +689,8 @@
         "ACTION_MANAGE_SETTINGS"    : "@:APP.ACTION_MANAGE_SETTINGS",
         "ACTION_MANAGE_USERS"       : "@:APP.ACTION_MANAGE_USERS",
         "ACTION_NAVIGATE_HOME"      : "@:APP.ACTION_NAVIGATE_HOME",
-        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY"
+        "ACTION_VIEW_HISTORY"       : "@:APP.ACTION_VIEW_HISTORY",
+        "ACTION_WATCH"              : "@:APP.ACTION_WATCH"
 
     }
 
