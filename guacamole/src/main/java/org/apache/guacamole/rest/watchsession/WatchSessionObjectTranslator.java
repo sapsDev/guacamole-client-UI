@@ -57,10 +57,9 @@ public class WatchSessionObjectTranslator
 
     @Override
     public void filterExternalObject(UserContext userContext,
-                                     APIWatchSession object) throws GuacamoleException {
-
+            WatchSession existingObject, APIWatchSession object) 
+            throws GuacamoleException {
         // Nothing to filter on ActiveConnections (no attributes)
-
     }
 
 }
