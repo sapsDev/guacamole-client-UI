@@ -239,8 +239,8 @@ CREATE TABLE `guacamole_connection_parameter` (
 
 --
 -- Table of watch sessions. Each watch session has a restriction for the viewer,
--- a username of the user sharing the session, the identifier of the shared connection and
--- a link to join the session. 
+-- a username of the user sharing the session, the identifier and name of the 
+-- shared connection, the underlying tunnel uuid and a link to join the session. 
 --
 
 CREATE TABLE guacamole_watch_session (
