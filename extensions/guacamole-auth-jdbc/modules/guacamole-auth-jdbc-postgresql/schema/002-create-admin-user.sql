@@ -37,6 +37,7 @@ FROM (
         ('guacadmin', 'CREATE_SHARING_PROFILE'),
         ('guacadmin', 'CREATE_USER'),
         ('guacadmin', 'CREATE_USER_GROUP'),
+        ('guacadmin', 'CREATE_WATCH_SESSION'),
         ('guacadmin', 'ADMINISTER')
 ) permissions (username, permission)
 JOIN guacamole_entity ON permissions.username = guacamole_entity.name AND guacamole_entity.type = 'USER';

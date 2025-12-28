@@ -662,7 +662,7 @@ CREATE TABLE [guacamole_watch_session_permission] (
     [watch_session_id] [int]                         NOT NULL,
     [permission]       [guacamole_object_permission] NOT NULL,
 
-     CONSTRAINT [PK_guacamole_watch_session_permission]
+    CONSTRAINT [PK_guacamole_watch_session_permission]
         PRIMARY KEY CLUSTERED ([entity_id], [watch_session_id], [permission]),
 
     CONSTRAINT [FK_guacamole_watch_session_permission_watch_session_id]

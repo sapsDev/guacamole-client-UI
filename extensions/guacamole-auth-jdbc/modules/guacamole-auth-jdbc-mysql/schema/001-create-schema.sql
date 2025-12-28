@@ -505,7 +505,7 @@ CREATE TABLE `guacamole_system_permission` (
                     'CREATE_SHARING_PROFILE',
                     'CREATE_USER',
                     'CREATE_USER_GROUP',
-                    'CREATE_WATCH_SESSION'
+                    'CREATE_WATCH_SESSION',
                     'AUDIT',
                     'ADMINISTER') NOT NULL,
 

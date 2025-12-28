@@ -36,6 +36,7 @@ FROM (
     UNION SELECT 'guacadmin'  AS username, 'CREATE_SHARING_PROFILE'  AS permission
     UNION SELECT 'guacadmin'  AS username, 'CREATE_USER'             AS permission
     UNION SELECT 'guacadmin'  AS username, 'CREATE_USER_GROUP'       AS permission
+    UNION SELECT 'guacadmin'  AS username, 'CREATE_WATCH_SESSION'    AS permission
     UNION SELECT 'guacadmin'  AS username, 'ADMINISTER'              AS permission
 ) permissions
 JOIN guacamole_entity ON permissions.username = guacamole_entity.name AND guacamole_entity.type = 'USER';
