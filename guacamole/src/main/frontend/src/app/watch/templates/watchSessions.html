@@ -31,10 +31,10 @@
             <td><guac-user-item username="wrapper.username"></guac-user-item></td>
             <td>{{wrapper.connection}}</td>
             <td>{{wrapper.restriction ? "read-only" : "none"}}</td>
-            <td><a href=""
-                   onclick="window.open('{{wrapper.link}}', '_blank'); return false;">
+            <td><a href="{{wrapper.link}}" target="_blank" rel="noopener noreferrer">
                 open
-            </a></td>
+                </a>
+            </td>
         </tr>
         </tbody>
     </table>
