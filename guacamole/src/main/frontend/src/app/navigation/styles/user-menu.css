@@ -79,6 +79,10 @@
     background-image: url('images/action-icons/guac-config-dark.svg');
 }
 
+.user-menu .menu-dropdown .menu-contents li a[href="#/watch/sessions"] {
+    background-image: url('images/action-icons/guac-monitors.svg');
+}
+
 .user-menu .menu-dropdown .menu-contents li a.logout {
     background-image: url('images/action-icons/guac-logout-dark.svg');
 }
